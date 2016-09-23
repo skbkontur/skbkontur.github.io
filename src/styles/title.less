@@ -1,0 +1,48 @@
+@import "./common/mixins.less";
+@import "./common/variables.less";
+
+//=====================================
+// LAYOUT
+//=====================================
+
+.title-container {
+    h1 {
+        max-width: @max-width;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding-left: @xs-h-padding;
+        padding-right: @xs-h-padding;
+
+        .sm-viewport({
+            padding-left: @sm-h-padding;
+            padding-right: @sm-h-padding;
+        });
+
+        .md-viewport({
+            padding-left: @md-h-padding;
+            padding-right: @md-h-padding;
+        });
+    }
+}
+
+//====================================
+// VISUAL STYLES
+//====================================
+
+.title-container {
+    background-color: @header-background-color;
+
+    h1 {
+        font-size: 26px;
+        font-weight: 300;
+
+        .sm-viewport({
+            font-size: 38px;
+        });
+
+        .md-viewport({
+            font-size: 52px;
+        });
+    }
+}
+

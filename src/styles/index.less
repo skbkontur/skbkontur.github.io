@@ -1,0 +1,42 @@
+@import "./common/reset.less";
+@import "./common/flexbox-grid.css";
+@import "./common/typography.less";
+@import "./common/mixins.less";
+
+@import "./nav-bar.less";
+@import "./title.less";
+@import "./blocks.less";
+@import "./footer.less";
+
+//=================================
+// LAYOUT
+//=================================
+
+html, body {
+    height: 100%;
+}
+
+html.overlay {
+    overflow: hidden;
+}
+
+//=================================
+// VISUAL STYLES
+//=================================
+
+body {
+    background-color: @xs-main-background-color;
+    .sm-viewport({
+        background-color: @main-background-color;
+    });
+}
+
+a {
+    text-decoration: none;
+    color: #1e79be;
+
+    &:hover {
+        text-decoration: underline;
+        color: #009be6;
+    }
+}

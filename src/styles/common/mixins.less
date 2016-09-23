@@ -1,0 +1,28 @@
+@xs-size: 30em;
+@sm-size: 48em;
+@md-size: 64em;
+@lg-size: 75em;
+
+.xs-only-viewport(@rules) {
+    @media only screen and (max-width: @sm-size) {
+        @rules();
+    }
+}
+
+.sm-viewport(@rules) {
+    @media only screen and (min-width: @sm-size) {
+        @rules();
+    }
+}
+
+.md-viewport(@rules) {
+    @media only screen and (min-width: @md-size) {
+        @rules();
+    }
+}
+
+.lg-viewport(@rules) {
+    @media only screen and (min-width: @lg-size) {
+        @rules();
+    }
+}
