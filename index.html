@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
+    <% var model = require('./src/index-data.js').ru %>
     <meta charset="UTF-8">
-    <title> </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= model.pageTitle %></title>
 </head>
 <body>
     <div id="content">
@@ -12,53 +14,62 @@
                     <div class="logo"></div>
                 </div>
                 <div class="sections">
-                    <a class="section active">
-                        Section 1
-                    </a>
-                    <a href="#" class="section">
-                        Section 2
-                    </a>
+                    <% model.menu.forEach(function (menuItem) { %>
+                        <a
+                            <%= menuItem.href ? 'href="' + menuItem.href + '"' : '' %>
+                            class="section">
+                            <%= menuItem.caption %>
+                        </a>
+                    <% }) %>
                 </div>
             </div>
         </div>
         <div class="header-container">
             <div class="header">
-                Some header
+                <%= model.title %>
             </div>
         </div>
         <div class="block-container">
-            <div class="blocks">
-                <div class="block block-2 cert-image">
-                    <h3><a href="#">Block header</a></h3>
-                    <span class="text">Lorem Ipsum is <a href="#">simply</a> dummy text of the printing and typesetting industry. Lorem Ipsum has been the</span>
-                    <div class="links">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+            <div class="blocks row">
+                <% model.blocks.forEach(function(block) { %>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        <div class="block">
+                            <% if (block.image) { %>
+                                <div class="image">
+                                    <img src='<%= block.image %>' />
+                                </div>
+                            <% } %>
+                            <div class="content">
+                                <h3>
+                                    <a href="<%= block.header.href %>">
+                                        <%= block.header.caption %>
+                                    </a>
+                                </h3>
+                                <span class="text">
+                                    <%= block.text %>
+                                </span>
+                                <div class="links">
+                                    <% block.links.forEach(function(link) { %>
+                                        <a href="<%= link.href %>">
+                                            <%= link.caption %>
+                                        </a>
+                                    <% }) %>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="block block-1">
-                    Block text 2
-                </div>
-                <div class="block block-1">
-                    Block text 3
-                </div>
-                <div class="block block-1">
-                    Block text 4
-                </div>
-                <div class="block block-1">
-                    Block text 5
-                </div>
+                <% }) %>
+                <div class="clear-fix"></div>
             </div>
         </div>
-    </div>
-    <div class="footer-container">
-        <div class="footer">
-            <div class="kontur-logo"></div>
-            <span>c 1988 года</span>
-            <div class="languages">
-                <a class="active">Ru</a>
-                <a href="#">En</a>
+        <div class="footer-container">
+            <div class="footer">
+                <div class="kontur-logo"></div>
+                <span>c 1988 года</span>
+                <div class="languages">
+                    <a class="active">Ru</a>
+                    <a href="#">En</a>
+                </div>
             </div>
         </div>
     </div>
