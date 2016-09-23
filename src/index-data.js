@@ -1,110 +1,58 @@
-const certImage = require('./images/cert.png');
+const moiraImage = require('./images/moira.png');
 
 module.exports = {
     'ru': {
-        pageTitle: 'Some Page Title',
-        title: 'Some title',
+        pageTitle: 'Технологии Контура',
+        title: 'Open Source',
         menu: [
             {
-                caption: 'Products',
+                caption: 'Open Source',
                 href: null
             },
             {
-                caption: 'Google',
+                caption: 'Выступления',
                 href: 'http://google.com'
             },
             {
-                caption: 'GitHub',
+                caption: 'Статьи',
                 href: 'http://github.com'
             }
         ],
         blocks: [
             {
-                image: certImage,
+                image: moiraImage,
                 header: {
-                    href: '#',
-                    caption: 'Block header'
+                    href: 'https://moira.readthedocs.io/',
+                    caption: 'Moira'
                 },
-                text: 'Lorem Ipsum is <a href="#">simply</a> dummy text of the printing and typesetting industry. Lorem Ipsum has been the',
+                text: 'Уведомления по почте, Telegram, Slack, Pushover на основании метрик из <a href="https://graphite.readthedocs.io/">Graphite</a>',
                 links: [
                     {
-                        href: '#',
-                        caption: 'link 1'
+                        href: 'https://github.com/moira-alert',
+                        caption: 'Код'
                     },
                     {
-                        href: '#',
-                        caption: 'link 2'
-                    },
-                    {
-                        href: '#',
-                        caption: 'link 3'
-                    },
-                ]
-            },
-            {
-                image: certImage,
-                header: {
-                    href: '#',
-                    caption: 'Block header'
-                },
-                text: 'Lorem Ipsum is <a href="#">simply</a> dummy text of the printing and typesetting industry. Lorem Ipsum has been the',
-                links: [
-                    {
-                        href: '#',
-                        caption: 'link 1'
-                    },
-                    {
-                        href: '#',
-                        caption: 'link 2'
-                    },
-                    {
-                        href: '#',
-                        caption: 'link 3'
+                        href: 'https://moira.readthedocs.io/',
+                        caption: 'Документация'
                     },
                 ]
             },
             {
                 header: {
-                    href: '#',
-                    caption: 'Block header'
+                    href: 'https://github.com/skbkontur/ZstdNet',
+                    caption: 'ZstdNet'
                 },
-                text: 'Lorem Ipsum is <a href="#">simply</a> dummy text of the printing and typesetting industry. Lorem Ipsum has been the',
-                links: [
-                    {
-                        href: '#',
-                        caption: 'link 1'
-                    },
-                    {
-                        href: '#',
-                        caption: 'link 2'
-                    },
-                    {
-                        href: '#',
-                        caption: 'link 3'
-                    },
-                ]
+                text: '.NET-обертка над библиотекой сжатия <a href="http://www.zstd.net">Zstandard</a>',
+                links: []
             },
             {
                 header: {
-                    href: '#',
-                    caption: 'Block header'
+                    href: 'https://github.com/tihonove/reelm',
+                    caption: 'reelm'
                 },
-                text: 'Lorem Ipsum is <a href="#">simply</a> dummy text of the printing and typesetting industry. Lorem Ipsum has been the',
-                links: [
-                    {
-                        href: '#',
-                        caption: 'link 1'
-                    },
-                    {
-                        href: '#',
-                        caption: 'link 2'
-                    },
-                    {
-                        href: '#',
-                        caption: 'link 3'
-                    },
-                ]
-            }
+                text: 'Библиотека для управления эффектами в <a href="http://redux.js.org">redux</a>',
+                links: []
+            },
         ]
     }
 }
