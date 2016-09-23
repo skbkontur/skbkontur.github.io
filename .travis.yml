@@ -4,7 +4,7 @@ node_js:
 branches:
   only:
   - develop
-install: npm install --only=dev
+install: npm install
 script: true
 before_deploy:
 - openssl aes-256-cbc -K $encrypted_381afb105c0d_key -iv $encrypted_381afb105c0d_iv -in deploy_key.enc -out deploy_key -d
