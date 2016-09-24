@@ -40,10 +40,6 @@ module.exports = {
                 loader: 'file-loader',
             },
             {
-                test: /\.ejs$/,
-                loader: 'ejs'
-            },
-            {
                 test: /\.html$/,
                 loader: 'ejs'
             },
