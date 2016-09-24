@@ -1,5 +1,7 @@
 module.exports = {
     'ru': {
+        lang: 'ru',
+        skbkonturSinceCaption: 'c 1988 года',
         pageTitle: 'Технологии Контура',
         title: 'Статьи',
         menu: [

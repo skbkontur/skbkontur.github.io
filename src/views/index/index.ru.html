@@ -1,5 +1,5 @@
 <%
     var data = require('../../models/index.js').ru
-    var template = require('./index.base.html');
+    var layout = require('../layout.html');
 %>
-<%= template(data) %>
+<%= layout({ layout: data, body: [require('./index.body.html'), data]  }) %>
