@@ -2,8 +2,10 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var autoprefixer = require('autoprefixer');
+var pages = require('./pages');
+var webpack = require('webpack');
 
-const production = process.env.NODE_ENV == 'production';
+var production = process.env.NODE_ENV == 'production';
 
 function getFileNameTemplate(ext) {
     return production ? '[name].[hash].' + ext + '' : '[name].' + ext + ''
@@ -36,16 +38,32 @@ module.exports = {
                 test: /\.(woff|woff2|eot|svg|ttf|gif|png)$/,
                 exclude: /node_modules/,
                 loader: 'file-loader',
-            }
+            },
+            {
+                test: /\.ejs$/,
+                loader: 'ejs'
+            },
+            {
+                test: /\.html$/,
+                loader: 'ejs'
+            },
         ],
+    },
+    ejsLoader : {
+        variable: 'model',
     },
     postcss: [ autoprefixer({ browsers: ['not ie < 10'] }) ],
     plugins: [
-        new ExtractTextPlugin(getFileNameTemplate('css')),
-        new HtmlWebpackPlugin({
-            template: './index.html',
-            filename: 'index.html',
-            inject: true
-        }),
+        new ExtractTextPlugin(getFileNameTemplate('css'))
     ],
 };
+
+for(var i = 0; i < pages.length; i++) {
+    var page = pages[i];
+    module.exports.plugins.push(
+        new HtmlWebpackPlugin({
+            template: './src/views/' + page.template,
+            filename: page.target,
+        }));
+}
+

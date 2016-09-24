@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="<%= model.lang %>">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= model.pageTitle %></title>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="nav-bar-container">
+                <div class="nav-bar" id="nav-bar">
+                    <div id="site-navigation-menu-overlay" class="overlay"></div>
+                    <div class="logo"></div>
+                    <button class="site-navigation-button" id="site-navigation-button">
+                        <span class="button-hamburger"></span>
+                        <span class="button-close"></span>
+                    </button>
+                    <nav class="site-navigation" id="site-navigation">
+                        <ul>
+                            <% model.menu.forEach(function (menuItem) { %>
+                                <li>
+                                    <a
+                                        <%= menuItem.href ? 'href="' + menuItem.href + '"' : '' %>
+                                        class="site-section">
+                                        <%= menuItem.caption %>
+                                    </a>
+                                </li>
+                            <% }) %>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="title-container">
+                <h1 aria-level="1"><%= model.title %></h1>
+            </div>
+        </header>
+        <main class="block-container">
+            <div class="blocks">
+                <div class="row">
+                    <% model.blocks.forEach(function(block) { %>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <article class="block">
+                                <% if (block.image) { %>
+                                    <div class="image"><img src='<%= block.image %>' /></div>
+                                <% } %>
+                                <div class="content">
+                                    <h3>
+                                        <a href="<%= block.header.href %>"><%= block.header.caption %></a>
+                                    </h3>
+                                    <div class="text">
+                                        <%= block.text %>
+                                    </div>
+                                    <div class="links">
+                                        <% block.links.forEach(function(link) { %>
+                                            <a href="<%= link.href %>"><%= link.caption %></a>
+                                        <% }) %>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    <% }) %>
+                </div>
+            </div>
+        </main>
+        <div id="push"></div>
+    </div>
+    <div class="footer-container">
+        <footer class="footer">
+            <div class="kontur-logo"></div>
+            <span><%= model.skbkonturSinceCaption %></span>
+            <div class="languages">
+                <% if(model.lang === 'ru') { %>
+                    <a class="active">Ru</a>
+                    <a href="/index.en.html">En</a>
+                <% } else { %>
+                    <a href="/">Ru</a>
+                    <a class="active">En</a>
+                <% } %>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
