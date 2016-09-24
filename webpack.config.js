@@ -2,7 +2,7 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const production = process.env.NODE_ENV == 'prod';
+const production = process.env.NODE_ENV == 'production';
 
 function getFileNameTemplate(ext) {
     return production ? '[name].[hash].' + ext + '' : '[name].' + ext + ''
