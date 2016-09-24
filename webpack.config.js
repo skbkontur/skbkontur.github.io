@@ -1,6 +1,7 @@
 /* eslint-disable */
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var autoprefixer = require('autoprefixer');
 
 const production = process.env.NODE_ENV == 'production';
 
@@ -28,7 +29,7 @@ module.exports = {
                 test: /\.(c|le)ss$/,
                 exclude: /node_modules/,
                 loader: production
-                    ? ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader')
+                    ? ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!less-loader')
                     : 'style-loader!css-loader!less-loader',
             },
             {
@@ -38,6 +39,7 @@ module.exports = {
             }
         ],
     },
+    postcss: [ autoprefixer({ browsers: ['not ie < 10'] }) ],
     plugins: [
         new ExtractTextPlugin(getFileNameTemplate('css')),
         new HtmlWebpackPlugin({
