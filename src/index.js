@@ -25,8 +25,11 @@ hammer.on('panstart panmove panend pancancel', (ev) => {
     var percent = (100 / containerWidth) * delta;
     siteNavigation.style.width = Math.round(containerWidth - delta).toString() + 'px';
     if (ev.type == 'panend' || ev.type == 'pancancel') {
-        if (Math.abs(percent) > 20 && ev.type == 'panend') {
+        if (Math.abs(percent) > 30 && ev.type == 'panend') {
             toggleMenu();
+        }
+        else {
+            siteNavigation.style.width = containerWidth.toString() + 'px';
         }
     }
 });
