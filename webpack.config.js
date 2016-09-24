@@ -1,5 +1,6 @@
 /* eslint-disable */
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var PurifyPlugin = require("purifycss-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var autoprefixer = require('autoprefixer');
 var pages = require('./pages');
@@ -30,9 +31,7 @@ module.exports = {
             {
                 test: /\.(c|le)ss$/,
                 exclude: /node_modules/,
-                loader: production
-                    ? ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!less-loader')
-                    : 'style-loader!css-loader!less-loader',
+                loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!less-loader')
             },
             {
                 test: /\.(woff|woff2|eot|svg|ttf|gif|png)$/,
@@ -50,7 +49,13 @@ module.exports = {
     },
     postcss: [ autoprefixer({ browsers: ['not ie < 10'] }) ],
     plugins: [
-        new ExtractTextPlugin(getFileNameTemplate('css'))
+        new ExtractTextPlugin(getFileNameTemplate('css')),
+        new PurifyPlugin({
+            basePath: __dirname,
+            paths: [
+                './src/views/**/*.html'
+            ]
+        }),
     ],
 };
 

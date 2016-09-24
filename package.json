@@ -27,6 +27,7 @@
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "postcss-loader": "^0.13.0",
+    "purifycss-webpack-plugin": "^2.0.3",
     "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
     "webpack": "1.13.2",
