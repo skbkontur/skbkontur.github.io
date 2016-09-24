@@ -64,6 +64,13 @@ for(var i = 0; i < pages.length; i++) {
         new HtmlWebpackPlugin({
             template: './src/views/' + page.template,
             filename: page.target,
+            minify: {
+                collapseWhitespace: true,
+                collapseBooleanAttributes: true,
+                collapseInlineTagWhitespace: true,
+                removeAttributeQuotes: true,
+                removeComments: true,
+            }
         }));
 }
 
