@@ -17,7 +17,7 @@ module.exports = {
     },
     output: {
         path: 'dist',
-        publicPath: '',
+        publicPath: '/',
         filename: getFileNameTemplate('js'),
     },
     module: {
