@@ -62,6 +62,7 @@ for(var i = 0; i < pages.length; i++) {
             filename: page.target,
             minify: {
                 collapseWhitespace: true,
+                conservativeCollapse: true,
                 collapseBooleanAttributes: true,
                 collapseInlineTagWhitespace: true,
                 removeAttributeQuotes: true,
