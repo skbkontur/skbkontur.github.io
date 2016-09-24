@@ -23,11 +23,14 @@
     height: @footer-height;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .footer {
+    flex-grow: 0;
+    flex-basis: @max-width;
     max-width: @max-width;
+    box-sizing: border-box;
     padding-left: @xs-h-padding;
     padding-right: @xs-h-padding;
     .sm-viewport({
