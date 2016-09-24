@@ -11,7 +11,7 @@ function getFileNameTemplate(ext) {
 
 module.exports = {
     entry: {
-        'index': ['babel-polyfill', './src/index.js'],
+        'index': ['./src/index.js'],
     },
     output: {
         path: 'dist',
