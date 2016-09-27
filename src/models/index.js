@@ -62,7 +62,7 @@ module.exports = {
                     href: 'https://ditrace.readthedocs.io/',
                     caption: 'DiTrace'
                 },
-                text: 'Система трассировки запросов для анализа узких мест в распределенных системах',
+                text: 'Трассировка запросов для анализа узких мест в распределенных системах',
                 links: [
                     {
                         href: 'https://github.com/ditrace',
@@ -136,7 +136,7 @@ module.exports = {
                     href: 'https://ditrace.readthedocs.io/',
                     caption: 'DiTrace'
                 },
-                text: 'A request tracing system to analyze bottlenecks in distributed systems',
+                text: 'Request tracing for bottlenecks analysis in distributed systems',
                 links: [
                     {
                         href: 'https://github.com/ditrace',
