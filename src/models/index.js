@@ -1,4 +1,5 @@
 const moiraImage = require('../images/moira.png');
+const ditraceImage = require('../images/ditrace.png');
 
 module.exports = {
     'ru': {
@@ -55,12 +56,30 @@ module.exports = {
                 text: 'Библиотека для управления эффектами в <a href="http://redux.js.org">redux</a>',
                 links: []
             },
+            {
+                image: ditraceImage,
+                header: {
+                    href: 'https://ditrace.readthedocs.io/',
+                    caption: 'DiTrace'
+                },
+                text: 'Система трассировки запросов для анализа узких мест в распределенных системах',
+                links: [
+                    {
+                        href: 'https://github.com/ditrace',
+                        caption: 'Код'
+                    },
+                    {
+                        href: 'http://ditrace.readthedocs.io/',
+                        caption: 'Документация'
+                    },
+                ]
+            },
         ]
     },
     'en': {
         lang: 'en',
         skbkonturSinceCaption: 'since 1988',
-        pageTitle: 'Технологии Контура',
+        pageTitle: 'Kontur Tech',
         title: 'Open Source',
         menu: [
             {
@@ -83,15 +102,15 @@ module.exports = {
                     href: 'https://moira.readthedocs.io/',
                     caption: 'Moira'
                 },
-                text: 'Уведомления по почте, Telegram, Slack, Pushover на основании метрик из <a href="https://graphite.readthedocs.io/">Graphite</a>',
+                text: 'Mail, Telegram, Slack and Pushover notifications based on <a href="https://graphite.readthedocs.io/">Graphite</a> metrics',
                 links: [
                     {
                         href: 'https://github.com/moira-alert',
-                        caption: 'Код'
+                        caption: 'Code'
                     },
                     {
                         href: 'https://moira.readthedocs.io/',
-                        caption: 'Документация'
+                        caption: 'Docs'
                     },
                 ]
             },
@@ -100,7 +119,7 @@ module.exports = {
                     href: 'https://github.com/skbkontur/ZstdNet',
                     caption: 'ZstdNet'
                 },
-                text: '.NET-обертка над библиотекой сжатия <a href="http://www.zstd.net">Zstandard</a>',
+                text: '.NET-wrapper of <a href="http://www.zstd.net">Zstandard</a> compression library',
                 links: []
             },
             {
@@ -108,8 +127,26 @@ module.exports = {
                     href: 'https://github.com/tihonove/reelm',
                     caption: 'reelm'
                 },
-                text: 'Библиотека для управления эффектами в <a href="http://redux.js.org">redux</a>',
+                text: 'Awesome effect management library for <a href="http://redux.js.org">redux</a>',
                 links: []
+            },
+            {
+                image: ditraceImage,
+                header: {
+                    href: 'https://ditrace.readthedocs.io/',
+                    caption: 'DiTrace'
+                },
+                text: 'A request tracing system to analyze bottlenecks in distributed systems',
+                links: [
+                    {
+                        href: 'https://github.com/ditrace',
+                        caption: 'Code'
+                    },
+                    {
+                        href: 'http://ditrace.readthedocs.io/',
+                        caption: 'Docs'
+                    },
+                ]
             },
         ]
     }
