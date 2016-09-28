@@ -110,6 +110,7 @@ module.exports = {
                 ]
             },
             {
+                image: gitHubImage,
                 header: {
                     href: 'https://github.com/skbkontur/ZstdNet',
                     caption: 'ZstdNet'
@@ -118,6 +119,7 @@ module.exports = {
                 links: []
             },
             {
+                image: gitHubImage,
                 header: {
                     href: 'https://github.com/tihonove/reelm',
                     caption: 'reelm'
