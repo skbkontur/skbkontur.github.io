@@ -72,6 +72,7 @@ for(var i = 0; i < pages.length; i++) {
                 collapseInlineTagWhitespace: true,
                 removeAttributeQuotes: true,
                 removeComments: true,
+                minifyJS: true,
             }
         }));
 }
