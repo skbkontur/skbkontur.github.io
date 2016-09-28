@@ -86,14 +86,6 @@ module.exports = {
                 caption: 'Open Source',
                 href: null
             },
-            {
-                caption: 'Talks',
-                href: '/talks.html'
-            },
-            {
-                caption: 'Articles',
-                href: '/articles.html',
-            }
         ],
         blocks: [
             {
