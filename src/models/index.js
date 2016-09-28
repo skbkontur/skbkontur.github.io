@@ -1,5 +1,6 @@
 const moiraImage = require('../images/moira.png');
 const ditraceImage = require('../images/ditrace.png');
+const gitHubImage = require('../images/github.png');
 
 module.exports = {
     'ru': {
@@ -41,6 +42,7 @@ module.exports = {
                 ]
             },
             {
+                image: gitHubImage,
                 header: {
                     href: 'https://github.com/skbkontur/ZstdNet',
                     caption: 'ZstdNet'
@@ -49,6 +51,7 @@ module.exports = {
                 links: []
             },
             {
+                image: gitHubImage,
                 header: {
                     href: 'https://github.com/tihonove/reelm',
                     caption: 'reelm'
