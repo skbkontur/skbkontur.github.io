@@ -77,6 +77,15 @@ module.exports = {
                     },
                 ]
             },
+            {
+                image: gitHubImage,
+                header: {
+                    href: 'https://github.com/skbkontur/cspreport',
+                    caption: 'cspreport'
+                },
+                text: 'Шлюз для сбора отчетов о нарушении политик безопасности <a href="https://en.wikipedia.org/wiki/Content_Security_Policy">CSP</a> и <a href="https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning">HPKP</a>',
+                links: []
+            },
         ]
     },
     'en': {
@@ -144,6 +153,15 @@ module.exports = {
                         caption: 'Docs'
                     },
                 ]
+            },
+            {
+                image: gitHubImage,
+                header: {
+                    href: 'https://github.com/skbkontur/cspreport',
+                    caption: 'cspreport'
+                },
+                text: '<a href="https://en.wikipedia.org/wiki/Content_Security_Policy">CSP</a> and <a href="https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning">HPKP</a> policy violation report collector',
+                links: []
             },
         ]
     }
