@@ -30,6 +30,12 @@ export default class Layout extends React.Component {
         }
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.content !== this.props.content) {
+            this.setState({ menuOpened: false })
+        }
+    }
+
     renderLink(menuItem) {
         const { router } = this.context;
         if (router.isActive(menuItem.href, true)) {
@@ -109,12 +115,12 @@ export default class Layout extends React.Component {
                         <div className="languages">
                             {layout.lang === 'ru'
                                 ? [
-                                    <a key='ru' className="active">Ru</a>,
-                                    <a key='en' href="/en">En</a>
+                                    <Link key='ru' className="active">Ru</Link>,
+                                    <Link key='en' to="/en">En</Link>
                                 ]
                                 : [
-                                    <a key='ru' href="/">Ru</a>,
-                                    <a key='en' className="active">En</a>
+                                    <Link key='ru' to="/">Ru</Link>,
+                                    <Link key='en' className="active">En</Link>
                                 ]}
                         </div>
                     </footer>
