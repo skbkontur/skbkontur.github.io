@@ -1,16 +1,27 @@
 /* eslint-disable */
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var PurifyPlugin = require("purifycss-webpack-plugin");
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+var CompressionPlugin = require("compression-webpack-plugin");
 var autoprefixer = require('autoprefixer');
 var pages = require('./pages');
 var webpack = require('webpack');
+var minify = require('html-minifier').minify;
+const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
 var production = process.env.NODE_ENV == 'production';
 
 function getFileNameTemplate(ext) {
     return production ? '[name].[hash].' + ext + '' : '[name].' + ext + ''
 }
+
+var paths = [
+    '/',
+    '/talks',
+    '/articles',
+    '/ru/',
+    '/ru/talks',
+    '/ru/articles',
+    '/en',
+];
 
 module.exports = {
     entry: {
@@ -20,12 +31,24 @@ module.exports = {
         path: 'dist',
         publicPath: '/',
         filename: getFileNameTemplate('js'),
+        libraryTarget: 'umd'
     },
     module: {
+        preLoaders: [
+            {
+                test: /\.html$/,
+                loader: 'dot'
+            }
+        ],
         loaders: [
             {
                 test: /\.jsx?$/,
                 loader: 'babel',
+                exclude: /node_modules/,
+            },
+            {
+                test: /\.ejs$/,
+                loader: 'ejs-loader',
                 exclude: /node_modules/,
             },
             {
@@ -38,42 +61,42 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'file-loader',
             },
-            {
-                test: /\.html$/,
-                loader: 'ejs'
-            },
         ],
     },
-    ejsLoader : {
-        variable: 'model',
+    resolve: {
+        extensions: ['', '.js', '.jsx']
     },
     postcss: [ autoprefixer({ browsers: ['not ie < 10'] }) ],
     plugins: [
-        new ExtractTextPlugin(getFileNameTemplate('css')),
-        new PurifyPlugin({
-            basePath: __dirname,
-            paths: [
-                './src/views/**/*.html'
-            ]
+        new webpack.ProvidePlugin({
+            _: "lodash"
         }),
+        new ExtractTextPlugin(getFileNameTemplate('css')),
+        new StaticSiteGeneratorPlugin('index', paths),
+        new CompressionPlugin({
+            asset: "[path]",
+            algorithm: function(buffer, opts, callback) {
+                callback(null, minify(buffer.toString('utf8'), {
+                    collapseWhitespace: true,
+                    conservativeCollapse: true,
+                    collapseBooleanAttributes: true,
+                    collapseInlineTagWhitespace: true,
+                    removeAttributeQuotes: true,
+                    removeComments: false,
+                    minifyJS: true,
+                }));
+            },
+            test: /\.html$/,
+            threshold: 1,
+            minRatio: 1
+        })
     ],
 };
 
-for(var i = 0; i < pages.length; i++) {
-    var page = pages[i];
-    module.exports.plugins.push(
-        new HtmlWebpackPlugin({
-            template: './src/views/' + page.template,
-            filename: page.target,
-            minify: {
-                collapseWhitespace: true,
-                conservativeCollapse: true,
-                collapseBooleanAttributes: true,
-                collapseInlineTagWhitespace: true,
-                removeAttributeQuotes: true,
-                removeComments: true,
-                minifyJS: true,
-            }
-        }));
+if (production) {
+    module.exports.plugins.push(new webpack.DefinePlugin({
+        'process.env': {
+            'NODE_ENV': JSON.stringify('production')
+        }
+    }));
 }
-

@@ -1,5 +1,0 @@
-<%
-    var data = require('../models/talks.js').ru
-    var layout = require('./layout.html');
-%>
-<%= layout({ layout: data, body: [function() { return ''; }, data]  }) %>

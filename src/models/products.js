@@ -1,27 +1,12 @@
-const moiraImage = require('../images/moira.png');
-const ditraceImage = require('../images/ditrace.png');
-const gitHubImage = require('../images/github.png');
+import React from 'react';
 
-module.exports = {
+import moiraImage from '../images/moira.png';
+import ditraceImage from '../images/ditrace.png';
+import gitHubImage from '../images/github.png';
+
+export default {
     'ru': {
-        lang: 'ru',
-        skbkonturSinceCaption: 'c 1988 года',
-        pageTitle: 'Технологии Контура',
-        title: 'Open Source',
-        menu: [
-            {
-                caption: 'Open Source',
-                href: null
-            },
-            {
-                caption: 'Выступления',
-                href: '/talks.html'
-            },
-            {
-                caption: 'Статьи',
-                href: '/articles.html',
-            }
-        ],
+        title: 'Open source',
         blocks: [
             {
                 image: moiraImage,
@@ -29,7 +14,7 @@ module.exports = {
                     href: 'https://moira.readthedocs.io/',
                     caption: 'Moira'
                 },
-                text: 'Уведомления по почте, Telegram, Slack, Pushover на основании метрик из <a href="https://graphite.readthedocs.io/">Graphite</a>',
+                text: <span>Уведомления по почте, Telegram, Slack, Pushover на основании метрик из <a href="https://graphite.readthedocs.io/">Graphite</a></span>,
                 links: [
                     {
                         href: 'https://github.com/moira-alert',
@@ -47,7 +32,7 @@ module.exports = {
                     href: 'https://github.com/skbkontur/ZstdNet',
                     caption: 'ZstdNet'
                 },
-                text: '.NET-обертка над библиотекой сжатия <a href="http://www.zstd.net">Zstandard</a>',
+                text: <span>.NET-обертка над библиотекой сжатия <a href="http://www.zstd.net">Zstandard</a></span>,
                 links: []
             },
             {
@@ -56,7 +41,7 @@ module.exports = {
                     href: 'https://github.com/tihonove/reelm',
                     caption: 'reelm'
                 },
-                text: 'Библиотека для управления эффектами в <a href="http://redux.js.org">redux</a>',
+                text: <span>Библиотека для управления эффектами в <a href="http://redux.js.org">redux</a></span>,
                 links: []
             },
             {
@@ -65,7 +50,7 @@ module.exports = {
                     href: 'https://ditrace.readthedocs.io/',
                     caption: 'DiTrace'
                 },
-                text: 'Трассировка запросов для анализа узких мест в распределенных системах',
+                text: <span>Трассировка запросов для анализа узких мест в распределенных системах</span>,
                 links: [
                     {
                         href: 'https://github.com/ditrace',
@@ -83,22 +68,13 @@ module.exports = {
                     href: 'https://github.com/skbkontur/cspreport',
                     caption: 'cspreport'
                 },
-                text: 'Шлюз для сбора отчетов о нарушении политик безопасности <a href="https://en.wikipedia.org/wiki/Content_Security_Policy">CSP</a> и <a href="https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning">HPKP</a>',
+                text: <span>Шлюз для сбора отчетов о нарушении политик безопасности <a href="https://en.wikipedia.org/wiki/Content_Security_Policy">CSP</a> и <a href="https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning">HPKP</a></span>,
                 links: []
             },
         ]
     },
     'en': {
-        lang: 'en',
-        skbkonturSinceCaption: 'since 1988',
-        pageTitle: 'Kontur Tech',
         title: 'Open Source',
-        menu: [
-            {
-                caption: 'Open Source',
-                href: null
-            },
-        ],
         blocks: [
             {
                 image: moiraImage,
@@ -106,7 +82,7 @@ module.exports = {
                     href: 'https://moira.readthedocs.io/',
                     caption: 'Moira'
                 },
-                text: 'Mail, Telegram, Slack and Pushover notifications based on <a href="https://graphite.readthedocs.io/">Graphite</a> metrics',
+                text: <span>Mail, Telegram, Slack and Pushover notifications based on <a href="https://graphite.readthedocs.io/">Graphite</a> metrics</span>,
                 links: [
                     {
                         href: 'https://github.com/moira-alert',
@@ -124,7 +100,7 @@ module.exports = {
                     href: 'https://github.com/skbkontur/ZstdNet',
                     caption: 'ZstdNet'
                 },
-                text: '.NET-wrapper of <a href="http://www.zstd.net">Zstandard</a> compression library',
+                text: <span>.NET-wrapper of <a href="http://www.zstd.net">Zstandard</a> compression library</span>,
                 links: []
             },
             {
@@ -133,7 +109,7 @@ module.exports = {
                     href: 'https://github.com/tihonove/reelm',
                     caption: 'reelm'
                 },
-                text: 'Awesome effect management library for <a href="http://redux.js.org">redux</a>',
+                text: <span>Awesome effect management library for <a href="http://redux.js.org">redux</a></span>,
                 links: []
             },
             {
@@ -142,7 +118,7 @@ module.exports = {
                     href: 'https://ditrace.readthedocs.io/',
                     caption: 'DiTrace'
                 },
-                text: 'Request tracing for bottlenecks analysis in distributed systems',
+                text: <span>Request tracing for bottlenecks analysis in distributed systems</span>,
                 links: [
                     {
                         href: 'https://github.com/ditrace',
@@ -160,7 +136,7 @@ module.exports = {
                     href: 'https://github.com/skbkontur/cspreport',
                     caption: 'cspreport'
                 },
-                text: '<a href="https://en.wikipedia.org/wiki/Content_Security_Policy">CSP</a> and <a href="https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning">HPKP</a> policy violation report collector',
+                text: <span><a href="https://en.wikipedia.org/wiki/Content_Security_Policy">CSP</a> and <a href="https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning">HPKP</a> policy violation report collector</span>,
                 links: []
             },
         ]

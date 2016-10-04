@@ -1,35 +1,42 @@
-import './styles/index.less'
-import Hammer from 'hammerjs';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactDOMServer from 'react-dom/server';
+import {
+    browserHistory,
+    createMemoryHistory,
+    IndexRoute,
+    Route,
+    Router,
+    RouterContext,
+    match
+} from 'react-router';
+import Helmet from "react-helmet";
+import template from './template.ejs';
+import routes from './routes';
 
-const siteNavigation = document.getElementById('site-navigation');
-let containerWidth = null;
-
-function toggleMenu() {
-    document.getElementById('site-navigation-button').classList.toggle("opened");
-    document.getElementById('nav-bar').classList.toggle("show-menu");
-    document.getElementsByTagName('html')[0].classList.toggle("overlay");
-    setTimeout(function() {
-        containerWidth = siteNavigation.offsetWidth;
-        siteNavigation.style.width = 'auto';
-    }, 500);
-
+if (typeof document !== 'undefined') {
+    const content = document.getElementById('content');
+    ReactDOM.render(<Router history={browserHistory} routes={routes} />, content);
 }
 
-document.getElementById('site-navigation-button').onclick = toggleMenu;
-document.getElementById('site-navigation-menu-overlay').onclick = toggleMenu;
+export default (locals, callback) => {
+    const history = createMemoryHistory();
+    const location = history.createLocation(locals.path);
+    const z = locals.webpackStats.compilation.getStats().toJson().assetsByChunkName;
+    const cssFiles = z.index.filter(x => /.css$/.test(x))
+    const jsFiles = z.index.filter(x => /.js$/.test(x))
 
-var hammer = new Hammer(document.getElementById('site-navigation'));
-hammer.add(new Hammer.Pan({ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 10 }));
-hammer.on('panstart panmove panend pancancel', (ev) => {
-    var delta = ev.deltaX;
-    var percent = (100 / containerWidth) * delta;
-    siteNavigation.style.width = Math.round(containerWidth - delta).toString() + 'px';
-    if (ev.type == 'panend' || ev.type == 'pancancel') {
-        if (Math.abs(percent) > 30 && ev.type == 'panend') {
-            toggleMenu();
+    match({ routes, location }, (error, redirectLocation, renderProps) => {
+        if (!renderProps) {
+            console.log(location);
         }
-        else {
-            siteNavigation.style.width = containerWidth.toString() + 'px';
-        }
-    }
-});
+        callback(null, template({
+            html: ReactDOMServer.renderToString(<RouterContext {...renderProps} />),
+            assets: {
+                js: jsFiles,
+                css: cssFiles,
+            },
+            head: Helmet.rewind(),
+        }));
+    });
+};
