@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/index.less';
 import cn from 'classnames';
-import Helmet from "react-helmet";
+import Helmet from 'react-helmet';
 import { Link } from 'react-router';
 const Hammer = typeof document !== 'undefined' ? require('hammerjs') : undefined;
 if (Hammer) {
@@ -10,7 +10,7 @@ if (Hammer) {
 
 export default class Layout extends React.Component {
     state = {
-        menuOpened: false
+        menuOpened: false,
     };
 
     static contextTypes = {

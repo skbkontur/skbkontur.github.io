@@ -1,6 +1,7 @@
 import React from 'react';
-import { IndexRoute, Route } from 'react-router';
-import Helmet from "react-helmet";
+import IndexRoute from 'react-router/lib/IndexRoute';
+import Route from 'react-router/lib/Route';
+import Helmet from 'react-helmet';
 
 import layout from './models/layout';
 import Layout from './components/Layout';
@@ -9,34 +10,34 @@ import products from './models/products';
 import Products from './components/Products';
 
 function Talks() {
-    return <div><Helmet title="Выступления" /></div>;
+    return <div><Helmet title='Выступления' /></div>;
 }
 
 function Articles() {
-    return <div><Helmet title="Статьи" /></div>;
+    return <div><Helmet title='Статьи' /></div>;
 }
 
-export default [
+export default (
     <Route>
         <Route layout={layout.ru} component={Layout} path='/(ru)'>
             <IndexRoute
                 products={products.ru}
-                components={{ content: Products, title: () => <span>Open Source</span>}}>
-            </IndexRoute>
+                components={{ content: Products, title: () => <span>Open Source</span>}}
+            />
             <Route
                 path='talks'
-                components={{ content: Talks, title: () => <span>Выступления</span>}}>
-            </Route>
+                components={{ content: Talks, title: () => <span>Выступления</span>}}
+            />
             <Route
                 path='articles'
-                components={{ content: Articles, title: () => <span>Статьи</span>}}>
-            </Route>
+                components={{ content: Articles, title: () => <span>Статьи</span>}}
+            />
         </Route>
         <Route layout={layout.en} component={Layout} path='/en'>
             <IndexRoute
                 products={products.en}
-                components={{ content: Products, title: () => <span>Open Source</span>}}>
-            </IndexRoute>
+                components={{ content: Products, title: () => <span>Open Source</span>}}
+            />
         </Route>
     </Route>
-];
+);

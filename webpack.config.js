@@ -2,7 +2,6 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CompressionPlugin = require("compression-webpack-plugin");
 var autoprefixer = require('autoprefixer');
-var pages = require('./pages');
 var webpack = require('webpack');
 var minify = require('html-minifier').minify;
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
@@ -25,7 +24,8 @@ var paths = [
 
 module.exports = {
     entry: {
-        'index': ['./src/index.js'],
+        'index': ['./src/client.js'],
+        'server': ['./src/server.js'],
     },
     output: {
         path: 'dist',
@@ -54,7 +54,7 @@ module.exports = {
             {
                 test: /\.(c|le)ss$/,
                 exclude: /node_modules/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!less-loader')
+                loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!less-loader'),
             },
             {
                 test: /\.(woff|woff2|eot|svg|ttf|gif|png)$/,
@@ -72,7 +72,7 @@ module.exports = {
             _: "lodash"
         }),
         new ExtractTextPlugin(getFileNameTemplate('css')),
-        new StaticSiteGeneratorPlugin('index', paths),
+        new StaticSiteGeneratorPlugin('server', paths),
         new CompressionPlugin({
             asset: "[path]",
             algorithm: function(buffer, opts, callback) {
@@ -99,4 +99,7 @@ if (production) {
             'NODE_ENV': JSON.stringify('production')
         }
     }));
+}
+else {
+    module.exports.entry.index.unshift("webpack-dev-server/client?http://localhost:8080/");
 }
