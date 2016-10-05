@@ -38,10 +38,37 @@
             display: flex;
             align-items: center;
 
+            .kontur-logo {
+                flex-grow: 0;
+                flex-shrink: 0;
+            }
+
+            .since-text {
+                flex-grow: 0;
+                flex-shrink: 0;
+            }
+
             .languages {
+                flex-grow: 0;
+                flex-shrink: 0;
                 display: inline-block;
                 margin-left: 50px;
                 white-space: nowrap;
+            }
+
+            .spacer {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 100%;
+            }
+            .email {
+                display: none;
+
+                .sm-viewport({
+                    display: inline-block;
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                });
             }
         }
     }
@@ -90,6 +117,19 @@
                 }
             }
         }
+
+            .email {
+                text-decoration: none;
+                &:hover {
+                    .text {
+                        text-decoration: underline;
+                    }
+                }
+                .icon {
+                    color: #444;
+                    font-size: 16px;
+                }
+            }
     }
 
 }

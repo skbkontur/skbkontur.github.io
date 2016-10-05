@@ -13,7 +13,7 @@ export default function Footer({ skbkonturSinceCaption, lang }: FooterProps) {
         <div className={cn('container')}>
             <footer className={cn('footer', 'fixed-width-content')}>
                 <div className={cn('kontur-logo')} />
-                <span>{skbkonturSinceCaption}</span>
+                <span className={cn('since-text')}>{skbkonturSinceCaption}</span>
                 <div className={cn('languages')}>
                     {lang === 'ru'
                         ? [
@@ -25,6 +25,12 @@ export default function Footer({ skbkonturSinceCaption, lang }: FooterProps) {
                             <Link key='en' className={cn('active')}>En</Link>,
                         ]}
                 </div>
+                <div className={cn('spacer')}/>
+                <a className={cn('email')} href='mailto:opensource@kontur.ru'>
+                    <span className={cn('icon')}>{'\u2709'}</span>
+                    {'\u0020'}
+                    <span className={cn('text')}>opensource@kontur.ru</span>
+                </a>
             </footer>
         </div>
     );
