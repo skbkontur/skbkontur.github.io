@@ -4,6 +4,9 @@ import cn from 'classnames';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
 const Hammer = typeof document !== 'undefined' ? require('hammerjs') : undefined;
+
+import Footer from './Footer/Footer';
+
 if (Hammer) {
     delete Hammer.defaults.cssProps.userSelect;
 }
@@ -148,23 +151,10 @@ export default class Layout extends React.Component {
                     </main>
                     <div id="push"></div>
                 </div>
-                <div className="footer-container">
-                    <footer className="footer fixed-width-content">
-                        <div className="kontur-logo"></div>
-                        <span>{layout.skbkonturSinceCaption}</span>
-                        <div className="languages">
-                            {layout.lang === 'ru'
-                                ? [
-                                    <Link key='ru' className="active">Ru</Link>,
-                                    <Link key='en' to="/en">En</Link>
-                                ]
-                                : [
-                                    <Link key='ru' to="/">Ru</Link>,
-                                    <Link key='en' className="active">En</Link>
-                                ]}
-                        </div>
-                    </footer>
-                </div>
+                <Footer
+                    skbkonturSinceCaption={layout.skbkonturSinceCaption}
+                    lang={layout.lang}
+                />
             </div>
         );
     }

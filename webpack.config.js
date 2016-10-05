@@ -34,12 +34,6 @@ module.exports = {
         libraryTarget: 'umd'
     },
     module: {
-        preLoaders: [
-            {
-                test: /\.html$/,
-                loader: 'dot'
-            }
-        ],
         loaders: [
             {
                 test: /\.jsx?$/,
@@ -48,18 +42,23 @@ module.exports = {
             },
             {
                 test: /\.ejs$/,
-                loader: 'ejs-loader',
+                loader: 'ejs',
                 exclude: /node_modules/,
             },
             {
-                test: /\.(c|le)ss$/,
+                test: /\.less$/,
                 exclude: /node_modules/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!less-loader'),
+                loaders: [
+                    'classnames',
+                    production
+                        ? ExtractTextPlugin.extract('style', 'css!postcss!less')
+                        : ExtractTextPlugin.extract('style', 'css?localIdentName=[name]-[local]-[hash:base64:3]!postcss!less')
+                ],
             },
             {
                 test: /\.(woff|woff2|eot|svg|ttf|gif|png)$/,
                 exclude: /node_modules/,
-                loader: 'file-loader',
+                loader: 'file',
             },
         ],
     },
