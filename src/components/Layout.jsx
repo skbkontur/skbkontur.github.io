@@ -3,6 +3,10 @@ import '../styles/index.less';
 import cn from 'classnames';
 import Helmet from "react-helmet";
 import { Link } from 'react-router';
+const Hammer = typeof document !== 'undefined' ? require('hammerjs') : undefined;
+if (Hammer) {
+    delete Hammer.defaults.cssProps.userSelect;
+}
 
 export default class Layout extends React.Component {
     state = {
@@ -24,10 +28,45 @@ export default class Layout extends React.Component {
                 document.getElementsByTagName('html')[0].className = '';
             }
             setTimeout(() => {
+                this.refs.siteNavigationOverlay.style.opacity = null;
                 this.containerWidth = this.refs.siteNavigation.offsetWidth;
                 this.refs.siteNavigation.style.width = 'auto';
             }, 500);
         }
+    }
+
+    componentDidMount() {
+        var hammer = new Hammer(this.refs.siteNavigation);
+        hammer.add(new Hammer.Pan({ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 10 }));
+        hammer.on('panstart panmove panend pancancel', (ev) => {
+            var delta = ev.deltaX;
+            var percent = (100 / this.containerWidth) * delta;
+            this.refs.siteNavigation.style.width = Math.round(this.containerWidth - delta).toString() + 'px';
+            console.log(percent)
+            this.refs.siteNavigationOverlay.style.opacity = Math.min(0.7, 0.7 * (this.containerWidth - delta) / this.containerWidth);
+            if (ev.type == 'panend' || ev.type == 'pancancel') {
+                if (percent > 30 && ev.type == 'panend') {
+                    this.toggleMenu();
+                }
+                else {
+                    this.refs.siteNavigation.style.width = this.containerWidth.toString() + 'px';
+
+                }
+            }
+        });
+
+        var containerHammer = new Hammer(this.refs.container);
+        containerHammer.on('swipeleft', (ev) => {
+            if (this.state.menuOpened) {
+                return;
+            }
+            var delta = ev.deltaX;
+            const containerWidth = 300;
+            var percent = - (100 / containerWidth) * delta;
+            if (percent > 30) {
+                this.toggleMenu();
+            }
+        });
     }
 
     componentWillReceiveProps(nextProps) {
@@ -66,7 +105,7 @@ export default class Layout extends React.Component {
             route: { layout },
         } = this.props;
         return (
-            <div id="react-wrapper">
+            <div id="react-wrapper" ref='container'>
                 <div id="wrapper">
                     <Helmet
                         htmlAttributes={{
@@ -77,6 +116,7 @@ export default class Layout extends React.Component {
                         <div className="nav-bar-container">
                             <div className={cn('nav-bar', 'fixed-width-content', { 'show-menu': menuOpened })} id="nav-bar">
                                 <div
+                                    ref='siteNavigationOverlay'
                                     onClick={() => this.toggleMenu()}
                                     id="site-navigation-menu-overlay"
                                     className="overlay"></div>
