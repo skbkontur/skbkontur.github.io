@@ -9,9 +9,8 @@ import Layout from './components/Layout';
 import products from './models/products';
 import Products from './components/Products';
 
-function Talks() {
-    return <div><Helmet title='Выступления' /></div>;
-}
+import talks from './models/talks';
+import Talks from './components/Talks/Talks';
 
 function Articles() {
     return <div><Helmet title='Статьи' /></div>;
@@ -26,6 +25,7 @@ export default (
             />
             <Route
                 path='talks'
+                talks={talks}
                 components={{ content: Talks, title: () => <span>Выступления</span>}}
             />
             <Route

@@ -36,13 +36,13 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.jsx?$/,
-                loader: 'babel',
+                test: /\.ejs$/,
+                loader: 'ejs',
                 exclude: /node_modules/,
             },
             {
-                test: /\.ejs$/,
-                loader: 'ejs',
+                test: /\.jsx?$/,
+                loader: 'babel',
                 exclude: /node_modules/,
             },
             {
@@ -58,6 +58,26 @@ module.exports = {
             {
                 test: /\.(woff|woff2|eot|svg|ttf|gif|png)$/,
                 exclude: /node_modules/,
+                loader: 'file',
+            },
+            {
+                test: /\.jsx?$/,
+                loader: 'babel',
+                include: /retail-ui/,
+            },
+            {
+                test: /\.less$/,
+                include: /retail-ui/,
+                loaders: [
+                    'classnames',
+                    production
+                        ? ExtractTextPlugin.extract('style', 'css!postcss!less')
+                        : ExtractTextPlugin.extract('style', 'css?localIdentName=[name]-[local]-[hash:base64:3]!postcss!less')
+                ],
+            },
+            {
+                test: /\.(woff|woff2|eot|svg|ttf|gif|png)$/,
+                include: /retail-ui/,
                 loader: 'file',
             },
         ],
