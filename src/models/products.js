@@ -5,8 +5,13 @@ import ditraceImage from '../images/ditrace.png';
 import gitHubImage from '../images/github.png';
 
 export default {
-    'ru': {
+    ['ru']: {
         title: 'Open source',
+        meta: [
+            { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
+            { ['name']: 'description', ['content']: 'Open source технологии компании СКБ Контур' },
+            { ['name']: 'keywords', ['content']: 'open source,скб контур' },
+        ],
         blocks: [
             {
                 image: moiraImage,
@@ -75,6 +80,11 @@ export default {
     },
     'en': {
         title: 'Open Source',
+        meta: [
+            { ['http-equiv']: 'content-language', ['content']: 'en-US' },
+            { ['name']: 'description', ['content']: 'SKB Kontur Open source' },
+            { ['name']: 'keywords', ['content']: 'open source,skb kontur' },
+        ],
         blocks: [
             {
                 image: moiraImage,

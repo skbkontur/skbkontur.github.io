@@ -46,7 +46,10 @@ function Article({ article }) {
 export default function Articles({ route: { articles } }) {
     return (
         <div className={cn('root', 'fixed-width-content')}>
-            <Helmet title={articles.title} />
+            <Helmet
+                title={articles.title}
+                meta={articles.meta}
+            />
             <div className={cn('row')}>
                 {articles.items.map((article, index) => (
                     <div key={index} className={cn('article-container', 'col-lg-4', 'col-md-4', 'col-sm-4', 'col-xs-12')}>

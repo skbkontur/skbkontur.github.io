@@ -2,6 +2,11 @@ import relayImage from './images/relay.png';
 
 export default {
     title: 'Выступления',
+    meta: [
+        { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
+        { ['name']: 'description', ['content']: 'Записи докладов с конференции от компании СКБ Контур' },
+        { ['name']: 'keywords', ['content']: 'видео,технологии,доклад,скб контур' },
+    ],
     items: [
         {
             image: relayImage,

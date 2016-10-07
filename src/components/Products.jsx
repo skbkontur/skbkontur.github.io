@@ -4,7 +4,10 @@ import Helmet from 'react-helmet';
 export default function Products({ route: { products } }) {
     return (
         <div className="blocks fixed-width-content">
-            <Helmet title={products.title} />
+            <Helmet
+                title={products.title}
+                meta={products.meta}
+            />
             <div className="row">
                 {products.blocks.map((block, index) => (
                     <div key={index} className="col-lg-4 col-md-6 col-sm-6 col-xs-12">

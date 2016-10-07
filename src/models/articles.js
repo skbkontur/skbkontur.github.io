@@ -1,5 +1,10 @@
 export default {
     title: 'Статьи',
+        meta: [
+            { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
+            { ['name']: 'description', ['content']: 'Статьи про технологии компании СКБ Контур' },
+            { ['name']: 'keywords', ['content']: 'статьи,технологии,скб контур' },
+        ],
     items: [
         {
             speakerFullName: 'Волокитин Павел',

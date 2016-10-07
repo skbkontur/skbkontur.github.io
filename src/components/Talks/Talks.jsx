@@ -49,7 +49,10 @@ function Talk({ talk }) {
 export default function Talks({ route: { talks } }) {
     return (
         <div className={cn('root', 'fixed-width-content')}>
-            <Helmet title={talks.title} />
+            <Helmet
+                title={talks.title}
+                meta={talks.meta}
+            />
             <div className={cn('row')}>
                 {talks.items.map((talk, index) => (
                     <div key={index} className={cn('talk-container', 'col-lg-4', 'col-md-4', 'col-sm-4', 'col-xs-12')}>
