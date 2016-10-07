@@ -1,7 +1,6 @@
 import React from 'react';
 import IndexRoute from 'react-router/lib/IndexRoute';
 import Route from 'react-router/lib/Route';
-import Helmet from 'react-helmet';
 
 import layout from './models/layout';
 import Layout from './components/Layout';
@@ -12,9 +11,8 @@ import Products from './components/Products';
 import talks from './models/talks';
 import Talks from './components/Talks/Talks';
 
-function Articles() {
-    return <div><Helmet title='Статьи' /></div>;
-}
+import articles from './models/articles';
+import Articles from './components/Articles/Articles';
 
 export default (
     <Route>
@@ -30,6 +28,7 @@ export default (
             />
             <Route
                 path='articles'
+                articles={articles}
                 components={{ content: Articles, title: () => <span>Статьи</span>}}
             />
         </Route>
