@@ -1,7 +1,7 @@
 import volokitinImage from './images/volokitin.jpg';
-import kazakovImage from './image/kazakov.jpg';
-import chevdarImage from './image/chevdar.jpg';
-import tihonovImage from './image/tihonov.jpg';
+import kazakovImage from './images/kazakov.jpg';
+import chevdarImage from './images/chevdar.jpg';
+import tihonovImage from './images/tihonov.jpg';
 
 export default {
     title: 'Выступления',
