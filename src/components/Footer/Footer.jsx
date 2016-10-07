@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 import cn from './Footer.less';
+import Icon from 'retail-ui/components/Icon';
 
 type FooterProps = {
     skbkonturSinceCaption: string;
@@ -27,7 +28,7 @@ export default function Footer({ skbkonturSinceCaption, lang }: FooterProps) {
                 </div>
                 <div className={cn('spacer')}/>
                 <a className={cn('email')} href='mailto:opensource@kontur.ru'>
-                    <span className={cn('icon')}>{'\u2709'}</span>
+                    <span className={cn('icon')}><Icon name='envelop' /></span>
                     {'\u0020'}
                     <span className={cn('text')}>opensource@kontur.ru</span>
                 </a>
