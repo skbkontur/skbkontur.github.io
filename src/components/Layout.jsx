@@ -82,13 +82,13 @@ export default class Layout extends React.Component {
         const { router } = this.context;
         if (router.isActive(menuItem.href, true)) {
             return (
-                <Link className="site-section">
+                <Link title={menuItem.caption} className="site-section">
                     {menuItem.caption}
                 </Link>
             )
         }
         return (
-            <Link to={menuItem.href} className="site-section">
+            <Link title={menuItem.caption} to={menuItem.href} className="site-section">
                 {menuItem.caption}
             </Link>
         );
