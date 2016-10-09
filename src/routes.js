@@ -3,7 +3,7 @@ import IndexRoute from 'react-router/lib/IndexRoute';
 import Route from 'react-router/lib/Route';
 
 import layout from './models/layout';
-import Layout from './components/Layout';
+import Layout from './components/Layout/Layout';
 
 import products from './models/products';
 import Products from './components/Products';

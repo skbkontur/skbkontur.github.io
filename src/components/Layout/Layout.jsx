@@ -1,11 +1,11 @@
 import React from 'react';
-import '../styles/index.less';
+import '../../styles/index.less';
 import cn from 'classnames';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
 const Hammer = typeof document !== 'undefined' ? require('hammerjs') : undefined;
 
-import Footer from './Footer/Footer';
+import Footer from '../Footer/Footer';
 
 if (Hammer) {
     delete Hammer.defaults.cssProps.userSelect;
@@ -40,8 +40,15 @@ export default class Layout extends React.Component {
 
     componentDidMount() {
         var hammer = new Hammer(this.refs.siteNavigation);
-        hammer.add(new Hammer.Pan({ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 10 }));
+        hammer.add(new Hammer.Pan({
+            direction: Hammer.DIRECTION_HORIZONTAL,
+            threshold: 10,
+            inputClass: Hammer.TouchInput,
+        }));
         hammer.on('panstart panmove panend pancancel', (ev) => {
+            if (ev.pointerType !== "touch") {
+                return;
+            }
             var delta = ev.deltaX;
             var percent = (100 / this.containerWidth) * delta;
             this.refs.siteNavigation.style.width = Math.round(this.containerWidth - delta).toString() + 'px';
@@ -58,7 +65,9 @@ export default class Layout extends React.Component {
             }
         });
 
-        var containerHammer = new Hammer(this.refs.container);
+        var containerHammer = new Hammer(this.refs.container, {
+            inputClass: Hammer.TouchInput,
+        });
         containerHammer.on('swipeleft', (ev) => {
             if (this.state.menuOpened) {
                 return;
