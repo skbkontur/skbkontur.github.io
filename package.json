@@ -5,7 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server -d --hot",
     "build": "rimraf dist && SET NODE_ENV=production&webpack -p",
-    "publish": "npm run build && cd dist && echo 'tech.kontur-team.ru' > CNAME && git init && git commit --allow-empty -m \"update docs\" && git add . && git commit -am \"update docs\" && git push git@github.com:skbkontur/skbkontur.github.io.git master --force"
+    "publish": "npm run build && cd dist && echo 'tech.skbkontur.ru' > CNAME && git init && git commit --allow-empty -m \"update docs\" && git add . && git commit -am \"update docs\" && git push git@github.com:skbkontur/skbkontur.github.io.git master --force"
   },
   "author": "",
   "dependencies": {
