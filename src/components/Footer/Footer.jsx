@@ -27,10 +27,10 @@ export default function Footer({ skbkonturSinceCaption, lang }: FooterProps) {
                         ]}
                 </div>
                 <div className={cn('spacer')}/>
-                <a className={cn('email')} href='mailto:opensource@kontur.ru'>
+                <a className={cn('email')} href='mailto:opensource@skbkontur.ru'>
                     <span className={cn('icon')}><Icon name='envelop' /></span>
                     {'\u0020'}
-                    <span className={cn('text')}>opensource@kontur.ru</span>
+                    <span className={cn('text')}>opensource@skbkontur.ru</span>
                 </a>
             </footer>
         </div>
