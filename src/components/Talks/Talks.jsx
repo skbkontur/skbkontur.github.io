@@ -2,15 +2,16 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import cn from './Talks.less';
 import Icon from 'retail-ui/components/Icon';
+import Link from 'retail-ui/components/Link';
 
 
-function ShortInfoBlock({ icon, text }) {
+function Tag({ text }) {
     if (text === null || text === undefined || text === '') {
         return null;
     }
     return (
-        <span className={cn('short-info-block')}>
-            <Icon name={icon} />{'\u0020'}{text}
+        <span className={cn('tag')}>
+            <Icon name='tag' />{'\u0020'}{text}
         </span>
     );
 }
@@ -22,19 +23,23 @@ function Talk({ talk }) {
                 <a href={talk.linkToVideo}><img src={talk.image} /></a>
             </div>
             <div className={cn('content')}>
-                <h3><a href={talk.linkToSlides}>{talk.title}</a></h3>
-                <div className={cn('speaker')}>{talk.speakerFullName}</div>
+                <h3><a href={talk.linkToVideo}>{talk.title}</a></h3>
+                <div className={cn('speaker-and-slides-link')}>
+                    <div className={cn('speaker')}>{talk.speakerFullName}</div>
+                    <div className={cn('slides-link')}>
+                        <Link
+                            href={talk.linkToSlides}
+                            icon='card'>
+                            Слайды
+                        </Link>
+                    </div>
+                </div>
                 <div className={cn('short-info')}>
-                    <ShortInfoBlock
-                        icon='star'
-                        text={talk.eventName}
-                    />
-                    <ShortInfoBlock
-                        icon='calendar'
-                        text={talk.dateString}
-                    />
+                    <span className={cn('event-info')}>
+                        {[talk.eventName, talk.dateString].filter(x => x).join(', ')}
+                    </span>
                     {talk.tags.map((x, index) => (
-                        <ShortInfoBlock
+                        <Tag
                             key={index}
                             icon='tag'
                             text={x}
