@@ -93,6 +93,11 @@ module.exports = {
     resolve: {
         extensions: ['', '.js', '.jsx']
     },
+    resolveLoader: {
+        alias: {
+            'talks-image-responsive': 'responsive?sizes[]=80&sizes[]=1000',
+        }
+    },
     postcss: [ autoprefixer({ browsers: ['not ie < 10'] }) ],
     plugins: [
         new webpack.ProvidePlugin({

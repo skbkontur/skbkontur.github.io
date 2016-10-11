@@ -1,16 +1,16 @@
-import volokitinImage from './images/volokitin.jpg';
-import kazakovImage from './images/kazakov.jpg';
-import chevdarImage from './images/chevdar.jpg';
-import tihonovImage from './images/tihonov.jpg';
-import burmistrovImage from './images/burmistrov.jpg';
-import egorovImage from './images/egorov.jpg';
-import larkovImage from './images/larkov.jpg';
-import ronzhinaImage from './images/ronzhina.png';
-import ratkinImage from './images/ratkin.png';
-import golubevImage from './images/golubev.png';
-import moiseevImage from './images/moiseev.png';
-import konovalovImage from './images/konovalov.png';
-import sobolevaImage from './images/soboleva.jpg';
+import volokitinImage from 'talks-image-responsive!./images/volokitin.jpg';
+import kazakovImage from 'talks-image-responsive!./images/kazakov.jpg';
+import chevdarImage from 'talks-image-responsive!./images/chevdar.jpg';
+import tihonovImage from 'talks-image-responsive!./images/tihonov.jpg';
+import burmistrovImage from 'talks-image-responsive!./images/burmistrov.jpg';
+import egorovImage from 'talks-image-responsive!./images/egorov.jpg';
+import larkovImage from 'talks-image-responsive!./images/larkov.jpg';
+import ronzhinaImage from 'talks-image-responsive!./images/ronzhina.png';
+import ratkinImage from 'talks-image-responsive!./images/ratkin.png';
+import golubevImage from 'talks-image-responsive!./images/golubev.png';
+import moiseevImage from 'talks-image-responsive!./images/moiseev.png';
+import konovalovImage from 'talks-image-responsive!./images/konovalov.png';
+import sobolevaImage from 'talks-image-responsive!./images/soboleva.jpg';
 
 export default {
     title: 'Выступления',

@@ -28,11 +28,22 @@ function sortTalks(talks) {
     return talksToSort;
 }
 
+function buildSrcSet(image) {
+    const smallImage = image.images.find(x => x.width === 80);
+    const normalImage = image.images[image.images.length - 1];
+    return `${smallImage.path} 500w,${normalImage.path} 1500w`;
+}
+
 function Talk({ talk }) {
     return (
         <article className={cn('talk')}>
             <div className={cn('image')}>
-                <a href={talk.linkToVideo}><img src={talk.image} /></a>
+                <a href={talk.linkToVideo}>
+                    <img
+                        src={talk.image.src}
+                        srcSet={buildSrcSet(talk.image)}
+                    />
+                </a>
             </div>
             <div className={cn('content')}>
                 <h3><a href={talk.linkToVideo}>{talk.title}</a></h3>
