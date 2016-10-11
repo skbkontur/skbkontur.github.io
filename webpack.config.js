@@ -24,8 +24,14 @@ var paths = [
 
 module.exports = {
     entry: {
-        'index': ['./src/client.js'],
-        'server': ['./src/server.js'],
+        'index': [
+            'moment/locale/ru',
+            './src/client.js'
+        ],
+        'server': [
+            'moment/locale/ru',
+            './src/server.js'
+        ],
     },
     output: {
         path: 'dist',
