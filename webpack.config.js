@@ -25,10 +25,12 @@ var paths = [
 module.exports = {
     entry: {
         'index': [
+            'babel-polyfill',
             'moment/locale/ru',
             './src/client.js'
         ],
         'server': [
+            'babel-polyfill',
             'moment/locale/ru',
             './src/server.js'
         ],
