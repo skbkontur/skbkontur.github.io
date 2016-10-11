@@ -6,6 +6,11 @@ import burmistrovImage from './images/burmistrov.jpg';
 import egorovImage from './images/egorov.jpg';
 import larkovImage from './images/larkov.jpg';
 import ronzhinaImage from './images/ronzhina.png';
+import ratkinImage from './images/ratkin.png';
+import golubevImage from './images/golubev.png';
+import moiseevImage from './images/moiseev.png';
+import konovalovImage from './images/konovalov.png';
+import sobolevaImage from './images/soboleva.jpg';
 
 export default {
     title: 'Выступления',
@@ -114,6 +119,56 @@ export default {
             tags: ['testing'],
             linkToVideo: 'https://www.youtube.com/watch?v=-4zAc7kWAhc&index=5&list=PLRdS-n5seLRoMRdNO1k1FeFeBMgBRRX6j',
             linkToSlides: 'https://drive.google.com/open?id=0B-qtqQ5D71UQRmF5dHVuWU8tYlU',
+        },
+        {
+            image: ratkinImage,
+            speakerFullName: 'Кирилл Раткин',
+            eventName: 'DUMP',
+            title: 'Планирование развития автотестов',
+            dateString: 'апрель 2016',
+            tags: ['testing'],
+            linkToVideo: 'https://www.youtube.com/watch?v=4yrWt_b835k&index=4&list=PLRdS-n5seLRoMRdNO1k1FeFeBMgBRRX6j',
+            linkToSlides: 'https://drive.google.com/open?id=0B-qtqQ5D71UQSHRBaGhKVjRhMkE',
+        },
+        {
+            image: golubevImage,
+            speakerFullName: 'Александр Голубев',
+            eventName: 'DUMP',
+            title: 'Адаптация команды после увольнения сотрудников',
+            dateString: 'апрель 2016',
+            tags: ['management', 'hr'],
+            linkToVideo: 'https://www.youtube.com/watch?v=pL6AFI5GpqM&index=3&list=PLRdS-n5seLRrEr-0A2koGR1a2tM9dM0an',
+            linkToSlides: 'https://drive.google.com/open?id=0B-qtqQ5D71UQQkxlNXRPZTFjRTA',
+        },
+        {
+            image: moiseevImage,
+            speakerFullName: 'Дмитрий Моисеев',
+            eventName: 'DUMP',
+            title: 'Xamarin: кроссплатформенные грабли',
+            dateString: 'апрель 2016',
+            tags: ['mobile'],
+            linkToVideo: 'https://www.youtube.com/watch?v=Ktc7ns2Z2Rw&index=6&list=PLRdS-n5seLRrSqdcVMqQge9YRcQztqgbO',
+            linkToSlides: 'https://drive.google.com/open?id=0B-qtqQ5D71UQcmRKOHVUU0E2Uzg',
+        },
+        {
+            image: konovalovImage,
+            speakerFullName: 'Никита Коновалов, Юлия Петрунина',
+            eventName: 'DUMP',
+            title: 'Тернистый путь принятия решений',
+            dateString: 'март 2015',
+            tags: ['design'],
+            linkToVideo: 'https://www.youtube.com/watch?v=KB48F8s7jzY&index=3&list=PLRdS-n5seLRrEb91BeyQfcRJCOwb7issv',
+            linkToSlides: 'http://www.slideshare.net/it-people/dump2015-46259341',
+        },
+        {
+            image: sobolevaImage,
+            speakerFullName: 'Эльвира Соболева',
+            eventName: 'DUMP',
+            title: 'Тестировщик в роли менеджера итерации',
+            dateString: 'март 2015',
+            tags: ['testing'],
+            linkToVideo: 'https://www.youtube.com/watch?v=qyJ4Uf0FmGE&list=PLRdS-n5seLRp_rmnC69UpyhiPpo1tRYLv&index=3',
+            linkToSlides: 'http://www.slideshare.net/it-people/ss-46260346',
         },
     ],
 };
