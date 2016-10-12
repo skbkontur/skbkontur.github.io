@@ -11,6 +11,9 @@ import golubevImage from 'talks-image-responsive!./images/golubev.png';
 import moiseevImage from 'talks-image-responsive!./images/moiseev.png';
 import konovalovImage from 'talks-image-responsive!./images/konovalov.png';
 import sobolevaImage from 'talks-image-responsive!./images/soboleva.jpg';
+import vdovichenkoImage from 'talks-image-responsive!./images/vdovichenko.png';
+import kirpichnikovImage from 'talks-image-responsive!./images/kirpichnikov.jpg';
+import khruschevImage from 'talks-image-responsive!./images/khruschev.jpg';
 
 export default {
     title: 'Выступления',
@@ -169,6 +172,56 @@ export default {
             tags: ['testing'],
             linkToVideo: 'https://www.youtube.com/watch?v=qyJ4Uf0FmGE&list=PLRdS-n5seLRp_rmnC69UpyhiPpo1tRYLv&index=3',
             linkToSlides: 'http://www.slideshare.net/it-people/ss-46260346',
+        },
+        {
+            image: vdovichenkoImage,
+            speakerFullName: 'Антон Вдовиченко',
+            eventName: 'DUMP',
+            title: 'Как тестировщик мануалы писал',
+            dateString: 'март 2015',
+            tags: ['testing'],
+            linkToVideo: 'https://www.youtube.com/watch?v=FtPX19c76l8&list=PLRdS-n5seLRp_rmnC69UpyhiPpo1tRYLv&index=2',
+            linkToSlides: 'http://www.slideshare.net/it-people/dump2015-46260163',
+        },
+        {
+            image: egorovImage,
+            speakerFullName: 'Павел Егоров',
+            eventName: 'DUMP',
+            title: 'Обучение разработчиков?!! Я думал они как-нибудь сами...',
+            dateString: 'март 2015',
+            tags: ['management', 'education'],
+            linkToVideo: 'https://www.youtube.com/watch?v=80YK0oqJhC4&list=PLRdS-n5seLRrR2gBuM7Kt1yIizNGIrnM9&index=6',
+            linkToSlides: 'http://www.slideshare.net/it-people/dump2015-46489805',
+        },
+        {
+            image: kirpichnikovImage,
+            speakerFullName: 'Алексей Кирпичников',
+            eventName: 'DUMP',
+            title: 'Свежие новости из мира слабо полностью антисимметричных квазигрупп десятого порядка',
+            dateString: 'март 2015',
+            tags: ['science', 'math'],
+            linkToVideo: 'https://www.youtube.com/watch?v=cwKnHHRutUs&index=6&list=PLRdS-n5seLRp6nwfAcqo7DTXta5GcclMq',
+            linkToSlides: 'http://www.slideshare.net/it-people/ss-k',
+        },
+        {
+            image: burmistrovImage,
+            speakerFullName: 'Иван Бурмистров, Александр Казаков, Иван Дашкевич',
+            eventName: 'DUMP',
+            title: 'Микросервисная архитектура в теории и на практике',
+            dateString: 'март 2015',
+            tags: ['backend', 'architecture'],
+            linkToVideo: 'https://www.youtube.com/watch?v=LDTa2Nx5qrw&list=PLRdS-n5seLRpIYtTllDAneJivR5Xea3nQ&index=6',
+            linkToSlides: 'https://drive.google.com/file/d/0B-qtqQ5D71UQam9KbUlrOFFzWTQ/view?usp=sharing',
+        },
+        {
+            image: khruschevImage,
+            speakerFullName: 'Михаил Хрущев',
+            eventName: 'DUMP',
+            title: 'Сайты в Фокусе',
+            dateString: 'март 2015',
+            tags: ['backend'],
+            linkToVideo: 'https://www.youtube.com/watch?v=tZ7wYPXhQh8&list=PLRdS-n5seLRpIYtTllDAneJivR5Xea3nQ&index=2',
+            linkToSlides: 'http://prezi.com/9ivkpl5qwtxx/',
         },
     ],
 };
