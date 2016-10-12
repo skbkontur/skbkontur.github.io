@@ -149,7 +149,7 @@ export default {
             eventName: 'DUMP',
             title: 'Xamarin: кроссплатформенные грабли',
             dateString: 'апрель 2016',
-            tags: ['mobile'],
+            tags: ['mobile', 'xamarin'],
             linkToVideo: 'https://www.youtube.com/watch?v=Ktc7ns2Z2Rw&index=6&list=PLRdS-n5seLRrSqdcVMqQge9YRcQztqgbO',
             linkToSlides: 'https://drive.google.com/open?id=0B-qtqQ5D71UQcmRKOHVUU0E2Uzg',
         },
