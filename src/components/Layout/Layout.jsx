@@ -155,9 +155,7 @@ export default class Layout extends React.Component {
                             <h1 className="fixed-width-content">{title}</h1>
                         </div>
                     </header>
-                    <main className="block-container">
-                        {content}
-                    </main>
+                    {content}
                     <div id="push"></div>
                 </div>
                 <Footer

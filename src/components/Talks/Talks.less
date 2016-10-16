@@ -4,8 +4,8 @@
 :local {
     // LAYOUT
     .root {
-        margin-top: @flexboxgrid-col-margin;
-        margin-bottom: @flexboxgrid-col-margin;
+        padding-top: @flexboxgrid-col-margin;
+        padding-bottom: @flexboxgrid-col-margin;
 
         .talk-container {
             margin-bottom: @flexboxgrid-col-margin;
@@ -98,6 +98,14 @@
     }
 
     // VISUAL STYLES
+
+    .root-container {
+        background-color: @xs-main-background-color;
+        .sm-viewport({
+            background-color: @main-background-color;
+        });
+    }
+
     .root {
         .talk {
             background-color: @block-background-color;

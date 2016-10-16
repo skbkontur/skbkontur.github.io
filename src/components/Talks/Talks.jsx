@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import cn from './Talks.less';
 import Icon from 'retail-ui/components/Icon';
 import Link from 'retail-ui/components/Link';
-import moment from 'moment';
+import { sortByDateString } from '../../utils/sort-utils.js';
 
 function Tag({ text }) {
     if (text === null || text === undefined || text === '') {
@@ -14,18 +14,6 @@ function Tag({ text }) {
             <Icon name='tag' />{'\u0020'}{text}
         </span>
     );
-}
-
-function compareTalkDateStrings(left, right) {
-    const leftDate = moment(left, 'MMMM YYYY', 'ru').toDate();
-    const rightDate = moment(right, 'MMMM YYYY', 'ru').toDate();
-    return (leftDate > rightDate) - (leftDate < rightDate);
-}
-
-function sortTalks(talks) {
-    const talksToSort = [...talks];
-    talksToSort.sort((left, right) => -compareTalkDateStrings(left.dateString, right.dateString));
-    return talksToSort;
 }
 
 function buildSrcSet(image) {
@@ -76,19 +64,21 @@ function Talk({ talk }) {
 
 export default function Talks({ route: { talks } }) {
     return (
-        <div className={cn('root', 'fixed-width-content')}>
-            <Helmet
-                title={talks.title}
-                meta={talks.meta}
-            />
-            <div className={cn('row')}>
-                {sortTalks(talks.items).map((talk, index) => (
-                    <div key={index} className={cn(
-                        'talk-container', 'col-lg-4', 'col-md-4', 'col-sm-4', 'col-xs-12')}>
-                        <Talk talk={talk} />
-                    </div>
-                ))}
+        <main className={cn('root-container')}>
+            <div className={cn('root', 'fixed-width-content')}>
+                <Helmet
+                    title={talks.title}
+                    meta={talks.meta}
+                />
+                <div className={cn('row')}>
+                    {sortByDateString(talks.items, x => x.dateString).map((talk, index) => (
+                        <div key={index} className={cn(
+                            'talk-container', 'col-lg-4', 'col-md-4', 'col-sm-4', 'col-xs-12')}>
+                            <Talk talk={talk} />
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
+        </main>
     );
 }

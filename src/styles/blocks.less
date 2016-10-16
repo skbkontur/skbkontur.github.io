@@ -6,6 +6,7 @@
 //===========================
 
 .blocks {
+    padding-bottom: @flexboxgrid-col-margin * 2;
     .row {
         margin: 0 -@flexboxgrid-col-margin;
     }
@@ -43,6 +44,13 @@
 //==========================
 // VISUAL STYLES
 //==========================
+
+.block-container {
+    background-color: @xs-main-background-color;
+    .sm-viewport({
+        background-color: @main-background-color;
+    });
+}
 
 .block {
     box-sizing: border-box;

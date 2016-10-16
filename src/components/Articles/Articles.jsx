@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import cn from './Articles.less';
 import Icon from 'retail-ui/components/Icon';
-
+import { sortByDateString } from '../../utils/sort-utils.js';
 
 function ShortInfoBlock({ icon, text }) {
     if (text === null || text === undefined || text === '') {
@@ -21,6 +21,9 @@ function Article({ article }) {
             <div className={cn('content')}>
                 <h3><a href={article.linkToSlides}>{article.title}</a></h3>
                 <div className={cn('speaker')}>{article.speakerFullName}</div>
+                <div className={cn('annotation')}>
+                    {article.annotation}
+                </div>
                 <div className={cn('short-info')}>
                     <ShortInfoBlock
                         icon='star'
@@ -51,8 +54,8 @@ export default function Articles({ route: { articles } }) {
                 meta={articles.meta}
             />
             <div className={cn('row')}>
-                {articles.items.map((article, index) => (
-                    <div key={index} className={cn('article-container', 'col-lg-4', 'col-md-4', 'col-sm-4', 'col-xs-12')}>
+                {sortByDateString(articles.items, x => x.dateString).map((article, index) => (
+                    <div key={index} className={cn('article-container', 'col-xs-12')}>
                         <Article article={article} />
                     </div>
                 ))}
