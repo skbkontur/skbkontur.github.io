@@ -1,11 +1,11 @@
 import React from 'react';
 
 export default {
-    title: 'Статьи',
+    title: 'Статьи сотрудников компании СКБ Контур',
     meta: [
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
-        { ['name']: 'description', ['content']: 'Статьи про технологии компании СКБ Контур' },
-        { ['name']: 'keywords', ['content']: 'статьи,технологии,скб контур' },
+        { ['name']: 'description', ['content']: 'Статьи сотрудников компании СКБ Контур на тематических ресурсах' },
+        { ['name']: 'keywords', ['content']: 'статьи' },
     ],
     items: [
         {

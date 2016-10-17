@@ -16,11 +16,11 @@ import kirpichnikovImage from 'talks-image-responsive!./images/kirpichnikov.jpg'
 import khruschevImage from 'talks-image-responsive!./images/khruschev.jpg';
 
 export default {
-    title: 'Выступления',
+    title: 'Выступления и доклады сотрудников компании СКБ Контур',
     meta: [
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
-        { ['name']: 'description', ['content']: 'Записи докладов с конференции от компании СКБ Контур' },
-        { ['name']: 'keywords', ['content']: 'видео,технологии,доклад,скб контур' },
+        { ['name']: 'description', ['content']: 'Выступления и доклады сотрудников компании СКБ Контур на конференциях c видео и презентациями' },
+        { ['name']: 'keywords', ['content']: 'выступления, доклады, презентации, скб контур, скб-контур, контур, видео, презентации' },
     ],
     items: [
         {
