@@ -6,6 +6,8 @@ import { Link } from 'react-router';
 const Hammer = typeof document !== 'undefined' ? require('hammerjs') : undefined;
 
 import Footer from '../Footer/Footer';
+import appleTouchIcons from './apple-touch-icons';
+import logoSocialImage from '../../images/logo-social.png';
 
 if (Hammer) {
     delete Hammer.defaults.cssProps.userSelect;
@@ -123,6 +125,14 @@ export default class Layout extends React.Component {
                         htmlAttributes={{
                             lang: layout.lang,
                         }}
+                        meta={[
+                            { content: logoSocialImage, property: 'og:image' },
+                        ]}
+                        link={[
+                            ...appleTouchIcons,
+                            { ['href']: '/favicon.ico', ['rel']: 'shortcut icon' },
+                            { ['href']: logoSocialImage, ['rel']: 'image_src' },
+                        ]}
                     />
                     <header>
                         <div className="nav-bar-container">

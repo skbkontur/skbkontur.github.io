@@ -7,10 +7,12 @@ import gitHubImage from '../images/github.png';
 export default {
     ['ru']: {
         title: 'Open source технологии и решения компании СКБ Контур: Moira, DiTrace и многое другое',
-        meta: [
+        meta: {
+            keywords: 'open source, open-sourсe, oss, скб контур, скб-контур, контур, открытый код, Moira, DiTrace, ZstdNet, reelm, cspreport',
+            description: 'Open source технологии компании СКБ Контур. Moira — решение по уведомлениям из Graphite, DiTrace — трассировка запросов в распределенных системах и другие решения',
+        },
+        customMetaHeaders: [
             { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
-            { ['name']: 'description', ['content']: 'Open source технологии компании СКБ Контур. Moira — решение по уведомлениям из Graphite, DiTrace — трассировка запросов в распределенных системах и другие решения' },
-            { ['name']: 'keywords', ['content']: 'open source, open-sourсe, oss, скб контур, скб-контур, контур, открытый код, Moira, DiTrace, ZstdNet, reelm, cspreport' },
         ],
         blocks: [
             {
@@ -80,10 +82,12 @@ export default {
     },
     'en': {
         title: 'Open Source',
-        meta: [
+        meta: {
+            description: 'SKB Kontur Open source',
+            keywords: 'open source,skb kontur',
+        },
+        customMetaHeaders: [
             { ['http-equiv']: 'content-language', ['content']: 'en-US' },
-            { ['name']: 'description', ['content']: 'SKB Kontur Open source' },
-            { ['name']: 'keywords', ['content']: 'open source,skb kontur' },
         ],
         blocks: [
             {

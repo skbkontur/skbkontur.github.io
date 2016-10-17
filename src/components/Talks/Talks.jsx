@@ -4,6 +4,8 @@ import cn from './Talks.less';
 import Icon from 'retail-ui/components/Icon';
 import Link from 'retail-ui/components/Link';
 import { sortByDateString } from '../../utils/sort-utils.js';
+import socialMetaHeaders from '../../models/social-meta-headers';
+import metaHeaders from '../../models/meta-headers';
 
 function Tag({ text }) {
     if (text === null || text === undefined || text === '') {
@@ -68,7 +70,11 @@ export default function Talks({ route: { talks } }) {
             <div className={cn('root', 'fixed-width-content')}>
                 <Helmet
                     title={talks.title}
-                    meta={talks.meta}
+                    meta={[
+                        ...talks.customMetaHeaders,
+                        ...metaHeaders(talks.meta),
+                        ...socialMetaHeaders(talks.title, talks.meta.description),
+                    ]}
                 />
                 <div className={cn('row')}>
                     {sortByDateString(talks.items, x => x.dateString).map((talk, index) => (

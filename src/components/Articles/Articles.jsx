@@ -3,6 +3,8 @@ import Helmet from 'react-helmet';
 import cn from './Articles.less';
 import Icon from 'retail-ui/components/Icon';
 import { sortByDateString } from '../../utils/sort-utils.js';
+import socialMetaHeaders from '../../models/social-meta-headers';
+import metaHeaders from '../../models/meta-headers';
 
 function ShortInfoBlock({ icon, text }) {
     if (text === null || text === undefined || text === '') {
@@ -51,7 +53,11 @@ export default function Articles({ route: { articles } }) {
         <div className={cn('root', 'fixed-width-content')}>
             <Helmet
                 title={articles.title}
-                meta={articles.meta}
+                meta={[
+                    ...articles.customMetaHeaders,
+                    ...metaHeaders(articles.meta),
+                    ...socialMetaHeaders(articles.title, articles.meta.description),
+                ]}
                 htmlAttributes={{ class: cn('articles') }}
             />
             <div className={cn('row')}>

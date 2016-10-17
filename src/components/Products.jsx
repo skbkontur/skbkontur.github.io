@@ -1,13 +1,20 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
+import socialMetaHeaders from '../models/social-meta-headers';
+import metaHeaders from '../models/meta-headers';
+
 export default function Products({ route: { products } }) {
     return (
         <main className="block-container">
             <div className="blocks fixed-width-content">
                 <Helmet
                     title={products.title}
-                    meta={products.meta}
+                    meta={[
+                        ...products.customMetaHeaders,
+                        ...metaHeaders(products.meta),
+                        ...socialMetaHeaders(products.title, products.meta.description),
+                    ]}
                 />
                 <div className="row">
                     {products.blocks.map((block, index) => (

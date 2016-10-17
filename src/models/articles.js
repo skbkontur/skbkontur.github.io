@@ -2,10 +2,12 @@ import React from 'react';
 
 export default {
     title: 'Статьи сотрудников компании СКБ Контур',
-    meta: [
+    meta: {
+        keywords: 'статьи',
+        description: 'Статьи сотрудников компании СКБ Контур на тематических ресурсах',
+    },
+    customMetaHeaders: [
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
-        { ['name']: 'description', ['content']: 'Статьи сотрудников компании СКБ Контур на тематических ресурсах' },
-        { ['name']: 'keywords', ['content']: 'статьи' },
     ],
     items: [
         {

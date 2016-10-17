@@ -17,10 +17,12 @@ import khruschevImage from 'talks-image-responsive!./images/khruschev.jpg';
 
 export default {
     title: 'Выступления и доклады сотрудников компании СКБ Контур',
-    meta: [
+    meta: {
+        keywords: 'выступления, доклады, презентации, скб контур, скб-контур, контур, видео, презентации',
+        description: 'Выступления и доклады сотрудников компании СКБ Контур на конференциях c видео и презентациями',
+    },
+    customMetaHeaders: [
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
-        { ['name']: 'description', ['content']: 'Выступления и доклады сотрудников компании СКБ Контур на конференциях c видео и презентациями' },
-        { ['name']: 'keywords', ['content']: 'выступления, доклады, презентации, скб контур, скб-контур, контур, видео, презентации' },
     ],
     items: [
         {

@@ -8,6 +8,7 @@ import {
 import Helmet from 'react-helmet';
 import template from './template.ejs';
 import routes from './routes';
+import '!file?name=favicon.ico!./images/favicon.ico';
 
 export default (locals, callback) => {
     const history = createMemoryHistory();
