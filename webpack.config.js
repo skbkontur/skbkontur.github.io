@@ -96,7 +96,7 @@ module.exports = {
     },
     resolveLoader: {
         alias: {
-            'talks-image-responsive': 'responsive?sizes[]=80&sizes[]=1000',
+            'talks-image-responsive': 'responsive?sizes[]=80&sizes[]=400',
         }
     },
     postcss: [ autoprefixer({ browsers: ['not ie < 10'] }) ],
