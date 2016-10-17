@@ -5,6 +5,7 @@ var autoprefixer = require('autoprefixer');
 var webpack = require('webpack');
 var minify = require('html-minifier').minify;
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
+var SiteMapGeneratorPlugin = require('./src/plugins/sitemap-generator-plugin');
 
 var production = process.env.NODE_ENV == 'production';
 
@@ -121,7 +122,16 @@ module.exports = {
             test: /\.html$/,
             threshold: 1,
             minRatio: 1
-        })
+        }),
+        new SiteMapGeneratorPlugin(
+            'http://tech.skbkontur.ru',
+            paths.map(function (path) {
+                return {
+                    path: path,
+                    changefreq: 'daily',
+                    priority: 0.6,
+                };
+            })),
     ],
 };
 
