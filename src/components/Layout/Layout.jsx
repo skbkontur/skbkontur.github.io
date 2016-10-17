@@ -125,6 +125,7 @@ export default class Layout extends React.Component {
                         htmlAttributes={{
                             lang: layout.lang,
                         }}
+                        titleTemplate={layout.titleTemplate}
                         meta={[
                             { content: logoSocialImage, property: 'og:image' },
                         ]}
