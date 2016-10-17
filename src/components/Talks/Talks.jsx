@@ -18,10 +18,14 @@ function Tag({ text }) {
     );
 }
 
-function buildSrcSet(image) {
+function buildImageProps(image) {
     const smallImage = image.images.find(x => x.width === 80);
     const normalImage = image.images[image.images.length - 1];
-    return `${smallImage.path} 500w,${normalImage.path} 1500w`;
+    return {
+        src: smallImage.path,
+        sizes: '(max-width: 30em) 80px, 100%',
+        srcSet: `${smallImage.path} 700w, ${normalImage.path} 3000w`,
+    };
 }
 
 function Talk({ talk }) {
@@ -30,8 +34,7 @@ function Talk({ talk }) {
             <div className={cn('image')}>
                 <a href={talk.linkToVideo}>
                     <img
-                        src={talk.image.src}
-                        srcSet={buildSrcSet(talk.image)}
+                        {...buildImageProps(talk.image)}
                     />
                 </a>
             </div>
