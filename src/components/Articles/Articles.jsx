@@ -52,6 +52,7 @@ export default function Articles({ route: { articles } }) {
             <Helmet
                 title={articles.title}
                 meta={articles.meta}
+                htmlAttributes={{ class: cn('articles') }}
             />
             <div className={cn('row')}>
                 {sortByDateString(articles.items, x => x.dateString).map((article, index) => (
