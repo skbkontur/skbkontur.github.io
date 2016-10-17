@@ -27,10 +27,10 @@ export default class Layout extends React.Component {
     componentDidUpdate() {
         if (document !== undefined) {
             if (this.state.menuOpened) {
-                document.getElementsByTagName('html')[0].className = 'overlay';
+                document.getElementsByTagName('html')[0].classList.add('overlay');
             }
             else {
-                document.getElementsByTagName('html')[0].className = '';
+                document.getElementsByTagName('html')[0].classList.remove('overlay');
             }
             setTimeout(() => {
                 this.refs.siteNavigationOverlay.style.opacity = null;
