@@ -81,10 +81,10 @@ export default {
         ]
     },
     'en': {
-        title: 'Open Source',
+        title: 'Open source technology and solutions company SKB Kontur: Moira, DiTrace and more',
         meta: {
-            description: 'SKB Kontur Open source',
-            keywords: 'open source,skb kontur',
+            description: 'Open source technology company SKB Kontur. Moira — Mail, Telegram, Slack and Pushover notifications based on Graphite metrics, DiTrace — request tracing for bottlenecks analysis in distributed systems',
+            keywords: 'open source, open-sourсe, oss, skb kontur, skb-kontur, kontur, Moira, DiTrace, ZstdNet, reelm, cspreport',
         },
         customMetaHeaders: [
             { ['http-equiv']: 'content-language', ['content']: 'en-US' },
