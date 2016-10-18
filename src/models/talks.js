@@ -14,6 +14,12 @@ import sobolevaImage from 'talks-image-responsive!./images/soboleva.jpg';
 import vdovichenkoImage from 'talks-image-responsive!./images/vdovichenko.png';
 import kirpichnikovImage from 'talks-image-responsive!./images/kirpichnikov.jpg';
 import khruschevImage from 'talks-image-responsive!./images/khruschev.jpg';
+import geinImage from 'talks-image-responsive!./images/gein.png';
+import kutovoiImage from 'talks-image-responsive!./images/kutovoi.png';
+import plinerImage from 'talks-image-responsive!./images/pliner.jpg';
+import kokovinImage from 'talks-image-responsive!./images/kokovin.jpg';
+import ahmetovImage from 'talks-image-responsive!./images/ahmetov.jpg';
+import dashkevichImage from 'talks-image-responsive!./images/dashkevich.jpg';
 
 export default {
     title: 'Выступления и доклады сотрудников компании СКБ Контур',
@@ -226,7 +232,7 @@ export default {
             linkToSlides: 'http://prezi.com/9ivkpl5qwtxx/',
         },
         {
-            image: egorovImage,
+            image: dashkevichImage,
             speakerFullName: 'Иван Дашкевич, Иван Бурмистров, Павел Егоров',
             eventName: 'DUMP',
             title: 'Почему из нас не получилось хороших тимлидов',
@@ -274,6 +280,56 @@ export default {
             tags: ['backend', 'db', 'cassandra'],
             linkToVideo: 'https://www.youtube.com/watch?v=M_rIdjpybH4&index=11&list=PLEbtM8n7mz93h4VRGBc3SabsAHJCcjdzx',
             linkToSlides: 'https://drive.google.com/open?id=0B-qtqQ5D71UQU1J5bDhtaEpOV1E',
+        },
+        {
+            image: geinImage,
+            speakerFullName: 'Андрей Гейн',
+            eventName: 'DUMP',
+            title: 'Что мы делали с большими графами, чтобы на них было интересно смотреть',
+            dateString: 'март 2014',
+            tags: ['science', 'math'],
+            linkToVideo: 'https://www.youtube.com/watch?v=DWm5pPSFA_Y&list=PLRdS-n5seLRoUXuEiUfbuvwDpvLtdsz_q&index=2',
+            linkToSlides: 'http://www.slideshare.net/it-people/dump2014-32925064',
+        },
+        {
+            image: kutovoiImage,
+            speakerFullName: 'Владимир Кутовой',
+            eventName: 'DUMP',
+            title: 'Keep Calm',
+            dateString: 'март 2014',
+            tags: ['design', 'ui'],
+            linkToVideo: 'https://www.youtube.com/watch?v=1mlHf0hNiUA&index=5&list=PLRdS-n5seLRq-L42Z42xb-uW2iGotkDWU',
+            linkToSlides: 'https://drive.google.com/file/d/0B-qtqQ5D71UQVXYzTUhnZjhCeFE/view?usp=drivesdk',
+        },
+        {
+            image: plinerImage,
+            speakerFullName: 'Лев Плинер',
+            eventName: 'DUMP',
+            title: '30 спартанцев: как совершить подвиг и не потерять команду',
+            dateString: 'март 2014',
+            tags: ['management', 'hr'],
+            linkToVideo: 'https://www.youtube.com/watch?v=fFfTVAGoDTM&list=PLRdS-n5seLRqJ-4fDXACGDMTz5JJH_gKy&index=2',
+            linkToSlides: 'https://drive.google.com/file/d/0B-qtqQ5D71UQYTdBd290eVJRTFE/view?usp=sharing',
+        },
+        {
+            image: kokovinImage,
+            speakerFullName: 'Александр Коковин',
+            eventName: 'DUMP',
+            title: 'Распределенный консенсус',
+            dateString: 'март 2014',
+            tags: ['backend', 'algorithms'],
+            linkToVideo: 'https://www.youtube.com/watch?v=uiEMqEl10Ps&list=PLRdS-n5seLRp0KOpGrpnBNFRmd8K-RPTC&index=6',
+            linkToSlides: 'https://drive.google.com/file/d/0B-qtqQ5D71UQM2NzWE5kWXI2SFk/view?usp=drivesdk',
+        },
+        {
+            image: ahmetovImage,
+            speakerFullName: 'Александр Ахметов',
+            eventName: 'DUMP',
+            title: 'Когда тесты пишут разработчики',
+            dateString: 'март 2014',
+            tags: ['testing'],
+            linkToVideo: 'https://www.youtube.com/watch?v=tnEyjppqufk&list=PLRdS-n5seLRoTw3SB8oPRBrbgDiRPWLdi',
+            linkToSlides: 'http://www.slideshare.net/it-people/dump2014-32925242',
         },
     ],
 };
