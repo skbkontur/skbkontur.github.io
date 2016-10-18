@@ -3,7 +3,7 @@ export default {
         lang: 'ru',
         skbkonturSinceCaption: 'c 1988 года',
         pageTitle: 'Технологии Контура',
-        titleTemplate: '%s - Технологии Контура',
+        titleTemplate: '%s — Технологии Контура',
         menu: [
             {
                 caption: 'Open Source',
@@ -23,7 +23,7 @@ export default {
         lang: 'en',
         skbkonturSinceCaption: 'since 1988',
         pageTitle: 'Kontur Tech',
-        titleTemplate: '%s - Kontur Tech',
+        titleTemplate: '%s — Kontur Tech',
         menu: [
             {
                 caption: 'Open Source',
