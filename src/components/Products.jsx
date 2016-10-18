@@ -18,7 +18,7 @@ export default function Products({ route: { products } }) {
                 />
                 <div className="row">
                     {products.blocks.map((block, index) => (
-                        <div key={index} className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div key={index} className="block-wrapper col-lg-4 col-md-6 col-sm-6 col-xs-12">
                             <article className="block">
                                 {block.image &&
                                     <div className="image"><img src={block.image} /></div>
