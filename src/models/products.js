@@ -78,6 +78,33 @@ export default {
                 text: <span>Шлюз для сбора отчетов о нарушении политик безопасности <a href="https://en.wikipedia.org/wiki/Content_Security_Policy">CSP</a> и <a href="https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning">HPKP</a></span>,
                 links: []
             },
+            {
+                image: gitHubImage,
+                header: {
+                    href: 'https://github.com/homuroll/gremit',
+                    caption: 'GrEmit'
+                },
+                text: <span>Инструменты для генерации кода через Reflection.Emit, в том числе GroboIL — умная обертка над <a href="http://msdn.microsoft.com/en-us/library/system.reflection.emit.ilgenerator.aspx">ILGenerator</a></span>,
+                links: []
+            },
+            {
+                image: gitHubImage,
+                header: {
+                    href: 'https://github.com/homuroll/GroBuf',
+                    caption: 'GroBuf'
+                },
+                text: <span>Быстрая бинарная сериализация для .NET</span>,
+                links: []
+            },
+            {
+                image: gitHubImage,
+                header: {
+                    href: 'https://github.com/homuroll/GrobExp.Compiler',
+                    caption: 'GrobExp.Compiler'
+                },
+                text: <span>Эффективная компиляция деревьев выражений для .NET</span>,
+                links: []
+            },
         ]
     },
     'en': {
@@ -151,6 +178,33 @@ export default {
                     caption: 'cspreport'
                 },
                 text: <span><a href="https://en.wikipedia.org/wiki/Content_Security_Policy">CSP</a> and <a href="https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning">HPKP</a> policy violation report collector</span>,
+                links: []
+            },
+            {
+                image: gitHubImage,
+                header: {
+                    href: 'https://github.com/homuroll/gremit',
+                    caption: 'GrEmit'
+                },
+                text: <span>Helpers for generating code using Reflection.Emit with the main one being GroboIL — a smart wrapper over <a href="http://msdn.microsoft.com/en-us/library/system.reflection.emit.ilgenerator.aspx">ILGenerator</a></span>,
+                links: []
+            },
+            {
+                image: gitHubImage,
+                header: {
+                    href: 'https://github.com/homuroll/GroBuf',
+                    caption: 'GroBuf'
+                },
+                text: <span>Fast binary serializer for .NET</span>,
+                links: []
+            },
+            {
+                image: gitHubImage,
+                header: {
+                    href: 'https://github.com/homuroll/GrobExp.Compiler',
+                    caption: 'GrobExp.Compiler'
+                },
+                text: <span>Effective compiler of .NET expression trees</span>,
                 links: []
             },
         ]
