@@ -81,6 +81,7 @@ export default function Talks({ route: { talks } }) {
                         ...metaHeaders(talks.meta),
                         ...socialMetaHeaders(talks.title, talks.meta.description),
                     ]}
+                    htmlAttributes={{ class: 'talks' }}
                 />
                 <div className={cn('row')}>
                     {sortByDateString(talks.items, x => x.dateString).map((talk, index) => (

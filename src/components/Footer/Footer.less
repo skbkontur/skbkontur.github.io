@@ -6,6 +6,7 @@
 //================================
 
 @footer-height: 70px;
+@talks-footer-height: 120px;
 
 #content, #react-wrapper {
     min-height: 100%;
@@ -23,6 +24,20 @@
     }
 }
 
+.talks {
+    #wrapper {
+        margin: 0 auto -@talks-footer-height;
+        #push {
+            height: @talks-footer-height;
+        }
+    }
+    :local {
+        .container {
+            height: @talks-footer-height;
+        }
+    }
+}
+
 :local {
     .container {
         box-sizing: border-box;
@@ -35,40 +50,47 @@
             flex-grow: 0;
             flex-basis: @max-width;
 
-            display: flex;
-            align-items: center;
-
-            .kontur-logo {
-                flex-grow: 0;
-                flex-shrink: 0;
+            .additional-text {
+                font-size: 14px;
+                margin-bottom: 15px;
             }
 
-            .since-text {
-                flex-grow: 0;
-                flex-shrink: 0;
-            }
+            .footer-main {
+                display: flex;
+                align-items: center;
 
-            .languages {
-                flex-grow: 0;
-                flex-shrink: 0;
-                display: inline-block;
-                margin-left: 50px;
-                white-space: nowrap;
-            }
-
-            .spacer {
-                flex-grow: 0;
-                flex-shrink: 1;
-                flex-basis: 100%;
-            }
-            .email {
-                display: none;
-
-                .sm-viewport({
-                    display: inline-block;
+                .kontur-logo {
                     flex-grow: 0;
                     flex-shrink: 0;
-                });
+                }
+
+                .since-text {
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                }
+
+                .languages {
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    display: inline-block;
+                    margin-left: 50px;
+                    white-space: nowrap;
+                }
+
+                .spacer {
+                    flex-grow: 0;
+                    flex-shrink: 1;
+                    flex-basis: 100%;
+                }
+                .email {
+                    display: none;
+
+                    .sm-viewport({
+                        display: inline-block;
+                        flex-grow: 0;
+                        flex-shrink: 0;
+                    });
+                }
             }
         }
     }

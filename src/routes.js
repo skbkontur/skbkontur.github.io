@@ -24,7 +24,11 @@ export default (
             <Route
                 path='talks'
                 talks={talks}
-                components={{ content: Talks, title: () => <span>Выступления</span>}}
+                components={{
+                    additionalFooterText: () => <span>{talks.additionalFooterText}</span>,
+                    content: Talks,
+                    title: () => <span>Выступления</span>,
+                }}
             />
             <Route
                 path='articles'

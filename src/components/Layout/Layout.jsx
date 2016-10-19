@@ -116,6 +116,7 @@ export default class Layout extends React.Component {
         const {
             title,
             content,
+            additionalFooterText,
             route: { layout },
         } = this.props;
         return (
@@ -170,6 +171,7 @@ export default class Layout extends React.Component {
                     <div id="push"></div>
                 </div>
                 <Footer
+                    additionalFooterText={additionalFooterText}
                     skbkonturSinceCaption={layout.skbkonturSinceCaption}
                     lang={layout.lang}
                 />

@@ -1,3 +1,5 @@
+import React from 'react';
+
 import ahmetovImage from 'talks-image-responsive!./images/talks/ahmetov.jpg';
 import baranovaImage from 'talks-image-responsive!./images/talks/baranova.jpg';
 import burmistrovImage from 'talks-image-responsive!./images/talks/burmistrov.jpg';
@@ -50,6 +52,11 @@ const dump2016Link = 'http://dump-conf.ru/archive/2016/';
 const wsdEkb2016Link = 'https://wsd.events/2016/06/25/';
 
 export default {
+    additionalFooterText:
+        <noindex>
+            Фотографии докладчиков взяты из видео выступлений и фотоархивов соответствующих конференций. Рядом с каждым выступлением есть
+            ссылка на сайт конференции, который является источником фотографии.
+        </noindex>,
     title: 'Выступления и доклады сотрудников компании СКБ Контур',
     meta: {
         keywords: 'выступления, доклады, презентации, скб контур, скб-контур, контур, видео, презентации',
