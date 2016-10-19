@@ -114,7 +114,7 @@ module.exports = {
                     conservativeCollapse: true,
                     collapseBooleanAttributes: true,
                     collapseInlineTagWhitespace: true,
-                    removeAttributeQuotes: true,
+                    removeAttributeQuotes: false,
                     removeComments: false,
                     minifyJS: true,
                 }));
