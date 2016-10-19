@@ -26,6 +26,11 @@ import shaihutdinovImage from 'talks-image-responsive!./images/shaihutdinov.png'
 import romanovskyImage from 'talks-image-responsive!./images/romanovsky.png';
 import safarovImage from 'talks-image-responsive!./images/safarov.png';
 
+const dump2013Link = 'http://dump-it.ru/arhiv/itogi-dump-2013/';
+const dump2014Link = 'http://dump-conf.ru/archive/2014/';
+const dump2015Link = 'http://dump-conf.ru/archive/2015/';
+const dump2016Link = 'http://dump-conf.ru/';
+
 export default {
     title: 'Выступления и доклады сотрудников компании СКБ Контур',
     meta: {
@@ -45,6 +50,7 @@ export default {
             tags: ['frontend', 'js', 'react'],
             linkToVideo: 'https://www.youtube.com/watch?v=v5Fi-djuwZk',
             linkToSlides: 'http://www.slideshare.net/PavelVolokitin/frontfellows-relay-66758880',
+            linkToEvent: 'https://frontendfellows.timepad.ru/event/284968/',
         },
         {
             image: kazakovImage,
@@ -55,6 +61,7 @@ export default {
             tags: ['backend', 'operations'],
             linkToVideo: 'https://www.youtube.com/watch?v=LFpJGGs-kuo',
             linkToSlides: 'http://www.slideshare.net/codefest/ss-60114851',
+            linkToEvent: 'http://2016.codefest.ru/',
         },
         {
             image: chevdarImage,
@@ -65,6 +72,7 @@ export default {
             tags: ['backend', '.net'],
             linkToVideo: 'https://www.youtube.com/watch?v=X35JVTJV1CE&list=PLtWrKx3nUGBeYn-pSCjEgBPL90SvpylZL&index=7',
             linkToSlides: 'http://public.jugru.org/dotnext/2016/spb/day_1/track_2/chevdar.pdf',
+            linkToEvent: 'http://dotnext-piter.ru/',
         },
         {
             image: volokitinImage,
@@ -75,6 +83,7 @@ export default {
             tags: ['frontend', 'js'],
             linkToVideo: 'https://www.youtube.com/watch?v=zoq95j3V43g',
             linkToSlides: 'http://www.slideshare.net/PavelVolokitin/javascript-javascript-66759016',
+            linkToEvent: 'https://wsd.events/2016/06/25/',
         },
         {
             image: tihonovImage,
@@ -85,6 +94,7 @@ export default {
             tags: ['frontend', 'js', 'react'],
             linkToVideo: 'https://www.youtube.com/watch?v=OXsxo4gkqtQ',
             linkToSlides: 'https://reelm.github.io/wsd-2016-slides/wsd-2016-slides.zip',
+            linkToEvent: 'https://wsd.events/2016/06/25/',
         },
         {
             image: burmistrovImage,
@@ -95,6 +105,7 @@ export default {
             tags: ['backend', 'db', 'cassandra'],
             linkToVideo: 'https://www.youtube.com/watch?v=t6utdWssBOM',
             linkToSlides: 'https://drive.google.com/open?id=0B-qtqQ5D71UQX1FvSlgtaUtscFE',
+            linkToEvent: 'https://www.datastax.com/company/events',
         },
         {
             image: egorovImage,
@@ -105,6 +116,7 @@ export default {
             tags: ['management', 'education'],
             linkToVideo: 'http://0x1.tv/20151022BG',
             linkToSlides: 'http://0x1.tv/20151022BG',
+            linkToEvent: 'http://2015.secr.ru/',
         },
         {
             image: kazakovImage,
@@ -115,6 +127,7 @@ export default {
             tags: ['backend', 'operations'],
             linkToVideo: 'https://www.youtube.com/watch?v=EpDgUZWjGLc&index=6&list=PLRdS-n5seLRriePAvTXvkl8mE20gPeDIp',
             linkToSlides: 'https://drive.google.com/open?id=0B-qtqQ5D71UQY1Bpdi1PTndhOXc',
+            linkToEvent: dump2016Link,
         },
         {
             image: larkovImage,
@@ -125,6 +138,7 @@ export default {
             tags: ['backend', 'operations'],
             linkToVideo: 'https://www.youtube.com/watch?v=_MJdtHbiXPE&index=5&list=PLRdS-n5seLRriePAvTXvkl8mE20gPeDIp',
             linkToSlides: 'https://drive.google.com/file/d/0B-qtqQ5D71UQQVcwUEpybmpIZVE/view?usp=drivesdk',
+            linkToEvent: dump2016Link,
         },
         {
             image: ronzhinaImage,
@@ -135,6 +149,7 @@ export default {
             tags: ['testing'],
             linkToVideo: 'https://www.youtube.com/watch?v=-4zAc7kWAhc&index=5&list=PLRdS-n5seLRoMRdNO1k1FeFeBMgBRRX6j',
             linkToSlides: 'https://drive.google.com/open?id=0B-qtqQ5D71UQRmF5dHVuWU8tYlU',
+            linkToEvent: dump2016Link,
         },
         {
             image: ratkinImage,
@@ -145,6 +160,7 @@ export default {
             tags: ['testing'],
             linkToVideo: 'https://www.youtube.com/watch?v=4yrWt_b835k&index=4&list=PLRdS-n5seLRoMRdNO1k1FeFeBMgBRRX6j',
             linkToSlides: 'https://drive.google.com/open?id=0B-qtqQ5D71UQSHRBaGhKVjRhMkE',
+            linkToEvent: dump2016Link,
         },
         {
             image: golubevImage,
@@ -155,6 +171,7 @@ export default {
             tags: ['management', 'hr'],
             linkToVideo: 'https://www.youtube.com/watch?v=pL6AFI5GpqM&index=3&list=PLRdS-n5seLRrEr-0A2koGR1a2tM9dM0an',
             linkToSlides: 'https://drive.google.com/open?id=0B-qtqQ5D71UQQkxlNXRPZTFjRTA',
+            linkToEvent: dump2016Link,
         },
         {
             image: moiseevImage,
@@ -165,6 +182,7 @@ export default {
             tags: ['mobile', 'xamarin'],
             linkToVideo: 'https://www.youtube.com/watch?v=Ktc7ns2Z2Rw&index=6&list=PLRdS-n5seLRrSqdcVMqQge9YRcQztqgbO',
             linkToSlides: 'https://drive.google.com/open?id=0B-qtqQ5D71UQcmRKOHVUU0E2Uzg',
+            linkToEvent: dump2016Link,
         },
         {
             image: konovalovImage,
@@ -175,6 +193,7 @@ export default {
             tags: ['design'],
             linkToVideo: 'https://www.youtube.com/watch?v=KB48F8s7jzY&index=3&list=PLRdS-n5seLRrEb91BeyQfcRJCOwb7issv',
             linkToSlides: 'http://www.slideshare.net/it-people/dump2015-46259341',
+            linkToEvent: dump2015Link,
         },
         {
             image: sobolevaImage,
@@ -185,6 +204,7 @@ export default {
             tags: ['testing'],
             linkToVideo: 'https://www.youtube.com/watch?v=qyJ4Uf0FmGE&list=PLRdS-n5seLRp_rmnC69UpyhiPpo1tRYLv&index=3',
             linkToSlides: 'http://www.slideshare.net/it-people/ss-46260346',
+            linkToEvent: dump2015Link,
         },
         {
             image: vdovichenkoImage,
@@ -195,6 +215,7 @@ export default {
             tags: ['testing'],
             linkToVideo: 'https://www.youtube.com/watch?v=FtPX19c76l8&list=PLRdS-n5seLRp_rmnC69UpyhiPpo1tRYLv&index=2',
             linkToSlides: 'http://www.slideshare.net/it-people/dump2015-46260163',
+            linkToEvent: dump2015Link,
         },
         {
             image: egorovImage,
@@ -205,6 +226,7 @@ export default {
             tags: ['management', 'education'],
             linkToVideo: 'https://www.youtube.com/watch?v=80YK0oqJhC4&list=PLRdS-n5seLRrR2gBuM7Kt1yIizNGIrnM9&index=6',
             linkToSlides: 'http://www.slideshare.net/it-people/dump2015-46489805',
+            linkToEvent: dump2015Link,
         },
         {
             image: kirpichnikovImage,
@@ -215,6 +237,7 @@ export default {
             tags: ['science', 'math'],
             linkToVideo: 'https://www.youtube.com/watch?v=cwKnHHRutUs&index=6&list=PLRdS-n5seLRp6nwfAcqo7DTXta5GcclMq',
             linkToSlides: 'http://www.slideshare.net/it-people/ss-k',
+            linkToEvent: dump2015Link,
         },
         {
             image: burmistrovImage,
@@ -225,6 +248,7 @@ export default {
             tags: ['backend', 'architecture'],
             linkToVideo: 'https://www.youtube.com/watch?v=LDTa2Nx5qrw&list=PLRdS-n5seLRpIYtTllDAneJivR5Xea3nQ&index=6',
             linkToSlides: 'https://drive.google.com/file/d/0B-qtqQ5D71UQam9KbUlrOFFzWTQ/view?usp=sharing',
+            linkToEvent: dump2015Link,
         },
         {
             image: khruschevImage,
@@ -235,6 +259,7 @@ export default {
             tags: ['backend'],
             linkToVideo: 'https://www.youtube.com/watch?v=tZ7wYPXhQh8&list=PLRdS-n5seLRpIYtTllDAneJivR5Xea3nQ&index=2',
             linkToSlides: 'http://prezi.com/9ivkpl5qwtxx/',
+            linkToEvent: dump2015Link,
         },
         {
             image: dashkevichImage,
@@ -245,6 +270,7 @@ export default {
             tags: ['management'],
             linkToVideo: 'https://www.youtube.com/watch?v=Fhd0L-cyp_s&list=PLRdS-n5seLRqJ-4fDXACGDMTz5JJH_gKy&index=4',
             linkToSlides: 'http://www.slideshare.net/it-people/dump2014-34282193',
+            linkToEvent: dump2014Link,
         },
         {
             image: kazakovImage,
@@ -255,6 +281,7 @@ export default {
             tags: ['backend', 'db', 'zebra'],
             linkToVideo: 'https://www.youtube.com/watch?v=8dvRoLPvCuo&list=PLRdS-n5seLRpVRDblg0KDFr5V4RlvaDiR&index=35',
             linkToSlides: 'http://www.slideshare.net/it-people/dump2013-serverside',
+            linkToEvent: dump2013Link,
         },
         {
             image: egorovImage,
@@ -295,6 +322,7 @@ export default {
             tags: ['science', 'math'],
             linkToVideo: 'https://www.youtube.com/watch?v=DWm5pPSFA_Y&list=PLRdS-n5seLRoUXuEiUfbuvwDpvLtdsz_q&index=2',
             linkToSlides: 'http://www.slideshare.net/it-people/dump2014-32925064',
+            linkToEvent: dump2014Link,
         },
         {
             image: kutovoiImage,
@@ -305,6 +333,7 @@ export default {
             tags: ['design', 'ui'],
             linkToVideo: 'https://www.youtube.com/watch?v=1mlHf0hNiUA&index=5&list=PLRdS-n5seLRq-L42Z42xb-uW2iGotkDWU',
             linkToSlides: 'https://drive.google.com/file/d/0B-qtqQ5D71UQVXYzTUhnZjhCeFE/view?usp=drivesdk',
+            linkToEvent: dump2014Link,
         },
         {
             image: plinerImage,
@@ -315,6 +344,7 @@ export default {
             tags: ['management', 'hr'],
             linkToVideo: 'https://www.youtube.com/watch?v=fFfTVAGoDTM&list=PLRdS-n5seLRqJ-4fDXACGDMTz5JJH_gKy&index=2',
             linkToSlides: 'https://drive.google.com/file/d/0B-qtqQ5D71UQYTdBd290eVJRTFE/view?usp=sharing',
+            linkToEvent: dump2014Link,
         },
         {
             image: kokovinImage,
@@ -325,6 +355,7 @@ export default {
             tags: ['backend', 'algorithms'],
             linkToVideo: 'https://www.youtube.com/watch?v=uiEMqEl10Ps&list=PLRdS-n5seLRp0KOpGrpnBNFRmd8K-RPTC&index=6',
             linkToSlides: 'https://drive.google.com/file/d/0B-qtqQ5D71UQM2NzWE5kWXI2SFk/view?usp=drivesdk',
+            linkToEvent: dump2014Link,
         },
         {
             image: ahmetovImage,
@@ -335,6 +366,7 @@ export default {
             tags: ['testing'],
             linkToVideo: 'https://www.youtube.com/watch?v=tnEyjppqufk&list=PLRdS-n5seLRoTw3SB8oPRBrbgDiRPWLdi',
             linkToSlides: 'http://www.slideshare.net/it-people/dump2014-32925242',
+            linkToEvent: dump2014Link,
         },
         {
             image: baranovaImage,
@@ -345,6 +377,7 @@ export default {
             tags: ['management'],
             linkToVideo: 'https://www.youtube.com/watch?v=eTybEGIE1QE&list=PLRdS-n5seLRpVRDblg0KDFr5V4RlvaDiR&index=14',
             linkToSlides: 'https://drive.google.com/file/d/0B-qtqQ5D71UQZndQSTFDNjlVdm8/view?usp=drivesdk',
+            linkToEvent: dump2013Link,
         },
         {
             image: solovievImage,
@@ -355,6 +388,7 @@ export default {
             tags: ['design', 'ui'],
             linkToVideo: 'https://www.youtube.com/watch?v=87lDgRxqTjY&index=27&list=PLRdS-n5seLRpVRDblg0KDFr5V4RlvaDiR',
             linkToSlides: 'http://www.slideshare.net/it-people/dump2013-22373283',
+            linkToEvent: dump2013Link,
         },
         {
             image: shaihutdinovImage,
@@ -365,6 +399,7 @@ export default {
             tags: ['design', 'ui'],
             linkToVideo: 'https://www.youtube.com/watch?v=Wmq7K1R-E8M&index=22&list=PLRdS-n5seLRpVRDblg0KDFr5V4RlvaDiR',
             linkToSlides: 'http://www.slideshare.net/it-people/dump2013-22088665',
+            linkToEvent: dump2013Link,
         },
         {
             image: romanovskyImage,
@@ -385,6 +420,7 @@ export default {
             tags: ['management'],
             linkToVideo: 'https://www.youtube.com/watch?v=c92vn7EN76k',
             linkToSlides: 'http://www.slideshare.net/teamlead/teamlead-atlassian-day-42013-wacko-wiki-mediawiki-confluence',
+            linkToSlides: 'http://www.teamlead.ru/display/MAIN/TAD+6-2014+Moscow',
         },
     ],
 };

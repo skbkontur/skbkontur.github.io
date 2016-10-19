@@ -93,7 +93,6 @@
             .short-info {
                 white-space: wrap;
                 .tag, .event-info {
-                    color: #888;
                     display: inline-block;
                     white-space: nowrap;
                 }
@@ -191,7 +190,15 @@
                     padding-top: 5px;
                 });
                 .event-info, .tag {
+                    color: #888;
                     margin-right: 10px;
+
+                    a {
+                        color: #888;
+                        &:active, &:hover, &:focus {
+                            color: #009be6;
+                        }
+                    }
                 }
             }
         }

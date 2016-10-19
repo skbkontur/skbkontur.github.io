@@ -52,7 +52,10 @@ function Talk({ talk }) {
                 </div>
                 <div className={cn('short-info')}>
                     <span className={cn('event-info')}>
-                        {[talk.eventName, talk.dateString].filter(x => x).join(', ')}
+                        {talk.linkToEvent
+                            ? <a href={talk.linkToEvent}>{[talk.eventName, talk.dateString].filter(x => x).join(', ')}</a>
+                            : [talk.eventName, talk.dateString].filter(x => x).join(', ')
+                        }
                     </span>
                     {talk.tags.map((x, index) => (
                         <Tag
