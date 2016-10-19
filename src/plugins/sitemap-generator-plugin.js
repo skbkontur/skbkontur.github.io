@@ -1,7 +1,13 @@
+var moment = require('moment');
+
 function SitemapWebpackPlugin(base, options, fileName) {
     this.base = base;
     this.options = options;
     this.fileName = fileName || 'sitemap.xml';
+}
+
+function formatDateTime(date) {
+    return moment(date).utc().format('YYYY-MM-DDTHH:mm:ss+00:00');
 }
 
 SitemapWebpackPlugin.prototype.apply = function(compiler) {
@@ -9,9 +15,14 @@ SitemapWebpackPlugin.prototype.apply = function(compiler) {
 
     // Create sitemap from paths
     var out = '<?xml version="1.0" encoding="UTF-8"?>\n';
-    out += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+    out +=
+        '<urlset\n' +
+        '\txmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n' +
+        '\txmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n' +
+        '\txsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9\n' +
+        '\t\thttp://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">\n';
     var now = new Date();
-    var lastModString = now.getFullYear() + '-' + now.getMonth() + '-' + now.getDate();
+    var lastModString = formatDateTime(now);
     for(var i = 0; i < self.options.length; i++) {
         var path = self.options[i].path;
         var priority = self.options[i].priority ? self.options[i].priority: 0.6;
@@ -20,7 +31,7 @@ SitemapWebpackPlugin.prototype.apply = function(compiler) {
         out += '\t<url>\n';
         out += '\t\t<loc>' + self.base + path + '</loc>\n';
         out += '\t\t<changefreq>' + changefreq + '</changefreq>\n';
-        out += '\t\t<priority>' + priority + '</priority>\n';
+        out += '\t\t<priority>' + priority.toFixed(2) + '</priority>\n';
         out += '\t\t<lastmod>' + lastModString + '</lastmod>\n';
         out += '\t</url>\n';
     }

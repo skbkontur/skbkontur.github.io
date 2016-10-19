@@ -9,18 +9,26 @@ var SiteMapGeneratorPlugin = require('./src/plugins/sitemap-generator-plugin');
 
 var production = process.env.NODE_ENV == 'production';
 
+function addTrailingSlash(str) {
+    var lastChar = str.substr(-1);
+    if (lastChar != '/') {
+        return str + '/';
+    }
+    return str;
+}
+
 function getFileNameTemplate(ext) {
     return production ? '[name].[hash].' + ext + '' : '[name].' + ext + ''
 }
 
 var paths = [
-    '/',
-    '/talks',
-    '/articles',
-    '/ru/',
-    '/ru/talks',
-    '/ru/articles',
-    '/en',
+    { path: '/', priority: 1 },
+    { path: '/talks' },
+    { path: '/articles' },
+    { path: '/ru/' },
+    { path: '/ru/talks' },
+    { path: '/ru/articles' },
+    { path: '/en' },
 ];
 
 module.exports = {
@@ -105,7 +113,7 @@ module.exports = {
             _: "lodash"
         }),
         new ExtractTextPlugin(getFileNameTemplate('css')),
-        new StaticSiteGeneratorPlugin('server', paths),
+        new StaticSiteGeneratorPlugin('server', paths.map(function(x) { return x.path; })),
         new CompressionPlugin({
             asset: "[path]",
             algorithm: function(buffer, opts, callback) {
@@ -125,13 +133,15 @@ module.exports = {
         }),
         new SiteMapGeneratorPlugin(
             'http://tech.skbkontur.ru',
-            paths.map(function (path) {
-                return {
-                    path: path,
-                    changefreq: 'daily',
-                    priority: 0.6,
-                };
-            })),
+            paths
+                .filter(function(x) { return !x.path.startsWith('/ru/'); })
+                .map(function (path) {
+                    return {
+                        path: addTrailingSlash(path.path),
+                        changefreq: 'always',
+                        priority: path.priority == null ? 0.6 : path.priority,
+                    };
+                })),
     ],
 };
 
