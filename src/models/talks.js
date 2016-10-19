@@ -20,6 +20,11 @@ import plinerImage from 'talks-image-responsive!./images/pliner.jpg';
 import kokovinImage from 'talks-image-responsive!./images/kokovin.jpg';
 import ahmetovImage from 'talks-image-responsive!./images/ahmetov.jpg';
 import dashkevichImage from 'talks-image-responsive!./images/dashkevich.jpg';
+import baranovaImage from 'talks-image-responsive!./images/baranova.jpg';
+import solovievImage from 'talks-image-responsive!./images/soloviev.jpg';
+import shaihutdinovImage from 'talks-image-responsive!./images/shaihutdinov.png';
+import romanovskyImage from 'talks-image-responsive!./images/romanovsky.png';
+import safarovImage from 'talks-image-responsive!./images/safarov.png';
 
 export default {
     title: 'Выступления и доклады сотрудников компании СКБ Контур',
@@ -330,6 +335,56 @@ export default {
             tags: ['testing'],
             linkToVideo: 'https://www.youtube.com/watch?v=tnEyjppqufk&list=PLRdS-n5seLRoTw3SB8oPRBrbgDiRPWLdi',
             linkToSlides: 'http://www.slideshare.net/it-people/dump2014-32925242',
+        },
+        {
+            image: baranovaImage,
+            speakerFullName: 'Анна Баранова',
+            eventName: 'DUMP',
+            title: 'Геймификация как метод управления',
+            dateString: 'май 2013',
+            tags: ['management'],
+            linkToVideo: 'https://www.youtube.com/watch?v=eTybEGIE1QE&list=PLRdS-n5seLRpVRDblg0KDFr5V4RlvaDiR&index=14',
+            linkToSlides: 'https://drive.google.com/file/d/0B-qtqQ5D71UQZndQSTFDNjlVdm8/view?usp=drivesdk',
+        },
+        {
+            image: solovievImage,
+            speakerFullName: 'Сергей Соловьев, Николай Чуприянов',
+            eventName: 'DUMP',
+            title: '武士道: путь воина в проектировании интерфейсов',
+            dateString: 'май 2013',
+            tags: ['design', 'ui'],
+            linkToVideo: 'https://www.youtube.com/watch?v=87lDgRxqTjY&index=27&list=PLRdS-n5seLRpVRDblg0KDFr5V4RlvaDiR',
+            linkToSlides: 'http://www.slideshare.net/it-people/dump2013-22373283',
+        },
+        {
+            image: shaihutdinovImage,
+            speakerFullName: 'Рамиль Шайхутдинов',
+            eventName: 'DUMP',
+            title: '«Дом качества» как инструмент анализа пользовательского опыта',
+            dateString: 'май 2013',
+            tags: ['design', 'ui'],
+            linkToVideo: 'https://www.youtube.com/watch?v=Wmq7K1R-E8M&index=22&list=PLRdS-n5seLRpVRDblg0KDFr5V4RlvaDiR',
+            linkToSlides: 'http://www.slideshare.net/it-people/dump2013-22088665',
+        },
+        {
+            image: romanovskyImage,
+            speakerFullName: 'Евгений Романовский',
+            eventName: 'Семинар IT-people',
+            title: 'Опыт работы с фреймворком ASP.NET MVC',
+            dateString: 'июнь 2013',
+            tags: ['backend', '.net', 'asp'],
+            linkToVideo: 'https://www.youtube.com/watch?v=As4pSEyN_7A&index=2&list=PLRdS-n5seLRpbtx-l9gXedNN3QC2wnukE',
+            linkToSlides: 'https://1drv.ms/p/s!AulBT7iBDr036wCPYI-H0Zp7vtPT',
+        },
+        {
+            image: safarovImage,
+            speakerFullName: 'Эльдар Сафаров',
+            eventName: 'Teamlead Atlassian Day',
+            title: 'От WackoWiki к Confluence',
+            dateString: 'апрель 2014',
+            tags: ['management'],
+            linkToVideo: 'https://www.youtube.com/watch?v=c92vn7EN76k',
+            linkToSlides: 'http://www.slideshare.net/teamlead/teamlead-atlassian-day-42013-wacko-wiki-mediawiki-confluence',
         },
     ],
 };
