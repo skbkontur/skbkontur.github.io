@@ -127,12 +127,12 @@ export default class Layout extends React.Component {
                         }}
                         titleTemplate={layout.titleTemplate}
                         meta={[
-                            { content: logoSocialImage, property: 'og:image' },
+                            { content: 'http://tech.skbkontur.ru' + logoSocialImage, property: 'og:image' },
                         ]}
                         link={[
                             ...appleTouchIcons,
                             { ['href']: '/favicon.ico', ['rel']: 'shortcut icon' },
-                            { ['href']: logoSocialImage, ['rel']: 'image_src' },
+                            { ['href']: 'http://tech.skbkontur.ru' + logoSocialImage, ['rel']: 'image_src' },
                         ]}
                     />
                     <header>
