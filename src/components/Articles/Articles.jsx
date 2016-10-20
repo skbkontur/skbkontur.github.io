@@ -22,19 +22,13 @@ function Article({ article }) {
         <article className={cn('article')}>
             <div className={cn('content')}>
                 <h3><a href={article.linkToSlides}>{article.title}</a></h3>
-                <div className={cn('speaker')}>{article.speakerFullName}</div>
                 <div className={cn('annotation')}>
                     {article.annotation}
                 </div>
                 <div className={cn('short-info')}>
                     <ShortInfoBlock
-                        icon='star'
-                        text={article.eventName}
-                    />
-                    <ShortInfoBlock
-                        icon='calendar'
-                        text={article.dateString}
-                    />
+                        text={article.speakerFullName +', ' + article.dateString}
+                        />
                     {article.tags.map((x, index) => (
                         <ShortInfoBlock
                             key={index}
