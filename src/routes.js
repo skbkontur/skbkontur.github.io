@@ -6,7 +6,7 @@ import layout from './models/layout';
 import Layout from './components/Layout/Layout';
 
 import products from './models/products';
-import Products from './components/Products';
+import Products from './components/Products/Products';
 
 import talks from './models/talks';
 import Talks from './components/Talks/Talks';

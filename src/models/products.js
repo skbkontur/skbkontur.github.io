@@ -1,8 +1,8 @@
 import React from 'react';
 
-import moiraImage from '../images/moira.png';
-import ditraceImage from '../images/ditrace.png';
-import gitHubImage from '../images/github.png';
+import moiraImage from './images/products/moira.png';
+import ditraceImage from './images/products/ditrace.png';
+import gitHubImage from './images/products/github.png';
 
 export default {
     ['ru']: {
