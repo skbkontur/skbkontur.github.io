@@ -42,13 +42,13 @@ function Talk({ talk }) {
                 <h3><a href={talk.linkToVideo}>{talk.title}</a></h3>
                 <div className={cn('speaker-and-slides-link')}>
                     <div className={cn('speaker')}>{talk.speakerFullName}</div>
-                    <div className={cn('slides-link')}>
+                    {talk.linkToSlides && <div className={cn('slides-link')}>
                         <Link
                             href={talk.linkToSlides}
                             icon='card'>
                             Слайды
                         </Link>
-                    </div>
+                    </div>}
                 </div>
                 <div className={cn('short-info')}>
                     <span className={cn('event-info')}>
