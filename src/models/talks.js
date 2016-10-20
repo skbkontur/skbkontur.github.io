@@ -26,10 +26,22 @@ import shaihutdinovImage from 'talks-image-responsive!./images/shaihutdinov.png'
 import romanovskyImage from 'talks-image-responsive!./images/romanovsky.png';
 import safarovImage from 'talks-image-responsive!./images/safarov.png';
 
+// 2013 conference archives
 const dump2013Link = 'http://dump-it.ru/arhiv/itogi-dump-2013/';
+const tadEkb2013Link = 'http://www.teamlead.ru/display/MAIN/TAD+4-2013+Ekaterinburg';
+
+// 2014 conference archives
 const dump2014Link = 'http://dump-conf.ru/archive/2014/';
+
+// 2015 conference archives
 const dump2015Link = 'http://dump-conf.ru/archive/2015/';
-const dump2016Link = 'http://dump-conf.ru/';
+const secr2015Link = 'http://2015.secr.ru/';
+
+// 2016 conference archives
+const dump2016Link = 'http://dump-conf.ru/archive/2016/';
+const codefest2016Link = 'http://2016.codefest.ru/';
+const dotnextPiter2016Link = 'http://2016.dotnext-piter.ru';
+const wsdEkb2016Link = 'https://wsd.events/2016/06/25/';
 
 export default {
     title: 'Выступления и доклады сотрудников компании СКБ Контур',
@@ -50,7 +62,6 @@ export default {
             tags: ['frontend', 'js', 'react'],
             linkToVideo: 'https://www.youtube.com/watch?v=v5Fi-djuwZk',
             linkToSlides: 'http://www.slideshare.net/PavelVolokitin/frontfellows-relay-66758880',
-            linkToEvent: 'https://frontendfellows.timepad.ru/event/284968/',
         },
         {
             image: kazakovImage,
@@ -61,7 +72,7 @@ export default {
             tags: ['backend', 'operations'],
             linkToVideo: 'https://www.youtube.com/watch?v=LFpJGGs-kuo',
             linkToSlides: 'http://www.slideshare.net/codefest/ss-60114851',
-            linkToEvent: 'http://2016.codefest.ru/',
+            linkToEvent: codefest2016Link,
         },
         {
             image: chevdarImage,
@@ -72,7 +83,7 @@ export default {
             tags: ['backend', '.net'],
             linkToVideo: 'https://www.youtube.com/watch?v=X35JVTJV1CE&list=PLtWrKx3nUGBeYn-pSCjEgBPL90SvpylZL&index=7',
             linkToSlides: 'http://public.jugru.org/dotnext/2016/spb/day_1/track_2/chevdar.pdf',
-            linkToEvent: 'http://dotnext-piter.ru/',
+            linkToEvent: dotnextPiter2016Link,
         },
         {
             image: volokitinImage,
@@ -83,7 +94,7 @@ export default {
             tags: ['frontend', 'js'],
             linkToVideo: 'https://www.youtube.com/watch?v=zoq95j3V43g',
             linkToSlides: 'http://www.slideshare.net/PavelVolokitin/javascript-javascript-66759016',
-            linkToEvent: 'https://wsd.events/2016/06/25/',
+            linkToEvent: wsdEkb2016Link,
         },
         {
             image: tihonovImage,
@@ -94,7 +105,7 @@ export default {
             tags: ['frontend', 'js', 'react'],
             linkToVideo: 'https://www.youtube.com/watch?v=OXsxo4gkqtQ',
             linkToSlides: 'https://reelm.github.io/wsd-2016-slides/wsd-2016-slides.zip',
-            linkToEvent: 'https://wsd.events/2016/06/25/',
+            linkToEvent: wsdEkb2016Link,
         },
         {
             image: burmistrovImage,
@@ -105,7 +116,6 @@ export default {
             tags: ['backend', 'db', 'cassandra'],
             linkToVideo: 'https://www.youtube.com/watch?v=t6utdWssBOM',
             linkToSlides: 'https://drive.google.com/open?id=0B-qtqQ5D71UQX1FvSlgtaUtscFE',
-            linkToEvent: 'https://www.datastax.com/company/events',
         },
         {
             image: egorovImage,
@@ -116,7 +126,7 @@ export default {
             tags: ['management', 'education'],
             linkToVideo: 'http://0x1.tv/20151022BG',
             linkToSlides: 'http://0x1.tv/20151022BG',
-            linkToEvent: 'http://2015.secr.ru/',
+            linkToEvent: secr2015Link,
         },
         {
             image: kazakovImage,
@@ -416,11 +426,11 @@ export default {
             speakerFullName: 'Эльдар Сафаров',
             eventName: 'Teamlead Atlassian Day',
             title: 'От WackoWiki к Confluence',
-            dateString: 'апрель 2014',
+            dateString: 'апрель 2013',
             tags: ['management'],
             linkToVideo: 'https://www.youtube.com/watch?v=c92vn7EN76k',
             linkToSlides: 'http://www.slideshare.net/teamlead/teamlead-atlassian-day-42013-wacko-wiki-mediawiki-confluence',
-            linkToSlides: 'http://www.teamlead.ru/display/MAIN/TAD+6-2014+Moscow',
+            linkToEvent: tadEkb2013Link,
         },
     ],
 };
