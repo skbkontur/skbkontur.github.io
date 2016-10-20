@@ -11,20 +11,26 @@ import khruschevImage from 'talks-image-responsive!./images/khruschev.jpg';
 import kirpichnikovImage from 'talks-image-responsive!./images/kirpichnikov.jpg';
 import kokovinImage from 'talks-image-responsive!./images/kokovin.jpg';
 import konovalovImage from 'talks-image-responsive!./images/konovalov.png';
+import kurpilanskyImage from 'talks-image-responsive!./images/kurpilansky.png';
 import kutovoiImage from 'talks-image-responsive!./images/kutovoi.png';
 import larkovImage from 'talks-image-responsive!./images/larkov.jpg';
 import moiseevImage from 'talks-image-responsive!./images/moiseev.png';
+import musinaImage from 'talks-image-responsive!./images/musina.png';
 import plinerImage from 'talks-image-responsive!./images/pliner.jpg';
 import ratkinImage from 'talks-image-responsive!./images/ratkin.png';
 import romanovskyImage from 'talks-image-responsive!./images/romanovsky.png';
 import ronzhinaImage from 'talks-image-responsive!./images/ronzhina.png';
 import safarovImage from 'talks-image-responsive!./images/safarov.png';
 import shaihutdinovImage from 'talks-image-responsive!./images/shaihutdinov.png';
-import sobolevaImage from 'talks-image-responsive!./images/soboleva.jpg';
+import sobolevaeImage from 'talks-image-responsive!./images/sobolevae.jpg';
+import sobolevaoImage from 'talks-image-responsive!./images/sobolevao.png';
 import solovievImage from 'talks-image-responsive!./images/soloviev.jpg';
 import tihonovImage from 'talks-image-responsive!./images/tihonov.jpg';
 import vdovichenkoImage from 'talks-image-responsive!./images/vdovichenko.png';
 import volokitinImage from 'talks-image-responsive!./images/volokitin.jpg';
+
+// 2012 conference archives
+const sqa2012Link = 'http://sqadays.com/ru/talks/7995';
 
 // 2013 conference archives
 const dump2013Link = 'http://dump-it.ru/arhiv/itogi-dump-2013/';
@@ -206,7 +212,7 @@ export default {
             linkToEvent: dump2015Link,
         },
         {
-            image: sobolevaImage,
+            image: sobolevaeImage,
             speakerFullName: 'Эльвира Соболева',
             eventName: 'DUMP',
             title: 'Тестировщик в роли менеджера итерации',
@@ -431,6 +437,54 @@ export default {
             linkToVideo: 'https://www.youtube.com/watch?v=c92vn7EN76k',
             linkToSlides: 'http://www.slideshare.net/teamlead/teamlead-atlassian-day-42013-wacko-wiki-mediawiki-confluence',
             linkToEvent: tadEkb2013Link,
+        },
+        {
+            image: musinaImage,
+            speakerFullName: 'Анастасия Мусина',
+            eventName: 'ConfeT&QA',
+            title: 'Не закручивайте гайки!',
+            dateString: 'октябрь 2013',
+            tags: ['testing'],
+            linkToVideo: 'https://www.youtube.com/watch?v=VCIqpKLhRlo',
+        },
+        {
+            image: musinaImage,
+            speakerFullName: 'Анастасия Мусина',
+            eventName: 'SQA Days',
+            title: 'Как заводить баги понятно всем',
+            dateString: 'апрель 2012',
+            tags: ['testing'],
+            linkToVideo: 'https://vimeo.com/42271611',
+            linkToSlides: 'http://www.slideshare.net/VLDCORP/ss-12686469',
+            linkToEvent: sqa2012Link,
+        },
+        {
+            image: kurpilanskyImage,
+            speakerFullName: 'Евгений Курпилянский',
+            eventName: 'CassandraConf',
+            title: 'Индексирование поверх Cassandra',
+            dateString: 'декабрь 2013',
+            tags: ['backend', 'db', 'cassandra'],
+            linkToVideo: 'https://www.youtube.com/watch?v=ljcZVZGnM2I&index=6&list=PLEbtM8n7mz93h4VRGBc3SabsAHJCcjdzx',
+        },
+        {
+            image: kokovinImage,
+            speakerFullName: 'Сычев Максим, Коковин Александр',
+            eventName: 'CassandraConf',
+            title: 'Как мы переезжали на Cassandra',
+            dateString: 'декабрь 2013',
+            tags: ['backend', 'db', 'cassandra'],
+            linkToVideo: 'https://www.youtube.com/watch?v=9iOBQPDvIgY&list=PLEbtM8n7mz93h4VRGBc3SabsAHJCcjdzx&index=7',
+            linkToSlides: 'http://www.slideshare.net/it-people/cassandraconf2',
+        },
+        {
+            image: sobolevaoImage,
+            speakerFullName: 'Соболева Ольга, Иванов Кирилл',
+            eventName: 'CassandraConf',
+            title: 'Обработка транзакций на примере телекоммуникационной компании',
+            dateString: 'декабрь 2013',
+            tags: ['backend', 'db', 'cassandra'],
+            linkToVideo: 'https://www.youtube.com/watch?v=BacY43GELrM&index=12&list=PLEbtM8n7mz93h4VRGBc3SabsAHJCcjdzx',
         },
     ],
 };
