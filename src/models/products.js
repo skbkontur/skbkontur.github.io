@@ -105,6 +105,15 @@ export default {
                 text: <span>Эффективная компиляция деревьев выражений для .NET</span>,
                 links: []
             },
+            {
+                image: gitHubImage,
+                header: {
+                    href: 'https://github.com/misha-plus/ytissues-confluence',
+                    caption: 'ytissues-confluence'
+                },
+                text: <span>Макрос Confluence для вставки на страницы интерактивных ссылок на задачи YouTrack</span>,
+                links: []
+            },
         ]
     },
     'en': {
@@ -205,6 +214,15 @@ export default {
                     caption: 'GrobExp.Compiler'
                 },
                 text: <span>Effective compiler of .NET expression trees</span>,
+                links: []
+            },
+            {
+                image: gitHubImage,
+                header: {
+                    href: 'https://github.com/misha-plus/ytissues-confluence',
+                    caption: 'ytissues-confluence'
+                },
+                text: <span>Helpful macros for inserting interactive links to YouTrack issues</span>,
                 links: []
             },
         ]
