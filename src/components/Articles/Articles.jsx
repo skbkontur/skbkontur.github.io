@@ -27,8 +27,8 @@ function Article({ article }) {
                 </div>
                 <div className={cn('short-info')}>
                     <ShortInfoBlock
-                        text={article.speakerFullName +', ' + article.dateString}
-                        />
+                        text={[article.speakerFullName, article.dateString].filter(x => x).join(', ')}
+                    />
                     {article.tags.map((x, index) => (
                         <ShortInfoBlock
                             key={index}
