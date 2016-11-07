@@ -40,7 +40,16 @@ export default {
                     caption: 'ZstdNet'
                 },
                 text: <span>.NET-обертка над библиотекой сжатия <a href="http://www.zstd.net">Zstandard</a></span>,
-                links: []
+                links: [
+                    {
+                        href: 'https://github.com/skbkontur/ZstdNet',
+                        caption: 'Код'
+                    },
+                    {
+                        href: 'https://www.nuget.org/packages/ZstdNet/',
+                        caption: 'NuGet'
+                    },
+                ]
             },
             {
                 image: gitHubImage,
@@ -49,7 +58,16 @@ export default {
                     caption: 'reelm'
                 },
                 text: <span>Библиотека для управления эффектами в <a href="http://redux.js.org">redux</a></span>,
-                links: []
+                links: [
+                    {
+                        href: 'https://github.com/tihonove/reelm',
+                        caption: 'Код'
+                    },
+                    {
+                        href: 'https://www.npmjs.com/package/reelm',
+                        caption: 'npm'
+                    },
+                ]
             },
             {
                 image: ditraceImage,
@@ -85,7 +103,16 @@ export default {
                     caption: 'GrEmit'
                 },
                 text: <span>Инструменты для генерации кода через Reflection.Emit, в том числе GroboIL — умная обертка над <a href="http://msdn.microsoft.com/en-us/library/system.reflection.emit.ilgenerator.aspx">ILGenerator</a></span>,
-                links: []
+                links: [
+                    {
+                        href: 'https://github.com/homuroll/gremit',
+                        caption: 'Код'
+                    },
+                    {
+                        href: 'https://www.nuget.org/packages/GrEmit/',
+                        caption: 'NuGet'
+                    },
+                ]
             },
             {
                 image: gitHubImage,
@@ -94,7 +121,16 @@ export default {
                     caption: 'GroBuf'
                 },
                 text: <span>Быстрая бинарная сериализация для .NET</span>,
-                links: []
+                links: [
+                    {
+                        href: 'https://github.com/homuroll/GroBuf',
+                        caption: 'Код'
+                    },
+                    {
+                        href: 'https://www.nuget.org/packages/GroBuf/',
+                        caption: 'NuGet'
+                    },
+                ]
             },
             {
                 image: gitHubImage,
@@ -103,7 +139,16 @@ export default {
                     caption: 'GrobExp.Compiler'
                 },
                 text: <span>Эффективная компиляция деревьев выражений для .NET</span>,
-                links: []
+                links: [
+                    {
+                        href: 'https://github.com/homuroll/GrobExp.Compiler',
+                        caption: 'Код'
+                    },
+                    {
+                        href: 'https://www.nuget.org/packages/GrobExp.Compiler/',
+                        caption: 'NuGet'
+                    },
+                ]
             },
             {
                 image: gitHubImage,
@@ -151,7 +196,16 @@ export default {
                     caption: 'ZstdNet'
                 },
                 text: <span>.NET-wrapper of <a href="http://www.zstd.net">Zstandard</a> compression library</span>,
-                links: []
+                links: [
+                    {
+                        href: 'https://github.com/skbkontur/ZstdNet',
+                        caption: 'Code'
+                    },
+                    {
+                        href: 'https://www.nuget.org/packages/ZstdNet/',
+                        caption: 'NuGet'
+                    },
+                ]
             },
             {
                 image: gitHubImage,
@@ -160,7 +214,16 @@ export default {
                     caption: 'reelm'
                 },
                 text: <span>Awesome effect management library for <a href="http://redux.js.org">redux</a></span>,
-                links: []
+                links: [
+                    {
+                        href: 'https://github.com/tihonove/reelm',
+                        caption: 'Code'
+                    },
+                    {
+                        href: 'https://www.npmjs.com/package/reelm',
+                        caption: 'npm'
+                    },
+                ]
             },
             {
                 image: ditraceImage,
@@ -196,7 +259,16 @@ export default {
                     caption: 'GrEmit'
                 },
                 text: <span>Helpers for generating code using Reflection.Emit with the main one being GroboIL — a smart wrapper over <a href="http://msdn.microsoft.com/en-us/library/system.reflection.emit.ilgenerator.aspx">ILGenerator</a></span>,
-                links: []
+                links: [
+                    {
+                        href: 'https://github.com/homuroll/gremit',
+                        caption: 'Code'
+                    },
+                    {
+                        href: 'https://www.nuget.org/packages/GrEmit/',
+                        caption: 'NuGet'
+                    },
+                ]
             },
             {
                 image: gitHubImage,
@@ -205,7 +277,16 @@ export default {
                     caption: 'GroBuf'
                 },
                 text: <span>Fast binary serializer for .NET</span>,
-                links: []
+                links: [
+                    {
+                        href: 'https://github.com/homuroll/GroBuf',
+                        caption: 'Code'
+                    },
+                    {
+                        href: 'https://www.nuget.org/packages/GroBuf/',
+                        caption: 'NuGet'
+                    },
+                ]
             },
             {
                 image: gitHubImage,
@@ -214,7 +295,16 @@ export default {
                     caption: 'GrobExp.Compiler'
                 },
                 text: <span>Effective compiler of .NET expression trees</span>,
-                links: []
+                links: [
+                    {
+                        href: 'https://github.com/homuroll/GrobExp.Compiler',
+                        caption: 'Code'
+                    },
+                    {
+                        href: 'https://www.nuget.org/packages/GrobExp.Compiler/',
+                        caption: 'NuGet'
+                    },
+                ]
             },
             {
                 image: gitHubImage,
