@@ -8,7 +8,7 @@ export default {
     ['ru']: {
         title: 'Open source технологии и решения компании СКБ Контур: Moira, DiTrace и многое другое',
         meta: {
-            keywords: 'open source, open-sourсe, oss, скб контур, скб-контур, контур, открытый код, Moira, DiTrace, ZstdNet, reelm, cspreport',
+            keywords: 'open source, open-sourсe, oss, скб контур, скб-контур, контур, открытый код, Moira, DiTrace, ZstdNet, reelm, frontreport',
             description: 'Open source технологии компании СКБ Контур. Moira — решение по уведомлениям из Graphite, DiTrace — трассировка запросов в распределенных системах и другие решения',
         },
         customMetaHeaders: [
@@ -90,10 +90,10 @@ export default {
             {
                 image: gitHubImage,
                 header: {
-                    href: 'https://github.com/skbkontur/cspreport',
-                    caption: 'cspreport'
+                    href: 'https://github.com/skbkontur/frontreport',
+                    caption: 'frontreport'
                 },
-                text: <span>Шлюз для сбора отчетов о нарушении политик безопасности <a href="https://en.wikipedia.org/wiki/Content_Security_Policy">CSP</a> и <a href="https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning">HPKP</a></span>,
+                text: <span>Шлюз для сбора логов ошибок из браузеров пользователей</span>,
                 links: []
             },
             {
@@ -165,7 +165,7 @@ export default {
         title: 'Open source technology and solutions company SKB Kontur: Moira, DiTrace and more',
         meta: {
             description: 'Open source technology company SKB Kontur. Moira — Mail, Telegram, Slack and Pushover notifications based on Graphite metrics, DiTrace — request tracing for bottlenecks analysis in distributed systems',
-            keywords: 'open source, open-sourсe, oss, skb kontur, skb-kontur, kontur, Moira, DiTrace, ZstdNet, reelm, cspreport',
+            keywords: 'open source, open-sourсe, oss, skb kontur, skb-kontur, kontur, Moira, DiTrace, ZstdNet, reelm, frontreport',
         },
         customMetaHeaders: [
             { ['http-equiv']: 'content-language', ['content']: 'en-US' },
@@ -246,10 +246,10 @@ export default {
             {
                 image: gitHubImage,
                 header: {
-                    href: 'https://github.com/skbkontur/cspreport',
-                    caption: 'cspreport'
+                    href: 'https://github.com/skbkontur/frontreport',
+                    caption: 'frontreport'
                 },
-                text: <span><a href="https://en.wikipedia.org/wiki/Content_Security_Policy">CSP</a> and <a href="https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning">HPKP</a> policy violation report collector</span>,
+                text: <span>Browser stacktrace and policy violation report collector</span>,
                 links: []
             },
             {
