@@ -159,6 +159,15 @@ export default {
                 text: <span>Макрос Confluence для вставки на страницы интерактивных ссылок на задачи YouTrack</span>,
                 links: []
             },
+            {
+                image: gitHubImage,
+                header: {
+                    href: 'https://github.com/skbkontur/OctoPnP',
+                    caption: 'OctoPnP'
+                },
+                text: <span>Плагин TeamCity для упаковки и публикации пакетов в систему автоматического деплоя Octopus</span>,
+                links: []
+            },
         ]
     },
     'en': {
@@ -313,6 +322,15 @@ export default {
                     caption: 'ytissues-confluence'
                 },
                 text: <span>Helpful macros for inserting interactive links to YouTrack issues</span>,
+                links: []
+            },
+            {
+                image: gitHubImage,
+                header: {
+                    href: 'https://github.com/skbkontur/OctoPnP',
+                    caption: 'OctoPnP'
+                },
+                text: <span>TeamCity plugin with pack-and-publish functionality for Octopus-based deployments automation</span>,
                 links: []
             },
         ]
