@@ -6,6 +6,7 @@ import Link from 'retail-ui/components/Link';
 import { sortByDateString } from '../../utils/sort-utils.js';
 import socialMetaHeaders from '../../models/social-meta-headers';
 import metaHeaders from '../../models/meta-headers';
+import InfiniteLoader from '../InfiniteLoader/InfiniteLoader';
 
 function Tag({ text }) {
     if (text === null || text === undefined || text === '') {
@@ -70,28 +71,45 @@ function Talk({ talk }) {
     );
 }
 
-export default function Talks({ route: { talks } }) {
-    return (
-        <main className={cn('root-container')}>
-            <div className={cn('root', 'fixed-width-content')}>
-                <Helmet
-                    title={talks.title}
-                    meta={[
-                        ...talks.customMetaHeaders,
-                        ...metaHeaders(talks.meta),
-                        ...socialMetaHeaders(talks.title, talks.meta.description),
-                    ]}
-                    htmlAttributes={{ class: 'talks' }}
-                />
-                <div className={cn('row')}>
-                    {sortByDateString(talks.items, x => x.dateString).map((talk, index) => (
-                        <div key={index} className={cn(
-                            'talk-container', 'col-lg-4', 'col-md-4', 'col-sm-4', 'col-xs-12')}>
-                            <Talk talk={talk} />
-                        </div>
-                    ))}
+const initialLength = 9;
+const increseLengthBy = 9;
+
+export default class Talks extends React.Component {
+    state = {
+        size: initialLength,
+    };
+
+    handleLoadMore() {
+        this.setState({
+            size: this.state.size + increseLengthBy,
+        });
+    }
+
+    render() {
+        const { route: { talks } } = this.props;
+
+        return (
+            <main ref='el' className={cn('root-container')}>
+                <div className={cn('root', 'fixed-width-content')}>
+                    <Helmet
+                        title={talks.title}
+                        meta={[
+                            ...talks.customMetaHeaders,
+                            ...metaHeaders(talks.meta),
+                            ...socialMetaHeaders(talks.title, talks.meta.description),
+                        ]}
+                        htmlAttributes={{ class: 'talks' }}
+                    />
+                    <InfiniteLoader className={cn('row')} onLoadMore={() => this.handleLoadMore()}>
+                        {sortByDateString(talks.items, x => x.dateString).slice(0, this.state.size).map((talk, index) => (
+                            <div key={index} className={cn(
+                                'talk-container', 'col-lg-4', 'col-md-4', 'col-sm-4', 'col-xs-12')}>
+                                <Talk talk={talk} />
+                            </div>
+                        ))}
+                    </InfiniteLoader>
                 </div>
-            </div>
-        </main>
-    );
+            </main>
+        );
+    }
 }
