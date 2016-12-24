@@ -5,6 +5,7 @@ import Icon from 'retail-ui/components/Icon';
 import { sortByDateString } from '../../utils/sort-utils.js';
 import socialMetaHeaders from '../../models/social-meta-headers';
 import metaHeaders from '../../models/meta-headers';
+import TagsBar, { getMostPopularTags, getCurrentTag } from '../TagsBar/TagsBar';
 
 function ShortInfoBlock({ icon, text }) {
     if (text === null || text === undefined || text === '') {
@@ -42,24 +43,35 @@ function Article({ article }) {
     );
 }
 
-export default function Articles({ route: { articles } }) {
+export default function Articles({ location, route: { articles } }) {
+    const currentTag = getCurrentTag(location);
+
     return (
-        <div className={cn('root', 'fixed-width-content')}>
-            <Helmet
-                title={articles.title}
-                meta={[
-                    ...articles.customMetaHeaders,
-                    ...metaHeaders(articles.meta),
-                    ...socialMetaHeaders(articles.title, articles.meta.description),
-                ]}
-                htmlAttributes={{ class: cn('articles') }}
+        <div className={cn('root')}>
+            <TagsBar
+                className={cn('tags-bar')}
+                currentTag={currentTag}
+                tags={getMostPopularTags(articles.items, x => x.tags)}
             />
-            <div className={cn('row')}>
-                {sortByDateString(articles.items, x => x.dateString).map((article, index) => (
-                    <div key={index} className={cn('article-container', 'col-xs-12')}>
-                        <Article article={article} />
-                    </div>
-                ))}
+            <div className={cn('fixed-width-content')}>
+                <Helmet
+                    title={articles.title}
+                    meta={[
+                        ...articles.customMetaHeaders,
+                        ...metaHeaders(articles.meta),
+                        ...socialMetaHeaders(articles.title, articles.meta.description),
+                    ]}
+                    htmlAttributes={{ class: cn('articles') }}
+                />
+                <div className={cn('row')}>
+                    {sortByDateString(articles.items, x => x.dateString)
+                        .filter(x => currentTag === null || x.tags.includes(currentTag))
+                        .map((article, index) => (
+                            <div key={index} className={cn('article-container', 'col-xs-12')}>
+                                <Article article={article} />
+                            </div>
+                        ))}
+                </div>
             </div>
         </div>
     );

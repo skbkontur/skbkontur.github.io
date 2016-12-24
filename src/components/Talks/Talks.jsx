@@ -1,12 +1,16 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import cn from './Talks.less';
 import Icon from 'retail-ui/components/Icon';
 import Link from 'retail-ui/components/Link';
+
 import { sortByDateString } from '../../utils/sort-utils.js';
 import socialMetaHeaders from '../../models/social-meta-headers';
 import metaHeaders from '../../models/meta-headers';
 import InfiniteLoader from '../InfiniteLoader/InfiniteLoader';
+import TagsBar, { getMostPopularTags, getCurrentTag } from '../TagsBar/TagsBar';
+
+import cn from './Talks.less';
+
 
 function Tag({ text }) {
     if (text === null || text === undefined || text === '') {
@@ -86,10 +90,16 @@ export default class Talks extends React.Component {
     }
 
     render() {
-        const { route: { talks } } = this.props;
+        const { location, route: { talks } } = this.props;
+        const currentTag = getCurrentTag(location);
 
         return (
             <main ref='el' className={cn('root-container')}>
+                <TagsBar
+                    className={cn('tags-bar')}
+                    currentTag={currentTag}
+                    tags={getMostPopularTags(talks.items, x => x.tags)}
+                />
                 <div className={cn('root', 'fixed-width-content')}>
                     <Helmet
                         title={talks.title}
@@ -101,12 +111,15 @@ export default class Talks extends React.Component {
                         htmlAttributes={{ class: 'talks' }}
                     />
                     <InfiniteLoader className={cn('row')} onLoadMore={() => this.handleLoadMore()}>
-                        {sortByDateString(talks.items, x => x.dateString).slice(0, this.state.size).map((talk, index) => (
-                            <div key={index} className={cn(
-                                'talk-container', 'col-lg-4', 'col-md-4', 'col-sm-4', 'col-xs-12')}>
-                                <Talk talk={talk} />
-                            </div>
-                        ))}
+                        {sortByDateString(talks.items, x => x.dateString)
+                            .filter(x => currentTag === null || x.tags.includes(currentTag))
+                            .slice(0, this.state.size)
+                            .map((talk, index) => (
+                                <div key={index} className={cn(
+                                    'talk-container', 'col-lg-4', 'col-md-4', 'col-sm-4', 'col-xs-12')}>
+                                    <Talk talk={talk} />
+                                </div>
+                            ))}
                     </InfiniteLoader>
                 </div>
             </main>
