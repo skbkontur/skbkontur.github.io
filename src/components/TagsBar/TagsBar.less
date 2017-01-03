@@ -1,43 +1,43 @@
 @import "../../styles/common/mixins.less";
 @import "../../styles/common/variables.less";
 
-:local {
-    .root {
-        .xs-only-viewport({
-            display: none;
-        });
+@import '../../styles/common/layout.less';
 
-        padding-top: 5px;
-        padding-bottom: 5px;
-        height: 40px;
-        overflow: hidden;
+.root {
+    .xs-only-viewport({
+        display: none;
+    });
 
-        a {
-            &[href='#'] {
-                color: black;
-            }
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 40px;
+    overflow: hidden;
 
-            margin-right: 20px;
-            display: block;
-            float: left;
-            line-height: 40px;
-            font-size: 16px;
-            color: #747474;
+    a {
+        &[href='#'] {
+            color: black;
+        }
+
+        margin-right: 20px;
+        display: block;
+        float: left;
+        line-height: 40px;
+        font-size: 16px;
+        color: #747474;
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+            color: black;
             text-decoration: none;
-            font-weight: 600;
+        }
 
-            &:hover {
-                color: black;
-                text-decoration: none;
-            }
-
-            &:focus {
-                outline: -webkit-focus-ring-color auto 5px;
-                outline-color: -webkit-focus-ring-color;
-                outline-style: auto;
-                outline-width: 5px;
-                text-decoration: none;
-            }
+        &:focus {
+            outline: -webkit-focus-ring-color auto 5px;
+            outline-color: -webkit-focus-ring-color;
+            outline-style: auto;
+            outline-width: 5px;
+            text-decoration: none;
         }
     }
 }

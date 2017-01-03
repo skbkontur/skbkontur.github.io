@@ -1,152 +1,112 @@
 @import "../../styles/common/mixins.less";
 @import "../../styles/common/variables.less";
 
+@import "../../styles/common/layout.less";
+
 //================================
 // LAYOUT
 //================================
 
-@footer-height: 70px;
-@talks-footer-height: 120px;
-
-#content, #react-wrapper {
-    min-height: 100%;
-    height: 100%;
-}
-
-#wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -@footer-height;
-
-    #push {
-        height: @footer-height;
-    }
-}
-
-.talks {
-    #wrapper {
-        margin: 0 auto -@talks-footer-height;
-        #push {
-            height: @talks-footer-height;
-        }
-    }
-    :local {
-        .container {
-            height: @talks-footer-height;
-        }
-    }
-}
-
-:local {
-    .container {
-        box-sizing: border-box;
-        height: @footer-height;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .footer {
-            flex-grow: 0;
-            flex-basis: @max-width;
-
-            .additional-text {
-                font-size: 14px;
-                margin-bottom: 15px;
-                color: #888;
-            }
-
-            .footer-main {
-                display: flex;
-                align-items: center;
-
-                .kontur-logo {
-                    flex-grow: 0;
-                    flex-shrink: 0;
-                }
-
-                .since-text {
-                    flex-grow: 0;
-                    flex-shrink: 0;
-                }
-
-                .languages {
-                    flex-grow: 0;
-                    flex-shrink: 0;
-                    display: inline-block;
-                    margin-left: 50px;
-                    white-space: nowrap;
-                }
-
-                .spacer {
-                    flex-grow: 0;
-                    flex-shrink: 1;
-                    flex-basis: 100%;
-                }
-                .email {
-                    display: none;
-
-                    .sm-viewport({
-                        display: inline-block;
-                        flex-grow: 0;
-                        flex-shrink: 0;
-                    });
-                }
-            }
-        }
-    }
-
-
-    //================================
-    // VISUAL STYLES
-    //================================
-
-    .container {
-        background-color: @footer-background-color;
-        border-top: 1px solid #efefef;
-    }
-
-    .kontur-logo {
-        background-image: url(../../images/logo-skbkontur.png);
-        width: 114px;
-        height: 22px;
-        margin-right: 5px;
-        margin-top: -4px;
-    }
-
+.container {
     .footer {
-        .languages {
-            a {
-                font-size: 13px;
-                display: inline-block;
-                width: 28px;
-                height: 28px;
-                line-height: 28px;
-                text-align: center;
-                color: #848484;
+        .additional-text {
+            margin: 10px 0;
+            .sm-viewport({
+                margin: 20px 0;
+            });
 
-                &:hover {
-                    color: #848484;
-                    &.active {
-                        color: #4f4f4f;
-                    }
-                }
-
-                &.active {
-                    text-decoration: none;
-                    color: #4f4f4f;
-                    background-color: #e8e8e8;
-                    border-radius: 14px;
-                }
-            }
+            font-size: 14px;
+            color: #888;
         }
 
-        .email {
-            text-decoration: none;
+        .footer-main {
+            margin: 10px 0;
+            .sm-viewport({
+                margin: 20px 0;
+            });
+
+            display: flex;
+            align-items: center;
+
+            .kontur-logo {
+                flex: 0 0 auto;
+            }
+
+            .since-text {
+                flex: 0 0 auto;
+            }
+
+            .languages {
+                display: inline-block;
+                margin-left: 50px;
+                white-space: nowrap;
+            }
+
+            .spacer {
+                flex: 0 1 100%;
+            }
+            .email {
+                display: none;
+
+                .sm-viewport({
+                    display: inline-block;
+                    flex: 0 0 auto;
+                });
+            }
+        }
+    }
+}
+
+
+//================================
+// VISUAL STYLES
+//================================
+
+.container {
+    background-color: @footer-background-color;
+    border-top: 1px solid #efefef;
+}
+
+.kontur-logo {
+    background-image: url(../../images/logo-skbkontur.png);
+    width: 114px;
+    height: 22px;
+    margin-right: 5px;
+    margin-top: -4px;
+}
+
+.footer {
+    .languages {
+        a {
+            font-size: 13px;
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            color: #848484;
+
             &:hover {
-                .text {
-                    text-decoration: underline;
+                color: #848484;
+                &.active {
+                    color: #4f4f4f;
                 }
+            }
+
+            &.active {
+                text-decoration: none;
+                color: #4f4f4f;
+                background-color: #e8e8e8;
+                border-radius: 14px;
+            }
+        }
+    }
+
+    .email {
+        text-decoration: none;
+        &:hover {
+            .text {
+                text-decoration: underline;
             }
         }
     }

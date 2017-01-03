@@ -68,8 +68,8 @@ module.exports = {
                 loaders: [
                     'classnames',
                     production
-                        ? ExtractTextPlugin.extract('style', 'css!postcss!less')
-                        : ExtractTextPlugin.extract('style', 'css?localIdentName=[name]-[local]-[hash:base64:3]!postcss!less')
+                        ? ExtractTextPlugin.extract('style', 'css?modules!postcss!less')
+                        : ExtractTextPlugin.extract('style', 'css?modules&localIdentName=[name]-[local]-[hash:base64:3]!postcss!less')
                 ],
             },
             {

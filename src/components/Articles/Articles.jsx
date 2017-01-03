@@ -61,7 +61,6 @@ export default function Articles({ location, route: { articles } }) {
                         ...metaHeaders(articles.meta),
                         ...socialMetaHeaders(articles.title, articles.meta.description),
                     ]}
-                    htmlAttributes={{ class: cn('articles') }}
                 />
                 <div className={cn('row')}>
                     {sortByDateString(articles.items, x => x.dateString)

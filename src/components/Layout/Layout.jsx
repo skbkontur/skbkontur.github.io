@@ -1,8 +1,8 @@
 import React from 'react';
-import '../../styles/index.less';
-import cn from 'classnames';
+import cn from './Layout.less';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
+
 const Hammer = typeof document !== 'undefined' ? require('hammerjs') : undefined;
 
 import Footer from '../Footer/Footer';
@@ -54,7 +54,6 @@ export default class Layout extends React.Component {
             var delta = ev.deltaX;
             var percent = (100 / this.containerWidth) * delta;
             this.refs.siteNavigation.style.width = Math.round(this.containerWidth - delta).toString() + 'px';
-            console.log(percent)
             this.refs.siteNavigationOverlay.style.opacity = Math.min(0.7, 0.7 * (this.containerWidth - delta) / this.containerWidth);
             if (ev.type == 'panend' || ev.type == 'pancancel') {
                 if (percent > 30 && ev.type == 'panend') {
@@ -93,13 +92,13 @@ export default class Layout extends React.Component {
         const { router } = this.context;
         if (router.isActive(menuItem.href, true)) {
             return (
-                <Link title={menuItem.caption} className="site-section">
+                <Link title={menuItem.caption} className={cn('site-section')}>
                     {menuItem.caption}
                 </Link>
             )
         }
         return (
-            <Link title={menuItem.caption} to={menuItem.href} className="site-section">
+            <Link title={menuItem.caption} to={menuItem.href} className={cn('site-section')}>
                 {menuItem.caption}
             </Link>
         );
@@ -120,55 +119,54 @@ export default class Layout extends React.Component {
             route: { layout },
         } = this.props;
         return (
-            <div id="react-wrapper" ref='container'>
-                <div id="wrapper">
-                    <Helmet
-                        htmlAttributes={{
-                            lang: layout.lang,
-                        }}
-                        titleTemplate={layout.titleTemplate}
-                        meta={[
-                            { content: 'http://tech.skbkontur.ru' + logoSocialImage, property: 'og:image' },
-                        ]}
-                        link={[
-                            ...appleTouchIcons,
-                            { ['href']: '/favicon.ico', ['rel']: 'shortcut icon' },
-                            { ['href']: 'http://tech.skbkontur.ru' + logoSocialImage, ['rel']: 'image_src' },
-                        ]}
-                    />
-                    <header>
-                        <div className="nav-bar-container">
-                            <div className={cn('nav-bar', 'fixed-width-content', { 'show-menu': menuOpened })} id="nav-bar">
-                                <div
-                                    ref='siteNavigationOverlay'
-                                    onClick={() => this.toggleMenu()}
-                                    id="site-navigation-menu-overlay"
-                                    className="overlay"></div>
-                                <a href="https://kontur.ru" className="logo"></a>
-                                <div className="spacer"></div>
-                                <button
-                                    className={cn('site-navigation-button', { 'opened': menuOpened })} id="site-navigation-button"
-                                    onClick={() => this.toggleMenu()}>
-                                    <span className="button-hamburger"></span>
-                                    <span className="button-close"></span>
-                                </button>
-                                <nav ref='siteNavigation' className="site-navigation" id="site-navigation">
-                                    <ul>
-                                        {layout.menu.map((menuItem, index) => (
-                                            <li key={index}>
-                                                {this.renderLink(menuItem)}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </nav>
-                            </div>
+            <div className={cn('root')} ref='container'>
+                <Helmet
+                    htmlAttributes={{
+                        lang: layout.lang,
+                    }}
+                    titleTemplate={layout.titleTemplate}
+                    meta={[
+                        { content: 'http://tech.skbkontur.ru' + logoSocialImage, property: 'og:image' },
+                    ]}
+                    link={[
+                        ...appleTouchIcons,
+                        { ['href']: '/favicon.ico', ['rel']: 'shortcut icon' },
+                        { ['href']: 'http://tech.skbkontur.ru' + logoSocialImage, ['rel']: 'image_src' },
+                    ]}
+                />
+                <header>
+                    <div className={cn('nav-bar-container')}>
+                        <div className={cn('nav-bar', 'fixed-width-content', { 'show-menu': menuOpened })} id="nav-bar">
+                            <div
+                                ref='siteNavigationOverlay'
+                                onClick={() => this.toggleMenu()}
+                                id="site-navigation-menu-overlay"
+                                className={cn('overlay')}></div>
+                            <a href="https://kontur.ru" className={cn('logo')}></a>
+                            <div className={cn('spacer')}></div>
+                            <button
+                                className={cn('site-navigation-button', { 'opened': menuOpened })} id="site-navigation-button"
+                                onClick={() => this.toggleMenu()}>
+                                <span className={cn('button-hamburger')}></span>
+                                <span className={cn('button-close')}></span>
+                            </button>
+                            <nav ref='siteNavigation' className={cn('site-navigation')} id="site-navigation">
+                                <ul>
+                                    {layout.menu.map((menuItem, index) => (
+                                        <li key={index}>
+                                            {this.renderLink(menuItem)}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </nav>
                         </div>
-                        <div className="title-container">
-                            <h1 className="fixed-width-content">{title}</h1>
-                        </div>
-                    </header>
+                    </div>
+                    <div className={cn('title-container')}>
+                        <h1 className={cn('fixed-width-content')}>{title}</h1>
+                    </div>
+                </header>
+                <div className={cn('content')}>
                     {content}
-                    <div id="push"></div>
                 </div>
                 <Footer
                     additionalFooterText={additionalFooterText}

@@ -108,7 +108,6 @@ export default class Talks extends React.Component {
                             ...metaHeaders(talks.meta),
                             ...socialMetaHeaders(talks.title, talks.meta.description),
                         ]}
-                        htmlAttributes={{ class: 'talks' }}
                     />
                     <InfiniteLoader className={cn('row')} onLoadMore={() => this.handleLoadMore()}>
                         {sortByDateString(talks.items, x => x.dateString)

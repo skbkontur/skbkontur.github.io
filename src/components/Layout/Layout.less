@@ -1,5 +1,46 @@
-@import "./common/mixins.less";
-@import "./common/variables.less";
+@import "../../styles/common/reset.less";
+@import "../../styles/common/typography.less";
+@import "../../styles/common/mixins.less";
+@import "../../styles/common/variables.less";
+
+:global {
+    html, body, #content {
+        height: 100%;
+    }
+
+    html.overlay {
+        overflow: hidden;
+    }
+
+    body {
+        background-color: @xs-main-background-color;
+        .sm-viewport({
+            background-color: @main-background-color;
+        });
+    }
+
+    a {
+        text-decoration: none;
+        color: #1e79be;
+
+        &:active, &:hover, &:focus {
+            text-decoration: underline;
+            color: #009be6;
+        }
+    }
+}
+
+@import '../../styles/common/layout.less';
+
+.root {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 1 auto;
+}
 
 // ============================
 // LAYOUT
@@ -59,7 +100,7 @@
 }
 
 .logo {
-    background-image: url(../images/logo.png);
+    background-image: url(../../images/logo.png);
     display: inline-block;
     background-repeat: no-repeat;
 
@@ -142,7 +183,7 @@
         transition: transform 0.5s ease, opacity 0.5s ease;
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url(../images/26px-hamburger.svg);
+        background-image: url(../../images/26px-hamburger.svg);
         position: absolute;
         top: 0;
         left: 0;
@@ -156,7 +197,7 @@
         transition: transform 0.5s ease, opacity 0.5s ease;
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url(../images/26px-cross.svg);
+        background-image: url(../../images/26px-cross.svg);
         position: absolute;
         top: 0;
         left: 0;
@@ -247,4 +288,24 @@
         }
     });
 }
+//====================================
+// VISUAL STYLES
+//====================================
 
+.title-container {
+    background-color: @header-background-color;
+
+    h1 {
+        font-size: 26px;
+        font-weight: 300;
+
+        .sm-viewport({
+            font-size: 38px;
+            font-weight: 200;
+        });
+
+        .md-viewport({
+            font-size: 52px;
+        });
+    }
+}
