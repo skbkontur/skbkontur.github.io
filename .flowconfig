@@ -1,0 +1,24 @@
+[ignore]
+.*/fbjs/.*
+.*/flux/.*
+.*/reelm/.*
+.*/retail-ui/.*
+.*/stylelint/.*
+
+[include]
+
+[libs]
+interfaces/
+
+[options]
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=local_modules
+
+module.name_mapper='^.*\.less+$' -> '<PROJECT_ROOT>/flow/StylesFlowStub'
+module.name_mapper='^property-chain$' -> '<PROJECT_ROOT>/local_modules/property-chain'
+
+esproposal.class_instance_fields=enable
+unsafe.enable_getters_and_setters=true
+
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
+suppress_comment= \\(.\\|\n\\)*\\@flow\\-disable\\-next\\-line

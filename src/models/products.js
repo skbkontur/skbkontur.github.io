@@ -8,8 +8,12 @@ export default {
     ['ru']: {
         title: 'Open source технологии и решения компании СКБ Контур: Moira, DiTrace и многое другое',
         meta: {
-            keywords: 'open source, open-sourсe, oss, скб контур, скб-контур, контур, открытый код, Moira, DiTrace, ZstdNet, reelm, frontreport',
-            description: 'Open source технологии компании СКБ Контур. Moira — решение по уведомлениям из Graphite, DiTrace — трассировка запросов в распределенных системах и другие решения',
+            keywords:
+                'open source, open-sourсe, oss, скб контур, скб-контур, ' +
+                'контур, открытый код, Moira, DiTrace, ZstdNet, reelm, frontreport',
+            description:
+                'Open source технологии компании СКБ Контур. Moira — решение по уведомлениям из Graphite, ' +
+                'DiTrace — трассировка запросов в распределенных системах и другие решения',
         },
         customMetaHeaders: [
             { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
@@ -19,162 +23,184 @@ export default {
                 image: moiraImage,
                 header: {
                     href: 'https://moira.readthedocs.io/',
-                    caption: 'Moira'
+                    caption: 'Moira',
                 },
-                text: <span>Уведомления по почте, Telegram, Slack, Pushover на основании метрик из <a href="https://graphite.readthedocs.io/">Graphite</a></span>,
+                text: (
+                    <span>
+                        Уведомления по почте, Telegram, Slack, Pushover на основании метрик
+                        из <a href='https://graphite.readthedocs.io/'>Graphite</a>
+                    </span>
+                ),
                 links: [
                     {
                         href: 'https://github.com/moira-alert',
-                        caption: 'Код'
+                        caption: 'Код',
                     },
                     {
                         href: 'https://moira.readthedocs.io/',
-                        caption: 'Документация'
+                        caption: 'Документация',
                     },
-                ]
+                ],
             },
             {
                 image: gitHubImage,
                 header: {
                     href: 'https://github.com/skbkontur/ZstdNet',
-                    caption: 'ZstdNet'
+                    caption: 'ZstdNet',
                 },
-                text: <span>.NET-обертка над библиотекой сжатия <a href="http://www.zstd.net">Zstandard</a></span>,
+                text: <span>.NET-обертка над библиотекой сжатия <a href='http://www.zstd.net'>Zstandard</a></span>,
                 links: [
                     {
                         href: 'https://github.com/skbkontur/ZstdNet',
-                        caption: 'Код'
+                        caption: 'Код',
                     },
                     {
                         href: 'https://www.nuget.org/packages/ZstdNet/',
-                        caption: 'NuGet'
+                        caption: 'NuGet',
                     },
-                ]
+                ],
             },
             {
                 image: gitHubImage,
                 header: {
                     href: 'https://github.com/tihonove/reelm',
-                    caption: 'reelm'
+                    caption: 'reelm',
                 },
-                text: <span>Библиотека для управления эффектами в <a href="http://redux.js.org">redux</a></span>,
+                text: <span>Библиотека для управления эффектами в <a href='http://redux.js.org'>redux</a></span>,
                 links: [
                     {
                         href: 'https://github.com/tihonove/reelm',
-                        caption: 'Код'
+                        caption: 'Код',
                     },
                     {
                         href: 'https://www.npmjs.com/package/reelm',
-                        caption: 'npm'
+                        caption: 'npm',
                     },
-                ]
+                ],
             },
             {
                 image: ditraceImage,
                 header: {
                     href: 'https://ditrace.readthedocs.io/',
-                    caption: 'DiTrace'
+                    caption: 'DiTrace',
                 },
                 text: <span>Трассировка запросов для анализа узких мест в распределенных системах</span>,
                 links: [
                     {
                         href: 'https://github.com/ditrace',
-                        caption: 'Код'
+                        caption: 'Код',
                     },
                     {
                         href: 'http://ditrace.readthedocs.io/',
-                        caption: 'Документация'
+                        caption: 'Документация',
                     },
-                ]
+                ],
             },
             {
                 image: gitHubImage,
                 header: {
                     href: 'https://github.com/skbkontur/frontreport',
-                    caption: 'frontreport'
+                    caption: 'frontreport',
                 },
                 text: <span>Шлюз для сбора логов ошибок из браузеров пользователей</span>,
-                links: []
+                links: [],
             },
             {
                 image: gitHubImage,
                 header: {
                     href: 'https://github.com/homuroll/gremit',
-                    caption: 'GrEmit'
+                    caption: 'GrEmit',
                 },
-                text: <span>Инструменты для генерации кода через Reflection.Emit, в том числе GroboIL — умная обертка над <a href="http://msdn.microsoft.com/en-us/library/system.reflection.emit.ilgenerator.aspx">ILGenerator</a></span>,
+                text: (
+                    <span>
+                        Инструменты для генерации кода через Reflection.Emit,
+                        в том числе GroboIL — умная обертка
+                        над <a href='http://msdn.microsoft.com/en-us/library/system.reflection.emit.ilgenerator.aspx'>
+                            ILGenerator</a>
+                    </span>
+                ),
                 links: [
                     {
                         href: 'https://github.com/homuroll/gremit',
-                        caption: 'Код'
+                        caption: 'Код',
                     },
                     {
                         href: 'https://www.nuget.org/packages/GrEmit/',
-                        caption: 'NuGet'
+                        caption: 'NuGet',
                     },
-                ]
+                ],
             },
             {
                 image: gitHubImage,
                 header: {
                     href: 'https://github.com/homuroll/GroBuf',
-                    caption: 'GroBuf'
+                    caption: 'GroBuf',
                 },
                 text: <span>Быстрая бинарная сериализация для .NET</span>,
                 links: [
                     {
                         href: 'https://github.com/homuroll/GroBuf',
-                        caption: 'Код'
+                        caption: 'Код',
                     },
                     {
                         href: 'https://www.nuget.org/packages/GroBuf/',
-                        caption: 'NuGet'
+                        caption: 'NuGet',
                     },
-                ]
+                ],
             },
             {
                 image: gitHubImage,
                 header: {
                     href: 'https://github.com/homuroll/GrobExp.Compiler',
-                    caption: 'GrobExp.Compiler'
+                    caption: 'GrobExp.Compiler',
                 },
                 text: <span>Эффективная компиляция деревьев выражений для .NET</span>,
                 links: [
                     {
                         href: 'https://github.com/homuroll/GrobExp.Compiler',
-                        caption: 'Код'
+                        caption: 'Код',
                     },
                     {
                         href: 'https://www.nuget.org/packages/GrobExp.Compiler/',
-                        caption: 'NuGet'
+                        caption: 'NuGet',
                     },
-                ]
+                ],
             },
             {
                 image: gitHubImage,
                 header: {
                     href: 'https://github.com/misha-plus/ytissues-confluence',
-                    caption: 'ytissues-confluence'
+                    caption: 'ytissues-confluence',
                 },
                 text: <span>Макрос Confluence для вставки на страницы интерактивных ссылок на задачи YouTrack</span>,
-                links: []
+                links: [],
             },
             {
                 image: gitHubImage,
                 header: {
                     href: 'https://github.com/skbkontur/OctoPnP',
-                    caption: 'OctoPnP'
+                    caption: 'OctoPnP',
                 },
-                text: <span>Плагин TeamCity для упаковки и публикации пакетов в систему автоматического деплоя Octopus</span>,
-                links: []
+                text: (
+                    <span>
+                        Плагин TeamCity для упаковки и публикации пакетов в
+                        систему автоматического деплоя Octopus
+                    </span>
+                ),
+                links: [],
             },
-        ]
+        ],
     },
-    'en': {
+    en: {
         title: 'Open source technology and solutions company SKB Kontur: Moira, DiTrace and more',
         meta: {
-            description: 'Open source technology company SKB Kontur. Moira — Mail, Telegram, Slack and Pushover notifications based on Graphite metrics, DiTrace — request tracing for bottlenecks analysis in distributed systems',
-            keywords: 'open source, open-sourсe, oss, skb kontur, skb-kontur, kontur, Moira, DiTrace, ZstdNet, reelm, frontreport',
+            description:
+                'Open source technology company SKB Kontur. Moira — Mail, ' +
+                'Telegram, Slack and Pushover notifications based on Graphite metrics, DiTrace — ' +
+                'request tracing for bottlenecks analysis in distributed systems',
+            keywords:
+                'open source, open-sourсe, oss, skb kontur, skb-kontur, ' +
+                'kontur, Moira, DiTrace, ZstdNet, reelm, frontreport',
         },
         customMetaHeaders: [
             { ['http-equiv']: 'content-language', ['content']: 'en-US' },
@@ -184,155 +210,171 @@ export default {
                 image: moiraImage,
                 header: {
                     href: 'https://moira.readthedocs.io/',
-                    caption: 'Moira'
+                    caption: 'Moira',
                 },
-                text: <span>Mail, Telegram, Slack and Pushover notifications based on <a href="https://graphite.readthedocs.io/">Graphite</a> metrics</span>,
+                text: (
+                    <span>
+                        Mail, Telegram, Slack and Pushover notifications based
+                        on <a href='https://graphite.readthedocs.io/'>Graphite</a> metrics
+                    </span>
+                ),
                 links: [
                     {
                         href: 'https://github.com/moira-alert',
-                        caption: 'Code'
+                        caption: 'Code',
                     },
                     {
                         href: 'https://moira.readthedocs.io/',
-                        caption: 'Docs'
+                        caption: 'Docs',
                     },
-                ]
+                ],
             },
             {
                 image: gitHubImage,
                 header: {
                     href: 'https://github.com/skbkontur/ZstdNet',
-                    caption: 'ZstdNet'
+                    caption: 'ZstdNet',
                 },
-                text: <span>.NET-wrapper of <a href="http://www.zstd.net">Zstandard</a> compression library</span>,
+                text: <span>.NET-wrapper of <a href='http://www.zstd.net'>Zstandard</a> compression library</span>,
                 links: [
                     {
                         href: 'https://github.com/skbkontur/ZstdNet',
-                        caption: 'Code'
+                        caption: 'Code',
                     },
                     {
                         href: 'https://www.nuget.org/packages/ZstdNet/',
-                        caption: 'NuGet'
+                        caption: 'NuGet',
                     },
-                ]
+                ],
             },
             {
                 image: gitHubImage,
                 header: {
                     href: 'https://github.com/tihonove/reelm',
-                    caption: 'reelm'
+                    caption: 'reelm',
                 },
-                text: <span>Awesome effect management library for <a href="http://redux.js.org">redux</a></span>,
+                text: <span>Awesome effect management library for <a href='http://redux.js.org'>redux</a></span>,
                 links: [
                     {
                         href: 'https://github.com/tihonove/reelm',
-                        caption: 'Code'
+                        caption: 'Code',
                     },
                     {
                         href: 'https://www.npmjs.com/package/reelm',
-                        caption: 'npm'
+                        caption: 'npm',
                     },
-                ]
+                ],
             },
             {
                 image: ditraceImage,
                 header: {
                     href: 'https://ditrace.readthedocs.io/',
-                    caption: 'DiTrace'
+                    caption: 'DiTrace',
                 },
                 text: <span>Request tracing for bottlenecks analysis in distributed systems</span>,
                 links: [
                     {
                         href: 'https://github.com/ditrace',
-                        caption: 'Code'
+                        caption: 'Code',
                     },
                     {
                         href: 'http://ditrace.readthedocs.io/',
-                        caption: 'Docs'
+                        caption: 'Docs',
                     },
-                ]
+                ],
             },
             {
                 image: gitHubImage,
                 header: {
                     href: 'https://github.com/skbkontur/frontreport',
-                    caption: 'frontreport'
+                    caption: 'frontreport',
                 },
                 text: <span>Browser stacktrace and policy violation report collector</span>,
-                links: []
+                links: [],
             },
             {
                 image: gitHubImage,
                 header: {
                     href: 'https://github.com/homuroll/gremit',
-                    caption: 'GrEmit'
+                    caption: 'GrEmit',
                 },
-                text: <span>Helpers for generating code using Reflection.Emit with the main one being GroboIL — a smart wrapper over <a href="http://msdn.microsoft.com/en-us/library/system.reflection.emit.ilgenerator.aspx">ILGenerator</a></span>,
+                text: (
+                    <span>
+                        Helpers for generating code using Reflection.Emit with the
+                        main one being GroboIL — a smart wrapper
+                        over <a href='http://msdn.microsoft.com/en-us/library/system.reflection.emit.ilgenerator.aspx'>
+                            ILGenerator</a>
+                    </span>
+                ),
                 links: [
                     {
                         href: 'https://github.com/homuroll/gremit',
-                        caption: 'Code'
+                        caption: 'Code',
                     },
                     {
                         href: 'https://www.nuget.org/packages/GrEmit/',
-                        caption: 'NuGet'
+                        caption: 'NuGet',
                     },
-                ]
+                ],
             },
             {
                 image: gitHubImage,
                 header: {
                     href: 'https://github.com/homuroll/GroBuf',
-                    caption: 'GroBuf'
+                    caption: 'GroBuf',
                 },
                 text: <span>Fast binary serializer for .NET</span>,
                 links: [
                     {
                         href: 'https://github.com/homuroll/GroBuf',
-                        caption: 'Code'
+                        caption: 'Code',
                     },
                     {
                         href: 'https://www.nuget.org/packages/GroBuf/',
-                        caption: 'NuGet'
+                        caption: 'NuGet',
                     },
-                ]
+                ],
             },
             {
                 image: gitHubImage,
                 header: {
                     href: 'https://github.com/homuroll/GrobExp.Compiler',
-                    caption: 'GrobExp.Compiler'
+                    caption: 'GrobExp.Compiler',
                 },
                 text: <span>Effective compiler of .NET expression trees</span>,
                 links: [
                     {
                         href: 'https://github.com/homuroll/GrobExp.Compiler',
-                        caption: 'Code'
+                        caption: 'Code',
                     },
                     {
                         href: 'https://www.nuget.org/packages/GrobExp.Compiler/',
-                        caption: 'NuGet'
+                        caption: 'NuGet',
                     },
-                ]
+                ],
             },
             {
                 image: gitHubImage,
                 header: {
                     href: 'https://github.com/misha-plus/ytissues-confluence',
-                    caption: 'ytissues-confluence'
+                    caption: 'ytissues-confluence',
                 },
                 text: <span>Helpful macros for inserting interactive links to YouTrack issues</span>,
-                links: []
+                links: [],
             },
             {
                 image: gitHubImage,
                 header: {
                     href: 'https://github.com/skbkontur/OctoPnP',
-                    caption: 'OctoPnP'
+                    caption: 'OctoPnP',
                 },
-                text: <span>TeamCity plugin with pack-and-publish functionality for Octopus-based deployments automation</span>,
-                links: []
+                text: (
+                    <span>
+                        TeamCity plugin with pack-and-publish functionality for Octopus-based deployments automation
+                    </span>
+                ),
+                links: [],
             },
-        ]
-    }
-}
+        ],
+    },
+};

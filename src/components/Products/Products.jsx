@@ -20,7 +20,9 @@ export default function Products({ route: { products } }) {
                 />
                 <div className={cn('row')}>
                     {products.blocks.map((block, index) => (
-                        <div key={index} className={cn('block-wrapper', 'col-lg-4', 'col-md-6', 'col-sm-6', 'col-xs-12')}>
+                        <div
+                            key={index}
+                            className={cn('block-wrapper', 'col-lg-4', 'col-md-6', 'col-sm-6', 'col-xs-12')}>
                             <article className={cn('block')}>
                                 {block.image &&
                                     <div className={cn('image')}><img src={block.image} /></div>

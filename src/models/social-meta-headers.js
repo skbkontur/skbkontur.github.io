@@ -8,5 +8,5 @@ export default (title, description) => [
     { content: title, property: 'og:site_name' },
     { content: description, property: 'og:description' },
     { property: 'og:type', content: 'website' },
-]
+];
 

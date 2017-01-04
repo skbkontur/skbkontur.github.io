@@ -14,32 +14,38 @@ import Talks from './components/Talks/Talks';
 import articles from './models/articles';
 import Articles from './components/Articles/Articles';
 
+function toFactory(reactElement: React.Element<*>): React.Class<*> {
+    return function ElementFactory(): React.Element<*> {
+        return reactElement;
+    };
+}
+
 export default (
     <Route>
         <Route layout={layout.ru} component={Layout} path='/(ru)'>
             <IndexRoute
                 products={products.ru}
-                components={{ content: Products, title: () => <span>Open Source</span>}}
+                components={{ content: Products, title: toFactory(<span>Open Source</span>) }}
             />
             <Route
                 path='talks'
                 talks={talks}
                 components={{
-                    additionalFooterText: () => <span>{talks.additionalFooterText}</span>,
+                    additionalFooterText: toFactory(<span>{talks.additionalFooterText}</span>),
                     content: Talks,
-                    title: () => <span>Выступления</span>,
+                    title: toFactory(<span>Выступления</span>),
                 }}
             />
             <Route
                 path='articles'
                 articles={articles}
-                components={{ content: Articles, title: () => <span>Статьи</span>}}
+                components={{ content: Articles, title: toFactory(<span>Статьи</span>) }}
             />
         </Route>
         <Route layout={layout.en} component={Layout} path='/en'>
             <IndexRoute
                 products={products.en}
-                components={{ content: Products, title: () => <span>Open Source</span>}}
+                components={{ content: Products, title: toFactory(<span>Open Source</span>) }}
             />
         </Route>
     </Route>

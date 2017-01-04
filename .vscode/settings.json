@@ -1,0 +1,6 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "less.validate": false,
+    "typescript.validate.enable": false,
+    "javascript.validate.enable": false
+}

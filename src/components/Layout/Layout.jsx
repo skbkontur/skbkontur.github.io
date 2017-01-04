@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import cn from './Layout.less';
 import Helmet from 'react-helmet';
@@ -13,8 +14,32 @@ if (Hammer) {
     delete Hammer.defaults.cssProps.userSelect;
 }
 
+type LayoutState = {
+    menuOpened: boolean;
+}
+
+type LayoutMeta = {
+    lang: string;
+    skbkonturSinceCaption: string;
+    pageTitle: string;
+    titleTemplate: string;
+    menu: {
+        href: string;
+        caption: string;
+    }[];
+};
+
+type LayoutProps = {
+    title: string;
+    additionalFooterText?: string;
+    route: { layout: LayoutMeta };
+    children: ?any;
+    content: any;
+}
+
 export default class Layout extends React.Component {
-    state = {
+    props: LayoutProps;
+    state: LayoutState = {
         menuOpened: false,
     };
 
@@ -22,7 +47,55 @@ export default class Layout extends React.Component {
         router: React.PropTypes.any,
     }
 
-    containerWidth = null;
+    componentDidMount() {
+        if (Hammer) {
+            const hammer = new Hammer(this.refs.siteNavigation);
+            hammer.add(new Hammer.Pan({
+                direction: Hammer.DIRECTION_HORIZONTAL,
+                threshold: 10,
+                inputClass: Hammer.TouchInput,
+            }));
+            hammer.on('panstart panmove panend pancancel', ev => {
+                if (ev.pointerType !== 'touch') {
+                    return;
+                }
+                const delta = ev.deltaX;
+                const percent = (100 / this.containerWidth) * delta;
+                this.refs.siteNavigation.style.width = Math.round(this.containerWidth - delta).toString() + 'px';
+                this.refs.siteNavigationOverlay.style.opacity =
+                    Math.min(0.7, 0.7 * (this.containerWidth - delta) / this.containerWidth);
+                if (ev.type === 'panend' || ev.type === 'pancancel') {
+                    if (percent > 30 && ev.type === 'panend') {
+                        this.toggleMenu();
+                    }
+                    else {
+                        this.refs.siteNavigation.style.width = this.containerWidth.toString() + 'px';
+                    }
+                }
+            });
+
+            const containerHammer = new Hammer(this.refs.container, {
+                inputClass: Hammer.TouchInput,
+            });
+            containerHammer.on('swipeleft', ev => {
+                if (this.state.menuOpened) {
+                    return;
+                }
+                const delta = ev.deltaX;
+                const containerWidth = 300;
+                const percent = -(100 / containerWidth) * delta;
+                if (percent > 30) {
+                    this.toggleMenu();
+                }
+            });
+        }
+    }
+
+    componentWillReceiveProps(nextProps: LayoutProps) {
+        if (nextProps.content !== this.props.content) {
+            this.setState({ menuOpened: false });
+        }
+    }
 
     componentDidUpdate() {
         if (document !== undefined) {
@@ -40,74 +113,27 @@ export default class Layout extends React.Component {
         }
     }
 
-    componentDidMount() {
-        var hammer = new Hammer(this.refs.siteNavigation);
-        hammer.add(new Hammer.Pan({
-            direction: Hammer.DIRECTION_HORIZONTAL,
-            threshold: 10,
-            inputClass: Hammer.TouchInput,
-        }));
-        hammer.on('panstart panmove panend pancancel', (ev) => {
-            if (ev.pointerType !== "touch") {
-                return;
-            }
-            var delta = ev.deltaX;
-            var percent = (100 / this.containerWidth) * delta;
-            this.refs.siteNavigation.style.width = Math.round(this.containerWidth - delta).toString() + 'px';
-            this.refs.siteNavigationOverlay.style.opacity = Math.min(0.7, 0.7 * (this.containerWidth - delta) / this.containerWidth);
-            if (ev.type == 'panend' || ev.type == 'pancancel') {
-                if (percent > 30 && ev.type == 'panend') {
-                    this.toggleMenu();
-                }
-                else {
-                    this.refs.siteNavigation.style.width = this.containerWidth.toString() + 'px';
+    containerWidth: number = 0;
 
-                }
-            }
-        });
-
-        var containerHammer = new Hammer(this.refs.container, {
-            inputClass: Hammer.TouchInput,
-        });
-        containerHammer.on('swipeleft', (ev) => {
-            if (this.state.menuOpened) {
-                return;
-            }
-            var delta = ev.deltaX;
-            const containerWidth = 300;
-            var percent = - (100 / containerWidth) * delta;
-            if (percent > 30) {
-                this.toggleMenu();
-            }
-        });
+    toggleMenu() {
+        const { menuOpened } = this.state;
+        this.setState({ menuOpened: !menuOpened });
     }
 
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.content !== this.props.content) {
-            this.setState({ menuOpened: false })
-        }
-    }
-
-    renderLink(menuItem) {
+    renderLink(menuItem: { href: string; caption: string }): React.Element<*> {
         const { router } = this.context;
         if (router.isActive(menuItem.href, true)) {
             return (
                 <Link title={menuItem.caption} className={cn('site-section')}>
                     {menuItem.caption}
                 </Link>
-            )
+            );
         }
         return (
             <Link title={menuItem.caption} to={menuItem.href} className={cn('site-section')}>
                 {menuItem.caption}
             </Link>
         );
-    }
-
-    toggleMenu() {
-        const { menuOpened } = this.state;
-
-        this.setState({ menuOpened: !menuOpened })
     }
 
     render() {
@@ -136,21 +162,23 @@ export default class Layout extends React.Component {
                 />
                 <header>
                     <div className={cn('nav-bar-container')}>
-                        <div className={cn('nav-bar', 'fixed-width-content', { 'show-menu': menuOpened })} id="nav-bar">
+                        <div className={cn('nav-bar', 'fixed-width-content', { 'show-menu': menuOpened })} id='nav-bar'>
                             <div
                                 ref='siteNavigationOverlay'
                                 onClick={() => this.toggleMenu()}
-                                id="site-navigation-menu-overlay"
-                                className={cn('overlay')}></div>
-                            <a href="https://kontur.ru" className={cn('logo')}></a>
-                            <div className={cn('spacer')}></div>
+                                id='site-navigation-menu-overlay'
+                                className={cn('overlay')}
+                            />
+                            <a href='https://kontur.ru' className={cn('logo')} />
+                            <div className={cn('spacer')} />
                             <button
-                                className={cn('site-navigation-button', { 'opened': menuOpened })} id="site-navigation-button"
+                                className={cn('site-navigation-button', { opened: menuOpened })}
+                                id='site-navigation-button'
                                 onClick={() => this.toggleMenu()}>
-                                <span className={cn('button-hamburger')}></span>
-                                <span className={cn('button-close')}></span>
+                                <span className={cn('button-hamburger')} />
+                                <span className={cn('button-close')} />
                             </button>
-                            <nav ref='siteNavigation' className={cn('site-navigation')} id="site-navigation">
+                            <nav ref='siteNavigation' className={cn('site-navigation')} id='site-navigation'>
                                 <ul>
                                     {layout.menu.map((menuItem, index) => (
                                         <li key={index}>

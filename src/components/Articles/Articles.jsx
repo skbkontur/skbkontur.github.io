@@ -1,13 +1,24 @@
+// @flow
 import React from 'react';
 import Helmet from 'react-helmet';
-import cn from './Articles.less';
+
 import Icon from 'retail-ui/components/Icon';
+
+import type { Article } from '../../models/articles';
+
 import { sortByDateString } from '../../utils/sort-utils.js';
 import socialMetaHeaders from '../../models/social-meta-headers';
 import metaHeaders from '../../models/meta-headers';
 import TagsBar, { getMostPopularTags, getCurrentTag } from '../TagsBar/TagsBar';
 
-function ShortInfoBlock({ icon, text }) {
+import cn from './Articles.less';
+
+type ShortInfoBlockProps = {
+    icon?: string;
+    text: string;
+};
+
+function ShortInfoBlock({ icon, text }: ShortInfoBlockProps) {
     if (text === null || text === undefined || text === '') {
         return null;
     }
@@ -18,7 +29,11 @@ function ShortInfoBlock({ icon, text }) {
     );
 }
 
-function Article({ article }) {
+type ArticleProps = {
+    article: Article;
+};
+
+function ArticleView({ article }: ArticleProps): React.Element<*> {
     return (
         <article className={cn('article')}>
             <div className={cn('content')}>
@@ -43,7 +58,19 @@ function Article({ article }) {
     );
 }
 
-export default function Articles({ location, route: { articles } }) {
+type ArticlesMeta = {
+    title: string;
+    meta: { [name: string]: string };
+    customMetaHeaders: { [name: string]: string }[];
+    items: Articles[];
+};
+
+type CommonComponentProps<T> = {
+    location: { hash: ?string };
+    route: T;
+};
+
+export default function Articles({ location, route: { articles } }: CommonComponentProps<{ articles: ArticlesMeta }>) {
     const currentTag = getCurrentTag(location);
 
     return (
@@ -67,7 +94,7 @@ export default function Articles({ location, route: { articles } }) {
                         .filter(x => currentTag === null || x.tags.includes(currentTag))
                         .map((article, index) => (
                             <div key={index} className={cn('article-container', 'col-xs-12')}>
-                                <Article article={article} />
+                                <ArticleView article={article} />
                             </div>
                         ))}
                 </div>

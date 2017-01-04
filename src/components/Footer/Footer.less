@@ -1,11 +1,16 @@
-@import "../../styles/common/mixins.less";
-@import "../../styles/common/variables.less";
+@import '../../styles/common/mixins.less';
+@import '../../styles/common/variables.less';
 
-@import "../../styles/common/layout.less";
+@import '../../styles/common/layout.less';
 
 //================================
 // LAYOUT
 //================================
+
+@muted-text: #888888;
+@lang-link-color: #848484;
+@lang-link-active-color: #4f4f4f;
+@lang-link-bg-color: #e8e8e8;
 
 .container {
     .footer {
@@ -16,7 +21,7 @@
             });
 
             font-size: 14px;
-            color: #888;
+            color: @muted-text;
         }
 
         .footer-main {
@@ -45,6 +50,7 @@
             .spacer {
                 flex: 0 1 100%;
             }
+
             .email {
                 display: none;
 
@@ -57,7 +63,6 @@
     }
 }
 
-
 //================================
 // VISUAL STYLES
 //================================
@@ -68,7 +73,7 @@
 }
 
 .kontur-logo {
-    background-image: url(../../images/logo-skbkontur.png);
+    background-image: url('../../images/logo-skbkontur.png');
     width: 114px;
     height: 22px;
     margin-right: 5px;
@@ -84,19 +89,16 @@
             height: 28px;
             line-height: 28px;
             text-align: center;
-            color: #848484;
+            color: @lang-link-color;
 
-            &:hover {
-                color: #848484;
-                &.active {
-                    color: #4f4f4f;
-                }
+            &:hover, &:focus {
+                color: @lang-link-color;
             }
 
             &.active {
                 text-decoration: none;
-                color: #4f4f4f;
-                background-color: #e8e8e8;
+                color: @lang-link-active-color;
+                background-color: @lang-link-bg-color;
                 border-radius: 14px;
             }
         }
@@ -104,7 +106,8 @@
 
     .email {
         text-decoration: none;
-        &:hover {
+
+        &:hover, &:focus {
             .text {
                 text-decoration: underline;
             }

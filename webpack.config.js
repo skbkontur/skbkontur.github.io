@@ -100,7 +100,8 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: ['', '.js', '.jsx']
+        extensions: ['', '.js', '.jsx'],
+        modulesDirectories: ['node_modules', 'local_modules', 'web_modules'],
     },
     resolveLoader: {
         alias: {

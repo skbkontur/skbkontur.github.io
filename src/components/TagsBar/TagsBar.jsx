@@ -29,10 +29,12 @@ export function getMostPopularTags(items, tagsSelector) {
         }
     }
     const tags = [];
-    for (var tag in result) {
-        tags.push({ tag: tag, count: result[tag] });
+    for (const tag in result) {
+        if (result.hasOwnProperty(tag)) {
+            tags.push({ tag: tag, count: result[tag] });
+        }
     }
-    return tags.sort((a, b) => b.count - a.count).map(x => x.tag);
+    return tags.sort((left, right) => right.count - left.count).map(x => x.tag);
 }
 
 export function getCurrentTag(location) {
