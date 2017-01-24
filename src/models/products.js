@@ -99,13 +99,13 @@ export default {
             {
                 image: gitHubImage,
                 header: {
-                    href: 'https://github.com/homuroll/gremit',
+                    href: 'https://github.com/skbkontur/gremit',
                     caption: 'GrEmit'
                 },
                 text: <span>Инструменты для генерации кода через Reflection.Emit, в том числе GroboIL — умная обертка над <a href="http://msdn.microsoft.com/en-us/library/system.reflection.emit.ilgenerator.aspx">ILGenerator</a></span>,
                 links: [
                     {
-                        href: 'https://github.com/homuroll/gremit',
+                        href: 'https://github.com/skbkontur/gremit',
                         caption: 'Код'
                     },
                     {
@@ -117,13 +117,13 @@ export default {
             {
                 image: gitHubImage,
                 header: {
-                    href: 'https://github.com/homuroll/GroBuf',
+                    href: 'https://github.com/skbkontur/GroBuf',
                     caption: 'GroBuf'
                 },
                 text: <span>Быстрая бинарная сериализация для .NET</span>,
                 links: [
                     {
-                        href: 'https://github.com/homuroll/GroBuf',
+                        href: 'https://github.com/skbkontur/GroBuf',
                         caption: 'Код'
                     },
                     {
@@ -135,13 +135,13 @@ export default {
             {
                 image: gitHubImage,
                 header: {
-                    href: 'https://github.com/homuroll/GrobExp.Compiler',
+                    href: 'https://github.com/skbkontur/GrobExp.Compiler',
                     caption: 'GrobExp.Compiler'
                 },
                 text: <span>Эффективная компиляция деревьев выражений для .NET</span>,
                 links: [
                     {
-                        href: 'https://github.com/homuroll/GrobExp.Compiler',
+                        href: 'https://github.com/skbkontur/GrobExp.Compiler',
                         caption: 'Код'
                     },
                     {
@@ -264,13 +264,13 @@ export default {
             {
                 image: gitHubImage,
                 header: {
-                    href: 'https://github.com/homuroll/gremit',
+                    href: 'https://github.com/skbkontur/gremit',
                     caption: 'GrEmit'
                 },
                 text: <span>Helpers for generating code using Reflection.Emit with the main one being GroboIL — a smart wrapper over <a href="http://msdn.microsoft.com/en-us/library/system.reflection.emit.ilgenerator.aspx">ILGenerator</a></span>,
                 links: [
                     {
-                        href: 'https://github.com/homuroll/gremit',
+                        href: 'https://github.com/skbkontur/gremit',
                         caption: 'Code'
                     },
                     {
@@ -282,13 +282,13 @@ export default {
             {
                 image: gitHubImage,
                 header: {
-                    href: 'https://github.com/homuroll/GroBuf',
+                    href: 'https://github.com/skbkontur/GroBuf',
                     caption: 'GroBuf'
                 },
                 text: <span>Fast binary serializer for .NET</span>,
                 links: [
                     {
-                        href: 'https://github.com/homuroll/GroBuf',
+                        href: 'https://github.com/skbkontur/GroBuf',
                         caption: 'Code'
                     },
                     {
@@ -300,13 +300,13 @@ export default {
             {
                 image: gitHubImage,
                 header: {
-                    href: 'https://github.com/homuroll/GrobExp.Compiler',
+                    href: 'https://github.com/skbkontur/GrobExp.Compiler',
                     caption: 'GrobExp.Compiler'
                 },
                 text: <span>Effective compiler of .NET expression trees</span>,
                 links: [
                     {
-                        href: 'https://github.com/homuroll/GrobExp.Compiler',
+                        href: 'https://github.com/skbkontur/GrobExp.Compiler',
                         caption: 'Code'
                     },
                     {
