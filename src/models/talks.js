@@ -10,6 +10,7 @@ import egorovImage from 'talks-image-responsive!./images/talks/egorov.jpg';
 import geinImage from 'talks-image-responsive!./images/talks/gein.png';
 import golubevImage from 'talks-image-responsive!./images/talks/golubev.png';
 import kazakovImage from 'talks-image-responsive!./images/talks/kazakov.jpg';
+import kharlovImage from 'talks-image-responsive!./images/talks/kharlov.jpg';
 import khruschevImage from 'talks-image-responsive!./images/talks/khruschev.jpg';
 import kirpichnikovImage from 'talks-image-responsive!./images/talks/kirpichnikov.jpg';
 import kokovinImage from 'talks-image-responsive!./images/talks/kokovin.jpg';
@@ -21,7 +22,8 @@ import moiseevImage from 'talks-image-responsive!./images/talks/moiseev.png';
 import musinaImage from 'talks-image-responsive!./images/talks/musina.png';
 import plinerImage from 'talks-image-responsive!./images/talks/pliner.jpg';
 import ratkinImage from 'talks-image-responsive!./images/talks/ratkin.png';
-import romanovskyImage from 'talks-image-responsive!./images/talks/romanovsky.png';
+import romanovskyaImage from 'talks-image-responsive!./images/talks/romanovskya.png';
+import romanovskyeImage from 'talks-image-responsive!./images/talks/romanovskye.png';
 import ronzhinaImage from 'talks-image-responsive!./images/talks/ronzhina.png';
 import safarovImage from 'talks-image-responsive!./images/talks/safarov.png';
 import shaihutdinovImage from 'talks-image-responsive!./images/talks/shaihutdinov.png';
@@ -72,6 +74,28 @@ export default {
     ],
     items: [
         {
+            image: kharlovImage,
+            speakerFullName: 'Алексей Харлов',
+            eventName: '.NET meetup Екб',
+            title: 'Автоматизация процесса сборки с помощью CAKE',
+            dateString: 'сентябрь 2016',
+            tags: ['backend', '.net'],
+            linkToVideo: 'https://www.youtube.com/watch?v=mGwO1Oj3ccA',
+            linkToSlides: 'https://vk.com/doc1499661_438004265?hash=ded8a17a73a2a1444e&dl=14ee383b4306be04c3',
+            linkToEvent: dotnetEkbLink,
+        },
+        {
+            image: romanovskyaImage,
+            speakerFullName: 'Алексей Романовский',
+            eventName: '.NET meetup Екб',
+            title: 'Метрики и Metrics.NET',
+            dateString: 'август 2016',
+            tags: ['backend', '.net'],
+            linkToVideo: 'https://www.youtube.com/watch?v=wG2RspZV3jM',
+            linkToSlides: 'https://vk.com/doc1499661_437863799?hash=72f98033b2acba4709&dl=59acd61708d8a99b16',
+            linkToEvent: dotnetEkbLink,
+        },
+        {
             image: titarenkoImage,
             speakerFullName: 'Дмитрий Титаренко',
             eventName: '.NET meetup Екб',
@@ -94,7 +118,7 @@ export default {
             linkToEvent: dotnetEkbLink,
         },
         {
-            image: romanovskyImage,
+            image: romanovskyeImage,
             speakerFullName: 'Павел Егоров, Евгений Романовский',
             eventName: '.NET meetup Екб',
             title: 'SOLID. А можно ли лучше?',
@@ -474,7 +498,7 @@ export default {
             linkToEvent: dump2013Link,
         },
         {
-            image: romanovskyImage,
+            image: romanovskyeImage,
             speakerFullName: 'Евгений Романовский',
             eventName: 'Семинар IT-people',
             title: 'Опыт работы с фреймворком ASP.NET MVC',
