@@ -29,6 +29,7 @@ import sobolevaeImage from 'talks-image-responsive!./images/talks/sobolevae.jpg'
 import sobolevaoImage from 'talks-image-responsive!./images/talks/sobolevao.png';
 import solovievImage from 'talks-image-responsive!./images/talks/soloviev.jpg';
 import tihonovImage from 'talks-image-responsive!./images/talks/tihonov.jpg';
+import titarenkoImage from 'talks-image-responsive!./images/talks/titarenko.png';
 import vdovichenkoImage from 'talks-image-responsive!./images/talks/vdovichenko.png';
 import volokitinImage from 'talks-image-responsive!./images/talks/volokitin.jpg';
 
@@ -70,6 +71,39 @@ export default {
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
     ],
     items: [
+        {
+            image: titarenkoImage,
+            speakerFullName: 'Дмитрий Титаренко',
+            eventName: '.NET meetup Екб',
+            title: 'Злопастные строки',
+            dateString: 'август 2016',
+            tags: ['backend', '.net'],
+            linkToVideo: 'https://www.youtube.com/watch?v=GshXidWUtvE',
+            linkToSlides: 'https://vk.com/doc1499661_437863797?hash=f7bfd6ac190614ff35&dl=ba1e5f95a626d69f95',
+            linkToEvent: dotnetEkbLink,
+        },
+        {
+            image: egorovImage,
+            speakerFullName: 'Павел Егоров',
+            eventName: '.NET meetup Екб',
+            title: 'Моки зло и другие полезные вредняшки',
+            dateString: 'август 2016',
+            tags: ['backend', '.net'],
+            linkToVideo: 'https://www.youtube.com/watch?v=8j83zfDxJPU',
+            linkToSlides: 'https://vk.com/doc1499661_437863796?hash=cafa06d70432b2a8d2&dl=0ec102b3daf2fd2ea0',
+            linkToEvent: dotnetEkbLink,
+        },
+        {
+            image: romanovskyImage,
+            speakerFullName: 'Павел Егоров, Евгений Романовский',
+            eventName: '.NET meetup Екб',
+            title: 'SOLID. А можно ли лучше?',
+            dateString: 'июнь 2016',
+            tags: ['backend', '.net'],
+            linkToVideo: 'https://www.youtube.com/watch?v=xUtqV4RCn80',
+            linkToSlides: 'https://vk.com/doc1499661_437572110?hash=a21968e95acbe31db2&dl=0cb72903588e061282',
+            linkToEvent: dotnetEkbLink,
+        },
         {
             image: chicherskyImage,
             speakerFullName: 'Александр Чичерский',
