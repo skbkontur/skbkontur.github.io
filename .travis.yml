@@ -8,8 +8,7 @@ addons:
     packages:
       - g++-4.8
 env:
-  - NODE_ENV=production
-  - CXX=g++-4.8
+  - NODE_ENV=production CXX=g++-4.8
 branches:
   only:
   - develop
