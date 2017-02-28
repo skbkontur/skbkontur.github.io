@@ -11,6 +11,7 @@ import geinImage from 'talks-image-responsive!./images/talks/gein.png';
 import golubevImage from 'talks-image-responsive!./images/talks/golubev.png';
 import kazakovImage from 'talks-image-responsive!./images/talks/kazakov.jpg';
 import kharlovImage from 'talks-image-responsive!./images/talks/kharlov.jpg';
+import khazamovImage from 'talks-image-responsive!./images/talks/khazamov.png';
 import khruschevImage from 'talks-image-responsive!./images/talks/khruschev.jpg';
 import kirpichnikovImage from 'talks-image-responsive!./images/talks/kirpichnikov.jpg';
 import kokovinImage from 'talks-image-responsive!./images/talks/kokovin.jpg';
@@ -56,6 +57,7 @@ const dump2016Link = 'http://dump-conf.ru/archive/2016/';
 const wsdEkb2016Link = 'https://wsd.events/2016/06/25/';
 
 // conference and meetup archives without dates
+const uralJSLink = 'https://vk.com/uraljs';
 const dotnetEkbLink = 'https://vk.com/dotnetekb';
 
 export default {
@@ -73,6 +75,39 @@ export default {
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
     ],
     items: [
+        {
+            image: tihonovImage,
+            speakerFullName: 'Евгений Тихонов',
+            eventName: 'UralJS',
+            title: 'Тестирование реакт-компонент с enzyme',
+            dateString: 'декабрь 2016',
+            tags: ['frontend', 'js', 'react'],
+            linkToVideo: 'https://www.youtube.com/watch?v=w1AGie9yHsg&list=PLVxsRDo37_Zc42OJkyeKzqxR6gda70B0C&index=3',
+            linkToSlides: 'https://yadi.sk/d/NaFX7Fg8342VT9',
+            linkToEvent: uralJSLink,
+        },
+        {
+            image: khazamovImage,
+            speakerFullName: 'Теймураз Хазамов',
+            eventName: 'UralJS',
+            title: 'Observable в JavaScript?',
+            dateString: 'декабрь 2016',
+            tags: ['frontend', 'js'],
+            linkToVideo: 'https://www.youtube.com/watch?v=-Nx7EdE6qaI&list=PLVxsRDo37_Zc42OJkyeKzqxR6gda70B0C&index=2',
+            linkToSlides: 'http://slides.com/t1mmaas/observable#/',
+            linkToEvent: uralJSLink,
+        },
+        {
+            image: egorovImage,
+            speakerFullName: 'Павел Егоров',
+            eventName: 'UralJS',
+            title: 'Firebase. Back-end не нужен!',
+            dateString: 'декабрь 2016',
+            tags: ['frontend', 'js'],
+            linkToVideo: 'https://www.youtube.com/watch?v=tVO_kdKMufo&list=PLVxsRDo37_Zc42OJkyeKzqxR6gda70B0C',
+            linkToSlides: 'https://github.com/xoposhiy/firebase-course',
+            linkToEvent: uralJSLink,
+        },
         {
             image: kharlovImage,
             speakerFullName: 'Алексей Харлов',
