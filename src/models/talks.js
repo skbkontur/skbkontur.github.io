@@ -10,7 +10,7 @@ import egorovImage from 'talks-image-responsive!./images/talks/egorov.jpg';
 import geinImage from 'talks-image-responsive!./images/talks/gein.png';
 import golubevImage from 'talks-image-responsive!./images/talks/golubev.png';
 import kazakovImage from 'talks-image-responsive!./images/talks/kazakov.jpg';
-import kharlovImage from 'talks-image-responsive!./images/talks/kharlov.jpg';
+import kharlovImage from 'talks-image-responsive!./images/talks/kharlov.png';
 import khazamovImage from 'talks-image-responsive!./images/talks/khazamov.png';
 import khruschevImage from 'talks-image-responsive!./images/talks/khruschev.jpg';
 import kirpichnikovImage from 'talks-image-responsive!./images/talks/kirpichnikov.jpg';
