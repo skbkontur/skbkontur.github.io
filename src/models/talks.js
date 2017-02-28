@@ -4,6 +4,7 @@ import ahmetovImage from 'talks-image-responsive!./images/talks/ahmetov.jpg';
 import baranovaImage from 'talks-image-responsive!./images/talks/baranova.jpg';
 import burmistrovImage from 'talks-image-responsive!./images/talks/burmistrov.jpg';
 import chevdarImage from 'talks-image-responsive!./images/talks/chevdar.jpg';
+import chicherskyImage from 'talks-image-responsive!./images/talks/chichersky.png';
 import dashkevichImage from 'talks-image-responsive!./images/talks/dashkevich.jpg';
 import egorovImage from 'talks-image-responsive!./images/talks/egorov.jpg';
 import geinImage from 'talks-image-responsive!./images/talks/gein.png';
@@ -51,6 +52,9 @@ const dotnextPiter2016Link = 'http://2016.dotnext-piter.ru';
 const dump2016Link = 'http://dump-conf.ru/archive/2016/';
 const wsdEkb2016Link = 'https://wsd.events/2016/06/25/';
 
+// conference and meetup archives without dates
+const dotnetEkbLink = 'https://vk.com/dotnetekb';
+
 export default {
     additionalFooterText:
         <noindex>
@@ -66,6 +70,17 @@ export default {
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
     ],
     items: [
+        {
+            image: chicherskyImage,
+            speakerFullName: 'Александр Чичерский',
+            eventName: '.NET meetup Екб',
+            title: 'Асинхронность в NET или Потока нет!',
+            dateString: 'июнь 2016',
+            tags: ['backend', '.net'],
+            linkToVideo: 'https://www.youtube.com/watch?v=XfU8h9CcZV8',
+            linkToSlides: 'https://vk.com/doc1499661_437572111?hash=34eeb78055874fbe52&dl=edc0d29dddaae429eb',
+            linkToEvent: dotnetEkbLink,
+        },
         {
             image: volokitinImage,
             speakerFullName: 'Павел Волокитин',
