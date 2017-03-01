@@ -33,17 +33,14 @@ export default {
                         Отличие их состояло в том, что они активно распространяют свои технологии и знания — делятся
                         с профессиональным сообществом открытым кодом и понятными мануалами, выступают на конференциях.
                         Они осознанно вкладываются в развитие своих opensource-проектов. Технологии и описания многих
-                        из них лежат в открытом доступе на специально созданных сайтах
-                        <a href='http://tech.yandex.ru'>tech.yandex.ru</a>,
-                        <a href='http://opensource.mail.ru'>opensource.mail.ru</a>,
-                        <a href='http://techno.2gis.ru/opensource'>techno.2gis.ru/opensource</a>,
+                        из них лежат в открытом доступе на специально созданных 
+                        сайтах <a href='http://tech.yandex.ru'>tech.yandex.ru</a>, <a href='http://opensource.mail.ru'>opensource.mail.ru</a>, <a href='http://techno.2gis.ru/opensource'>techno.2gis.ru/opensource</a>,
                         и известны многим разработчикам за пределами компаний.
                     </p>
                     <p>
                         Если вы вдруг решили заняться благотворительностью (почти) и сделать что-то подобное в своей
                         компании, надеюсь, мой текст поможет ответить на вопросы: нужно ли это вам, сколько ресурсов
-                        потребуется и что в итоге получится. У нас вышел такой сайт:
-                        <a href='http://tech.skbkontur.ru'>tech.skbkontur.ru</a>.
+                        потребуется и что в итоге получится. У нас вышел такой сайт: <a href='http://tech.skbkontur.ru'>tech.skbkontur.ru</a>.
                     </p>
                 </div>
             ),
