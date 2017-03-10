@@ -9,6 +9,7 @@ import dashkevichImage from 'talks-image-responsive!./images/talks/dashkevich.jp
 import egorovImage from 'talks-image-responsive!./images/talks/egorov.jpg';
 import geinImage from 'talks-image-responsive!./images/talks/gein.png';
 import golubevImage from 'talks-image-responsive!./images/talks/golubev.png';
+import ivanovImage from 'talks-image-responsive!./images/talks/ivanov.png';
 import kazakovImage from 'talks-image-responsive!./images/talks/kazakov.jpg';
 import kharlovImage from 'talks-image-responsive!./images/talks/kharlov.png';
 import khazamovImage from 'talks-image-responsive!./images/talks/khazamov.png';
@@ -75,6 +76,17 @@ export default {
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
     ],
     items: [
+        {
+            image: ivanovImage,
+            speakerFullName: 'Кирилл Иванов',
+            eventName: '.NET meetup Екб',
+            title: 'F# + DDD',
+            dateString: 'февраль 2017',
+            tags: ['backend', '.net'],
+            linkToVideo: 'https://youtu.be/bA4B5FskQDM',
+            linkToSlides: 'http://slides.com/koteek/fsharpddd',
+            linkToEvent: dotnetEkbLink,
+        },
         {
             image: tihonovImage,
             speakerFullName: 'Евгений Тихонов',
