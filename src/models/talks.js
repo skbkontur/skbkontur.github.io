@@ -17,6 +17,7 @@ import khruschevImage from 'talks-image-responsive!./images/talks/khruschev.jpg'
 import kirpichnikovImage from 'talks-image-responsive!./images/talks/kirpichnikov.jpg';
 import kokovinImage from 'talks-image-responsive!./images/talks/kokovin.jpg';
 import konovalovImage from 'talks-image-responsive!./images/talks/konovalov.png';
+import koshelevImage from 'talks-image-responsive!./images/talks/koshelev.png';
 import kurpilanskyImage from 'talks-image-responsive!./images/talks/kurpilansky.png';
 import kutovoiImage from 'talks-image-responsive!./images/talks/kutovoi.png';
 import larkovImage from 'talks-image-responsive!./images/talks/larkov.jpg';
@@ -85,6 +86,17 @@ export default {
             tags: ['backend', '.net'],
             linkToVideo: 'https://youtu.be/bA4B5FskQDM',
             linkToSlides: 'http://slides.com/koteek/fsharpddd',
+            linkToEvent: dotnetEkbLink,
+        },
+        {
+            image: koshelevImage,
+            speakerFullName: 'Григорий Кошелев',
+            eventName: '.NET meetup Екб',
+            title: 'Интеграция виртуальных машин NET и JAVA',
+            dateString: 'февраль 2017',
+            tags: ['backend', '.net', 'java'],
+            linkToVideo: 'https://youtu.be/wyIlV4TU_Vk',
+            linkToSlides: 'https://vk.com/doc1499661_443130256?hash=c79b834120f09169a3&dl=08bf31d5ab21f036fc',
             linkToEvent: dotnetEkbLink,
         },
         {
