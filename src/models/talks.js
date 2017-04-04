@@ -20,6 +20,7 @@ import konovalovImage from 'talks-image-responsive!./images/talks/konovalov.png'
 import koshelevImage from 'talks-image-responsive!./images/talks/koshelev.png';
 import kurpilanskyImage from 'talks-image-responsive!./images/talks/kurpilansky.png';
 import kutovoiImage from 'talks-image-responsive!./images/talks/kutovoi.png';
+import kuzminImage from 'talks-image-responsive!./images/talks/kuzmin.png';
 import larkovImage from 'talks-image-responsive!./images/talks/larkov.jpg';
 import moiseevImage from 'talks-image-responsive!./images/talks/moiseev.png';
 import musinaImage from 'talks-image-responsive!./images/talks/musina.png';
@@ -33,6 +34,7 @@ import shaihutdinovImage from 'talks-image-responsive!./images/talks/shaihutdino
 import sobolevaeImage from 'talks-image-responsive!./images/talks/sobolevae.jpg';
 import sobolevaoImage from 'talks-image-responsive!./images/talks/sobolevao.png';
 import solovievImage from 'talks-image-responsive!./images/talks/soloviev.jpg';
+import sosninImage from 'talks-image-responsive!./images/talks/sosnin.jpg';
 import tihonovImage from 'talks-image-responsive!./images/talks/tihonov.jpg';
 import titarenkoImage from 'talks-image-responsive!./images/talks/titarenko.png';
 import vdovichenkoImage from 'talks-image-responsive!./images/talks/vdovichenko.png';
@@ -77,6 +79,28 @@ export default {
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
     ],
     items: [
+        {
+            image: sosninImage,
+            speakerFullName: 'Иван Соснин',
+            eventName: 'UralJS',
+            title: 'Управление армией сайд-эффектов',
+            dateString: 'февраль 2017',
+            tags: ['frontend', 'js', 'uraljs'],
+            linkToVideo: 'https://youtu.be/UFr7eA7Hx0Y',
+            linkToSlides: 'https://slides.com/vansosnin/saga',
+            linkToEvent: uralJSLink,
+        },
+        {
+            image: kuzminImage,
+            speakerFullName: 'Валерий Кузьмин',
+            eventName: 'UralJS',
+            title: 'Обойдемся без бэкэнда',
+            dateString: 'февраль 2017',
+            tags: ['frontend', 'js', 'uraljs'],
+            linkToVideo: 'https://youtu.be/JrLv1UY2NLE',
+            linkToSlides: 'https://slides.com/malcoriel/sls-at-uraljs',
+            linkToEvent: uralJSLink,
+        },
         {
             image: ivanovImage,
             speakerFullName: 'Кирилл Иванов',
