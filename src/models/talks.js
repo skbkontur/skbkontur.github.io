@@ -37,6 +37,7 @@ import solovievImage from 'talks-image-responsive!./images/talks/soloviev.jpg';
 import sosninImage from 'talks-image-responsive!./images/talks/sosnin.jpg';
 import tihonovImage from 'talks-image-responsive!./images/talks/tihonov.jpg';
 import titarenkoImage from 'talks-image-responsive!./images/talks/titarenko.png';
+import ustuzhaninImage from 'talks-image-responsive!./images/talks/ustuzhanin.png';
 import vdovichenkoImage from 'talks-image-responsive!./images/talks/vdovichenko.png';
 import volokitinImage from 'talks-image-responsive!./images/talks/volokitin.jpg';
 
@@ -53,6 +54,7 @@ const dump2014Link = 'http://dump-conf.ru/archive/2014/';
 // 2015 conference archives
 const dump2015Link = 'http://dump-conf.ru/archive/2015/';
 const secr2015Link = 'http://2015.secr.ru/';
+const whaleRider2015Link = 'http://whalerider.ru/2015/';
 
 // 2016 conference archives
 const codefest2016Link = 'http://2016.codefest.ru/';
@@ -79,6 +81,17 @@ export default {
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
     ],
     items: [
+        {
+            image: ustuzhaninImage,
+            speakerFullName: 'Игорь Устюжанин',
+            eventName: 'Whale Rider',
+            title: 'Комната с опускающимся потолком',
+            dateString: 'май 2015',
+            tags: ['management'],
+            linkToVideo: 'https://youtu.be/O8JATNfHchk',
+            linkToSlides: 'https://www.slideshare.net/profyclub_ru/ss-57647978',
+            linkToEvent: whaleRider2015Link,
+        },
         {
             image: sosninImage,
             speakerFullName: 'Иван Соснин',
