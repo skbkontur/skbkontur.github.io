@@ -168,6 +168,15 @@ export default {
                 text: <span>Плагин TeamCity для упаковки и публикации пакетов в систему автоматического деплоя Octopus</span>,
                 links: []
             },
+            {
+                image: gitHubImage,
+                header: {
+                    href: 'https://github.com/igorlukanin/uxperiment-sketch-plugin',
+                    caption: 'UXperiment Sketch Plugin'
+                },
+                text: <span>Плагин для трансформации <a href="https://sketchapp.com/">Sketch</a>-документов в JSON-объекты</span>,
+                links: []
+            },
         ]
     },
     'en': {
@@ -331,6 +340,15 @@ export default {
                     caption: 'OctoPnP'
                 },
                 text: <span>TeamCity plugin with pack-and-publish functionality for Octopus-based deployments automation</span>,
+                links: []
+            },
+            {
+                image: gitHubImage,
+                header: {
+                    href: 'https://github.com/igorlukanin/uxperiment-sketch-plugin',
+                    caption: 'UXperiment Sketch Plugin'
+                },
+                text: <span>A plugin that transforms <a href="https://sketchapp.com/">Sketch</a> documents into JSON objects</span>,
                 links: []
             },
         ]
