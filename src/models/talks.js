@@ -27,7 +27,7 @@ import musinaImage from 'talks-image-responsive!./images/talks/musina.png';
 import plinerImage from 'talks-image-responsive!./images/talks/pliner.jpg';
 import ratkinImage from 'talks-image-responsive!./images/talks/ratkin.png';
 import romanovskyaImage from 'talks-image-responsive!./images/talks/romanovskya.png';
-import romanovskyeImage from 'talks-image-responsive!./images/talks/romanovskye.png';
+import romanovskyeImage from 'talks-image-responsive!./images/talks/romanovskye.jpg';
 import ronzhinaImage from 'talks-image-responsive!./images/talks/ronzhina.png';
 import safarovImage from 'talks-image-responsive!./images/talks/safarov.png';
 import shaihutdinovImage from 'talks-image-responsive!./images/talks/shaihutdinov.png';
