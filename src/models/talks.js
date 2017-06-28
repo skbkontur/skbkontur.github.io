@@ -30,6 +30,7 @@ import ratkinImage from 'talks-image-responsive!./images/talks/ratkin.png';
 import romanovskyaImage from 'talks-image-responsive!./images/talks/romanovskya.png';
 import romanovskyeImage from 'talks-image-responsive!./images/talks/romanovskye.jpg';
 import ronzhinaImage from 'talks-image-responsive!./images/talks/ronzhina.png';
+import roschupkinImage from 'talks-image-responsive!./images/talks/roschupkin.jpg';
 import safarovImage from 'talks-image-responsive!./images/talks/safarov.png';
 import shaihutdinovImage from 'talks-image-responsive!./images/talks/shaihutdinov.png';
 import sobolevaeImage from 'talks-image-responsive!./images/talks/sobolevae.jpg';
@@ -86,6 +87,17 @@ export default {
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
     ],
     items: [
+        {
+            image: roschupkinImage,
+            speakerFullName: 'Анна Бандура, Виталий Рощупкин, Антон Рычков, Дмитрий Якин',
+            eventName: 'DUMP',
+            title: 'Хотели как лучше, а не получилось',
+            dateString: 'апрель 2017',
+            tags: ['testing'],
+            linkToVideo: 'https://www.youtube.com/watch?v=HbQm006nKho',
+            linkToSlides: 'https://www.slideshare.net/it-people/ss-75225256',
+            linkToEvent: dump2017Link,
+        },
         {
             image: zakharovImage,
             speakerFullName: 'Максим Захаров, Лена Зырянова, Илария Тарасова',
