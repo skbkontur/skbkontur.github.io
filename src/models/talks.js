@@ -38,6 +38,7 @@ import sobolevaeImage from 'talks-image-responsive!./images/talks/sobolevae.jpg'
 import sobolevaoImage from 'talks-image-responsive!./images/talks/sobolevao.png';
 import solovievImage from 'talks-image-responsive!./images/talks/soloviev.jpg';
 import sosninImage from 'talks-image-responsive!./images/talks/sosnin.jpg';
+import syrykhImage from 'talks-image-responsive!./images/talks/syrykh.jpg';
 import tihonovImage from 'talks-image-responsive!./images/talks/tihonov.jpg';
 import titarenkoImage from 'talks-image-responsive!./images/talks/titarenko.png';
 import ustuzhaninImage from 'talks-image-responsive!./images/talks/ustuzhanin.png';
@@ -88,6 +89,17 @@ export default {
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
     ],
     items: [
+        {
+            image: syrykhImage,
+            speakerFullName: 'Максим Сырых',
+            eventName: 'UralJS',
+            title: 'Фантастический WebAudio и где его искать',
+            dateString: 'апрель 2017',
+            tags: ['frontend', 'js'],
+            linkToVideo: 'https://www.youtube.com/watch?v=EXX5HmD_5lU&index=1&list=PLVxsRDo37_Zdda1PEmbGomFbisl9O3vU1',
+            linkToSlides: 'https://slogger.github.io/webaudio-uraljs/',
+            linkToEvent: uralJSLink,
+        },
         {
             image: bukharinomelkovImage,
             speakerFullName: 'Вячеслав Бухарин, Денис Омельков',
