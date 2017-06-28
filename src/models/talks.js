@@ -62,6 +62,9 @@ const dotnextPiter2016Link = 'http://2016.dotnext-piter.ru';
 const dump2016Link = 'http://dump-conf.ru/archive/2016/';
 const wsdEkb2016Link = 'https://wsd.events/2016/06/25/';
 
+// 2017 conference archives
+const dump2017Link = 'http://dump-conf.ru/archive/2017/';
+
 // conference and meetup archives without dates
 const uralJSLink = 'https://vk.com/uraljs';
 const dotnetEkbLink = 'https://vk.com/dotnetekb';
@@ -81,6 +84,28 @@ export default {
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
     ],
     items: [
+        {
+            image: ronzhinaImage,
+            speakerFullName: 'Анастасия Ронжина',
+            eventName: 'DUMP',
+            title: 'UTC. Первые шаги',
+            dateString: 'апрель 2017',
+            tags: ['testing'],
+            linkToVideo: 'https://www.youtube.com/watch?v=guTLoaG3FVE',
+            linkToSlides: 'https://www.slideshare.net/it-people/utc-75224418',
+            linkToEvent: dump2017Link,
+        },
+        {
+            image: kirpichnikovImage,
+            speakerFullName: 'Алексей Кирпичников',
+            eventName: 'DUMP',
+            title: 'Не очень легко сгенерировать пять случайных чисел',
+            dateString: 'апрель 2017',
+            tags: ['science', 'math'],
+            linkToVideo: 'https://www.youtube.com/watch?v=DyBzCcQWhCc',
+            linkToSlides: 'https://www.slideshare.net/it-people/ss-75225566',
+            linkToEvent: dump2017Link,
+        },
         {
             image: ustuzhaninImage,
             speakerFullName: 'Игорь Устюжанин',
