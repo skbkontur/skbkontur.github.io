@@ -23,6 +23,7 @@ import kutovoiImage from 'talks-image-responsive!./images/talks/kutovoi.png';
 import kuzminImage from 'talks-image-responsive!./images/talks/kuzmin.png';
 import larkovImage from 'talks-image-responsive!./images/talks/larkov.jpg';
 import moiseevImage from 'talks-image-responsive!./images/talks/moiseev.png';
+import mokhovaImage from 'talks-image-responsive!./images/talks/mokhova.jpg';
 import musinaImage from 'talks-image-responsive!./images/talks/musina.png';
 import plinerImage from 'talks-image-responsive!./images/talks/pliner.jpg';
 import ratkinImage from 'talks-image-responsive!./images/talks/ratkin.png';
@@ -84,6 +85,17 @@ export default {
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
     ],
     items: [
+        {
+            image: mokhovaImage,
+            speakerFullName: 'Екатерина Мохова, Ксения Ильина',
+            eventName: 'DUMP',
+            title: 'Авантюрное тестирование интерфейсов',
+            dateString: 'апрель 2017',
+            tags: ['design', 'ui'],
+            linkToVideo: 'https://www.youtube.com/watch?v=t_zKEjuiins',
+            linkToSlides: 'https://www.slideshare.net/it-people/ss-75225949',
+            linkToEvent: dump2017Link,
+        },
         {
             image: ronzhinaImage,
             speakerFullName: 'Анастасия Ронжина',
