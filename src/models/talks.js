@@ -41,6 +41,7 @@ import titarenkoImage from 'talks-image-responsive!./images/talks/titarenko.png'
 import ustuzhaninImage from 'talks-image-responsive!./images/talks/ustuzhanin.png';
 import vdovichenkoImage from 'talks-image-responsive!./images/talks/vdovichenko.png';
 import volokitinImage from 'talks-image-responsive!./images/talks/volokitin.jpg';
+import zakharovImage from 'talks-image-responsive!./images/talks/zakharov.jpg';
 
 // 2012 conference archives
 const sqa2012Link = 'http://sqadays.com/ru/talks/7995';
@@ -85,6 +86,17 @@ export default {
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
     ],
     items: [
+        {
+            image: zakharovImage,
+            speakerFullName: 'Максим Захаров, Лена Зырянова, Илария Тарасова',
+            eventName: 'DUMP',
+            title: 'Другое тестирование',
+            dateString: 'апрель 2017',
+            tags: ['testing'],
+            linkToVideo: 'https://www.youtube.com/watch?v=rWciwbsdZNw',
+            linkToSlides: 'https://www.slideshare.net/it-people/ss-75225231',
+            linkToEvent: dump2017Link,
+        },
         {
             image: mokhovaImage,
             speakerFullName: 'Екатерина Мохова, Ксения Ильиных',
