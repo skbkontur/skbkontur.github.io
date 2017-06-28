@@ -2,6 +2,7 @@ import React from 'react';
 
 import ahmetovImage from 'talks-image-responsive!./images/talks/ahmetov.jpg';
 import baranovaImage from 'talks-image-responsive!./images/talks/baranova.jpg';
+import bukharinomelkovImage from 'talks-image-responsive!./images/talks/bukharinomelkov.jpg';
 import burmistrovImage from 'talks-image-responsive!./images/talks/burmistrov.jpg';
 import chevdarImage from 'talks-image-responsive!./images/talks/chevdar.jpg';
 import chicherskyImage from 'talks-image-responsive!./images/talks/chichersky.png';
@@ -87,6 +88,17 @@ export default {
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
     ],
     items: [
+        {
+            image: bukharinomelkovImage,
+            speakerFullName: 'Вячеслав Бухарин, Денис Омельков',
+            eventName: 'UralJS',
+            title: 'Трудности перехода',
+            dateString: 'апрель 2017',
+            tags: ['frontend', 'js'],
+            linkToVideo: 'https://www.youtube.com/watch?v=O-GBvIrKEA0&list=PLVxsRDo37_Zdda1PEmbGomFbisl9O3vU1&index=2',
+            linkToSlides: 'http://slides.com/denisomelkov/deck#/',
+            linkToEvent: uralJSLink,
+        },
         {
             image: roschupkinImage,
             speakerFullName: 'Анна Бандура, Виталий Рощупкин, Антон Рычков, Дмитрий Якин',
