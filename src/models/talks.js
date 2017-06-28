@@ -89,7 +89,7 @@ export default {
             image: mokhovaImage,
             speakerFullName: 'Екатерина Мохова, Ксения Ильиных',
             eventName: 'DUMP',
-            title: 'Авантюрное тестирование интерфейсов',
+            title: 'Авантюрное тестирование интерфейса',
             dateString: 'апрель 2017',
             tags: ['design', 'ui'],
             linkToVideo: 'https://www.youtube.com/watch?v=t_zKEjuiins',
