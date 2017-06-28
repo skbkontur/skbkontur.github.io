@@ -87,13 +87,13 @@ export default {
     items: [
         {
             image: mokhovaImage,
-            speakerFullName: 'Екатерина Мохова, Ксения Ильина',
+            speakerFullName: 'Екатерина Мохова, Ксения Ильиных',
             eventName: 'DUMP',
             title: 'Авантюрное тестирование интерфейсов',
             dateString: 'апрель 2017',
             tags: ['design', 'ui'],
             linkToVideo: 'https://www.youtube.com/watch?v=t_zKEjuiins',
-            linkToSlides: 'https://www.slideshare.net/it-people/ss-75225949',
+            linkToSlides: 'https://speakerdeck.com/kseniailinyh/avantiurnoie-tiestirovaniie-intierfieisa',
             linkToEvent: dump2017Link,
         },
         {
