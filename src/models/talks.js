@@ -9,6 +9,7 @@ import chicherskyImage from 'talks-image-responsive!./images/talks/chichersky.pn
 import dashkevichImage from 'talks-image-responsive!./images/talks/dashkevich.jpg';
 import egorovImage from 'talks-image-responsive!./images/talks/egorov.jpg';
 import geinImage from 'talks-image-responsive!./images/talks/gein.png';
+import goldbergImage from 'talks-image-responsive!./images/talks/goldberg.jpg';
 import golubevImage from 'talks-image-responsive!./images/talks/golubev.png';
 import ivanovImage from 'talks-image-responsive!./images/talks/ivanov.png';
 import kazakovImage from 'talks-image-responsive!./images/talks/kazakov.jpg';
@@ -89,6 +90,17 @@ export default {
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
     ],
     items: [
+        {
+            image: goldbergImage,
+            speakerFullName: 'Игорь Гольдберг',
+            eventName: 'DUMP',
+            title: 'Не верь, не бойся, не проси!',
+            dateString: 'апрель 2017',
+            tags: ['management'],
+            linkToVideo: 'https://www.youtube.com/watch?v=f_kW1m3Jr0g',
+            linkToSlides: 'https://www.slideshare.net/it-people/ss-75274678',
+            linkToEvent: dump2017Link,
+        },
         {
             image: syrykhImage,
             speakerFullName: 'Максим Сырых',
