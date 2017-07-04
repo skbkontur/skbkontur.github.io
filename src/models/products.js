@@ -2,6 +2,7 @@ import React from 'react';
 
 import moiraImage from './images/products/moira.png';
 import ditraceImage from './images/products/ditrace.png';
+import cementImage from './images/products/cement.png';
 import gitHubImage from './images/products/github.png';
 
 export default {
@@ -52,22 +53,13 @@ export default {
                 ]
             },
             {
-                image: gitHubImage,
+                image: cementImage,
                 header: {
-                    href: 'https://github.com/tihonove/reelm',
-                    caption: 'reelm'
+                    href: 'https://github.com/skbkontur/cement',
+                    caption: 'cement'
                 },
-                text: <span>Библиотека для управления эффектами в <a href="http://redux.js.org">redux</a></span>,
-                links: [
-                    {
-                        href: 'https://github.com/tihonove/reelm',
-                        caption: 'Код'
-                    },
-                    {
-                        href: 'https://www.npmjs.com/package/reelm',
-                        caption: 'npm'
-                    },
-                ]
+                text: <span>Система управления зависимостями для C#</span>,
+                links: []
             },
             {
                 image: ditraceImage,
@@ -226,22 +218,13 @@ export default {
                 ]
             },
             {
-                image: gitHubImage,
+                image: cementImage,
                 header: {
-                    href: 'https://github.com/tihonove/reelm',
-                    caption: 'reelm'
+                    href: 'https://github.com/skbkontur/cement',
+                    caption: 'cement'
                 },
-                text: <span>Awesome effect management library for <a href="http://redux.js.org">redux</a></span>,
-                links: [
-                    {
-                        href: 'https://github.com/tihonove/reelm',
-                        caption: 'Code'
-                    },
-                    {
-                        href: 'https://www.npmjs.com/package/reelm',
-                        caption: 'npm'
-                    },
-                ]
+                text: <span>C# dependency management tool</span>,
+                links: []
             },
             {
                 image: ditraceImage,
