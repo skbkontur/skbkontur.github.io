@@ -112,11 +112,15 @@ export default {
                     href: 'https://github.com/skbkontur/GroBuf',
                     caption: 'GroBuf'
                 },
-                text: <span>Быстрая бинарная сериализация для .NET</span>,
+                text: <span>Быстрая бинарная сериализация для .NET и Java</span>,
                 links: [
                     {
                         href: 'https://github.com/skbkontur/GroBuf',
-                        caption: 'Код'
+                        caption: 'Код (C#)'
+                    },
+                    {
+                        href: 'https://github.com/skbkontur/grobufJVM',
+                        caption: 'Код (Java)'
                     },
                     {
                         href: 'https://www.nuget.org/packages/GroBuf/',
@@ -277,11 +281,15 @@ export default {
                     href: 'https://github.com/skbkontur/GroBuf',
                     caption: 'GroBuf'
                 },
-                text: <span>Fast binary serializer for .NET</span>,
+                text: <span>Fast binary serializer for .NET and Java</span>,
                 links: [
                     {
                         href: 'https://github.com/skbkontur/GroBuf',
-                        caption: 'Code'
+                        caption: 'Code (C#)'
+                    },
+                    {
+                        href: 'https://github.com/skbkontur/grobufJVM',
+                        caption: 'Code (Java)'
                     },
                     {
                         href: 'https://www.nuget.org/packages/GroBuf/',
