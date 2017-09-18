@@ -6,6 +6,7 @@ import bukharinomelkovImage from 'talks-image-responsive!./images/talks/bukharin
 import burmistrovImage from 'talks-image-responsive!./images/talks/burmistrov.jpg';
 import chevdarImage from 'talks-image-responsive!./images/talks/chevdar.jpg';
 import chicherskyImage from 'talks-image-responsive!./images/talks/chichersky.png';
+import cherkasskiyImage from 'talks-image-responsive!./images/talks/cherkasskiy.png';
 import dashkevichImage from 'talks-image-responsive!./images/talks/dashkevich.jpg';
 import egorovImage from 'talks-image-responsive!./images/talks/egorov.jpg';
 import geinImage from 'talks-image-responsive!./images/talks/gein.png';
@@ -45,7 +46,9 @@ import titarenkoImage from 'talks-image-responsive!./images/talks/titarenko.png'
 import ustuzhaninImage from 'talks-image-responsive!./images/talks/ustuzhanin.png';
 import vdovichenkoImage from 'talks-image-responsive!./images/talks/vdovichenko.png';
 import volokitinImage from 'talks-image-responsive!./images/talks/volokitin.jpg';
+import yuryevImage from 'talks-image-responsive!./images/talks/yuryev.png';
 import zakharovImage from 'talks-image-responsive!./images/talks/zakharov.jpg';
+import zhirovImage from 'talks-image-responsive!./images/talks/zhirov.png';
 
 // 2012 conference archives
 const sqa2012Link = 'http://sqadays.com/ru/talks/7995';
@@ -70,6 +73,7 @@ const wsdEkb2016Link = 'https://wsd.events/2016/06/25/';
 
 // 2017 conference archives
 const dump2017Link = 'http://dump-conf.ru/archive/2017/';
+const permTechTalksSep2017Link = 'https://vk.com/permtechtalks';
 
 // conference and meetup archives without dates
 const uralJSLink = 'https://vk.com/uraljs';
@@ -90,6 +94,61 @@ export default {
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
     ],
     items: [
+        {
+            image: cherkasskiyImage,
+            speakerFullName: 'Сергей Черкасский',
+            eventName: 'Perm Tech Talks',
+            title: 'Страх и ненависть в .NET',
+            dateString: 'сентябрь 2017',
+            tags: ['backend', '.net', 'operations'],
+            linkToVideo: 'https://www.youtube.com/watch?v=iVoBjO3ctqg&index=5&list=PLc82OEDeni8TyujauVY7DBM_dA1hZl2tK',
+            linkToSlides: 'https://goo.gl/LEnB4N',
+            linkToEvent: permTechTalksSep2017Link,
+        },
+        {
+            image: roschupkinImage,
+            speakerFullName: 'Виталий Рощупкин',
+            eventName: 'Perm Tech Talks',
+            title: 'Как помочь разработчику побороть legacy',
+            dateString: 'сентябрь 2017',
+            tags: ['testing'],
+            linkToVideo: 'https://www.youtube.com/watch?v=8qEgBdgFCtE&list=PLc82OEDeni8TyujauVY7DBM_dA1hZl2tK&index=4',
+            linkToSlides: 'https://goo.gl/Dc3hgK',
+            linkToEvent: permTechTalksSep2017Link,
+        },
+        {
+            image: zhirovImage,
+            speakerFullName: 'Евгений Жиров',
+            eventName: 'Perm Tech Talks',
+            title: 'Как обложить сервис метриками и не облажаться',
+            dateString: 'сентябрь 2017',
+            tags: ['backend', 'operations'],
+            linkToVideo: 'https://www.youtube.com/watch?v=1WvnifkND2g&index=3&list=PLc82OEDeni8TyujauVY7DBM_dA1hZl2tK',
+            linkToSlides: 'https://goo.gl/CqDjrN',
+            linkToEvent: permTechTalksSep2017Link,
+        },
+        {
+            image: kuzminImage,
+            speakerFullName: 'Валерий Кузьмин',
+            eventName: 'Perm Tech Talks',
+            title: 'Как писать код, который пишет код на TypeScript',
+            dateString: 'сентябрь 2017',
+            tags: ['frontend'],
+            linkToVideo: 'https://www.youtube.com/watch?v=Ra5bSK0M-Bo&index=2&list=PLc82OEDeni8TyujauVY7DBM_dA1hZl2tK',
+            linkToSlides: 'https://goo.gl/APYbJW',
+            linkToEvent: permTechTalksSep2017Link,
+        },
+        {
+            image: yuryevImage,
+            speakerFullName: 'Евгений Юрьев',
+            eventName: 'Perm Tech Talks',
+            title: 'Как писать код, который пишет код на MSIL',
+            dateString: 'сентябрь 2017',
+            tags: ['backend', '.net'],
+            linkToVideo: 'https://www.youtube.com/watch?v=U1v_ZQydnpU&index=1&list=PLc82OEDeni8TyujauVY7DBM_dA1hZl2tK',
+            linkToSlides: 'https://goo.gl/f3U9Eb',
+            linkToEvent: permTechTalksSep2017Link,
+        },
         {
             image: goldbergImage,
             speakerFullName: 'Игорь Гольдберг',
