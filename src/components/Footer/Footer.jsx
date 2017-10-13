@@ -36,7 +36,7 @@ export default function Footer({ additionalFooterText, skbkonturSinceCaption, la
                         </div>
                         <div className={cn('spacer')}/>
                         <a rel='nofollow' className={cn('telegram')} href='https://t.me/KonturTech' target='_blank'>
-                            <span className={cn('icon')}><Icon name='telegram-o' /></span>
+                            <span className={cn('icon')}><Icon name='telegram' /></span>
                             {'\u0020'}
                             <span className={cn('text')}>Канал в Телеграме</span>
                         </a>
