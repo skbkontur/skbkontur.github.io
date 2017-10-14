@@ -377,7 +377,7 @@ export default {
             speakerFullName: 'Елена Махно',
             title: 'Юзабилити: прямо здесь и сейчас',
             dateString: 'август 2013',
-            tags: ['design', 'usability'],
+            tags: ['design'],
             linkToSlides: 'https://habrahabr.ru/company/skbkontur/blog/189916/',
             annotation: (
                 <div>
