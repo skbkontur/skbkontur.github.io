@@ -36,10 +36,12 @@ import ronzhinaImage from 'talks-image-responsive!./images/talks/ronzhina.png';
 import roschupkinImage from 'talks-image-responsive!./images/talks/roschupkin.jpg';
 import safarovImage from 'talks-image-responsive!./images/talks/safarov.png';
 import shaihutdinovImage from 'talks-image-responsive!./images/talks/shaihutdinov.png';
+import shishkinImage from 'talks-image-responsive!./images/talks/shishkin.jpg';
 import sobolevaeImage from 'talks-image-responsive!./images/talks/sobolevae.jpg';
 import sobolevaoImage from 'talks-image-responsive!./images/talks/sobolevao.png';
 import solovievImage from 'talks-image-responsive!./images/talks/soloviev.jpg';
 import sosninImage from 'talks-image-responsive!./images/talks/sosnin.jpg';
+import suslovImage from 'talks-image-responsive!./images/talks/suslov.jpg';
 import syrykhImage from 'talks-image-responsive!./images/talks/syrykh.jpg';
 import tihonovImage from 'talks-image-responsive!./images/talks/tihonov.jpg';
 import titarenkoImage from 'talks-image-responsive!./images/talks/titarenko.png';
@@ -74,6 +76,7 @@ const wsdEkb2016Link = 'https://wsd.events/2016/06/25/';
 // 2017 conference archives
 const dump2017Link = 'http://dump-conf.ru/archive/2017/';
 const permTechTalksSep2017Link = 'https://vk.com/permtechtalks';
+const izhTechTalksOct2017Link = 'https://vk.com/izhtechtalks';
 
 // conference and meetup archives without dates
 const uralJSLink = 'https://vk.com/uraljs';
@@ -94,6 +97,50 @@ export default {
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
     ],
     items: [
+        {
+            image: suslovImage,
+            speakerFullName: 'Юрий Суслов',
+            eventName: 'Izh Tech Talks',
+            title: 'Мониторинг ошибок в боевом окружении',
+            dateString: 'октябрь 2017',
+            tags: ['operations', 'monitoring', 'alerting'],
+            linkToVideo: 'https://www.youtube.com/watch?v=Cw2C9yG_nZE&list=PLc82OEDeni8Ts3ldKIKKFlNHTKT7a_1jp',
+            linkToSlides: 'https://goo.gl/gYkeUh',
+            linkToEvent: izhTechTalksOct2017Link,
+        },
+        {
+            image: zhirovImage,
+            speakerFullName: 'Евгений Жиров',
+            eventName: 'Izh Tech Talks',
+            title: 'HTTP/2 via C#',
+            dateString: 'октябрь 2017',
+            tags: ['.net', 'http'],
+            linkToVideo: 'https://www.youtube.com/watch?v=WfiJ4os9ya8&list=PLc82OEDeni8Ts3ldKIKKFlNHTKT7a_1jp&index=2',
+            linkToSlides: 'https://goo.gl/iwXuJv',
+            linkToEvent: izhTechTalksOct2017Link,
+        },
+        {
+            image: cherkasskiyImage,
+            speakerFullName: 'Сергей Черкасский',
+            eventName: 'Izh Tech Talks',
+            title: 'Страх и ненависть в .NET',
+            dateString: 'октябрь 2017',
+            tags: ['backend', '.net', 'operations'],
+            linkToVideo: 'https://www.youtube.com/watch?v=3QIwWkRP3Uo&index=3&list=PLc82OEDeni8Ts3ldKIKKFlNHTKT7a_1jp',
+            linkToSlides: 'https://goo.gl/AH4dGt',
+            linkToEvent: izhTechTalksOct2017Link,
+        },
+        {
+            image: shishkinImage,
+            speakerFullName: 'Евгений Шишкин',
+            eventName: 'Izh Tech Talks',
+            title: 'Как стать разработчиком-звездой',
+            dateString: 'октябрь 2017',
+            tags: ['management', 'hr'],
+            linkToVideo: 'https://www.youtube.com/watch?v=BhJ4X1mZTYA&index=4&list=PLc82OEDeni8Ts3ldKIKKFlNHTKT7a_1jp',
+            linkToSlides: 'https://goo.gl/RbwvVA',
+            linkToEvent: izhTechTalksOct2017Link,
+        },
         {
             image: cherkasskiyImage,
             speakerFullName: 'Сергей Черкасский',
