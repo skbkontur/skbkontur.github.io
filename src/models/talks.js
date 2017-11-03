@@ -7,7 +7,9 @@ import burmistrovImage from 'talks-image-responsive!./images/talks/burmistrov.jp
 import chevdarImage from 'talks-image-responsive!./images/talks/chevdar.jpg';
 import chicherskyImage from 'talks-image-responsive!./images/talks/chichersky.png';
 import cherkasskiyImage from 'talks-image-responsive!./images/talks/cherkasskiy.png';
+import chupriyanovImage from 'talks-image-responsive!./images/talks/chupriyanov.jpg';
 import dashkevichImage from 'talks-image-responsive!./images/talks/dashkevich.jpg';
+import dolganovImage from 'talks-image-responsive!./images/talks/dolganov.jpg';
 import egorovImage from 'talks-image-responsive!./images/talks/egorov.jpg';
 import geinImage from 'talks-image-responsive!./images/talks/gein.png';
 import goldbergImage from 'talks-image-responsive!./images/talks/goldberg.jpg';
@@ -25,11 +27,13 @@ import kurpilanskyImage from 'talks-image-responsive!./images/talks/kurpilansky.
 import kutovoiImage from 'talks-image-responsive!./images/talks/kutovoi.png';
 import kuzminImage from 'talks-image-responsive!./images/talks/kuzmin.png';
 import larkovImage from 'talks-image-responsive!./images/talks/larkov.jpg';
+import mahnoImage from 'talks-image-responsive!./images/talks/mahno.jpg';
 import moiseevImage from 'talks-image-responsive!./images/talks/moiseev.png';
 import mokhovaImage from 'talks-image-responsive!./images/talks/mokhova.jpg';
 import musinaImage from 'talks-image-responsive!./images/talks/musina.png';
 import plinerImage from 'talks-image-responsive!./images/talks/pliner.jpg';
 import ratkinImage from 'talks-image-responsive!./images/talks/ratkin.png';
+import ratnerImage from 'talks-image-responsive!./images/talks/ratner.jpg';
 import romanovskyaImage from 'talks-image-responsive!./images/talks/romanovskya.png';
 import romanovskyeImage from 'talks-image-responsive!./images/talks/romanovskye.jpg';
 import ronzhinaImage from 'talks-image-responsive!./images/talks/ronzhina.png';
@@ -54,10 +58,13 @@ import zhirovImage from 'talks-image-responsive!./images/talks/zhirov.png';
 
 // 2012 conference archives
 const sqa2012Link = 'http://sqadays.com/ru/talks/7995';
+const dump2012Link = 'http://dump-conf.ru/archive/2012/';
 
 // 2013 conference archives
 const dump2013Link = 'http://dump-it.ru/arhiv/itogi-dump-2013/';
 const tadEkb2013Link = 'http://www.teamlead.ru/display/MAIN/TAD+4-2013+Ekaterinburg';
+const profsouxMay2013Link = 'http://2013.profsoux.ru/';
+const codefest2013Link = 'https://2013.codefest.ru/';
 
 // 2014 conference archives
 const dump2014Link = 'http://dump-conf.ru/archive/2014/';
@@ -77,10 +84,13 @@ const wsdEkb2016Link = 'https://wsd.events/2016/06/25/';
 const dump2017Link = 'http://dump-conf.ru/archive/2017/';
 const permTechTalksSep2017Link = 'https://vk.com/permtechtalks';
 const izhTechTalksOct2017Link = 'https://vk.com/izhtechtalks';
+const profsouxApr2017Link = 'http://2017.profsoux.ru/';
 
 // conference and meetup archives without dates
 const uralJSLink = 'https://vk.com/uraljs';
 const dotnetEkbLink = 'https://vk.com/dotnetekb';
+const UXSreda = 'https://www.facebook.com/UXSreda/';
+const UXResearchMeetup = 'https://goo.gl/j4TP1v';
 
 export default {
     additionalFooterText:
@@ -195,6 +205,17 @@ export default {
             linkToVideo: 'https://www.youtube.com/watch?v=U1v_ZQydnpU&index=1&list=PLc82OEDeni8TyujauVY7DBM_dA1hZl2tK',
             linkToSlides: 'https://goo.gl/f3U9Eb',
             linkToEvent: permTechTalksSep2017Link,
+        },
+        {
+            image: dolganovImage,
+            speakerFullName: 'Лев Долганов',
+            eventName: 'ProfsoUX',
+            title: 'Обратная связь в большом проекте и как извлечь из неё максимум пользы',
+            dateString: 'апрель 2017',
+            tags: ['design'],
+            linkToVideo: 'https://vimeo.com/213398072',
+            linkToSlides: 'https://goo.gl/4uKcfk',
+            linkToEvent: profsouxApr2017Link,
         },
         {
             image: goldbergImage,
@@ -362,6 +383,17 @@ export default {
             linkToEvent: dotnetEkbLink,
         },
         {
+            image: ratnerImage,
+            speakerFullName: 'Светлана Ратнер, Аня Кукаркина',
+            eventName: 'UX-Research Meetup',
+            title: 'Работать в поле и не спалиться',
+            dateString: 'январь 2017',
+            tags: ['design'],
+            linkToVideo: 'https://www.youtube.com/watch?v=GCCFe_zxG-U',
+            linkToSlides: '',
+            linkToEvent: UXResearchMeetup,
+        },
+        {
             image: tihonovImage,
             speakerFullName: 'Евгений Тихонов',
             eventName: 'UralJS',
@@ -469,6 +501,17 @@ export default {
             tags: ['frontend', 'js', 'react'],
             linkToVideo: 'https://www.youtube.com/watch?v=v5Fi-djuwZk',
             linkToSlides: 'http://www.slideshare.net/PavelVolokitin/frontfellows-relay-66758880',
+        },
+        {
+            image: ratnerImage,
+            speakerFullName: 'Светлана Ратнер',
+            eventName: 'UX-Research Meetup',
+            title: 'Модерируемые удаленные тестирования',
+            dateString: 'март 2016',
+            tags: ['design'],
+            linkToVideo: 'https://www.youtube.com/watch?v=FRXkLvbUbsI',
+            linkToSlides: '',
+            linkToEvent: UXResearchMeetup,
         },
         {
             image: kazakovImage,
@@ -690,6 +733,28 @@ export default {
             linkToEvent: dump2014Link,
         },
         {
+            image: shaihutdinovImage,
+            speakerFullName: 'Рамиль Шайхутдинов',
+            eventName: 'CodeFest',
+            title: 'Шашечки или ехать?',
+            dateString: 'март 2013',
+            tags: ['design'],
+            linkToVideo: 'https://www.youtube.com/watch?v=Svpn964JSyQ',
+            linkToSlides: 'https://www.slideshare.net/UXkontur/ss-21111509',
+            linkToEvent: codefest2013Link,
+        },
+        {
+            image: mahnoImage,
+            speakerFullName: 'Елена Махно',
+            eventName: 'Profsoux',
+            title: 'UX-исследования на всех этапах разработки продукта',
+            dateString: 'май 2013',
+            tags: ['design'],
+            linkToVideo: 'https://www.youtube.com/watch?v=HoZJ9_PEzmw',
+            linkToSlides: 'https://www.slideshare.net/ProfsoUX/ux-21491561',
+            linkToEvent: profsouxMay2013Link,
+        },
+        {
             image: kazakovImage,
             speakerFullName: 'Александр Казаков',
             eventName: 'DUMP',
@@ -699,16 +764,6 @@ export default {
             linkToVideo: 'https://www.youtube.com/watch?v=8dvRoLPvCuo&list=PLRdS-n5seLRpVRDblg0KDFr5V4RlvaDiR&index=35',
             linkToSlides: 'http://www.slideshare.net/it-people/dump2013-serverside',
             linkToEvent: dump2013Link,
-        },
-        {
-            image: egorovImage,
-            speakerFullName: 'Павел Егоров',
-            eventName: 'Семинар IT-people',
-            title: 'Введение в машинное обучение',
-            dateString: 'декабрь 2012',
-            tags: ['science', 'machine learning'],
-            linkToVideo: 'https://www.youtube.com/watch?v=qzs0rJscOxg&index=2&list=PLRdS-n5seLRoCss8j5S-M50hH0HhoPiSo',
-            linkToSlides: 'http://www.slideshare.net/xoposhiy/oseminar-2012',
         },
         {
             image: tihonovImage,
@@ -729,6 +784,17 @@ export default {
             tags: ['backend', 'db', 'cassandra'],
             linkToVideo: 'https://www.youtube.com/watch?v=M_rIdjpybH4&index=11&list=PLEbtM8n7mz93h4VRGBc3SabsAHJCcjdzx',
             linkToSlides: 'https://drive.google.com/open?id=0B-qtqQ5D71UQU1J5bDhtaEpOV1E',
+        },
+        {
+            image: chupriyanovImage,
+            speakerFullName: 'Николай Чуприянов',
+            eventName: 'DUMP',
+            title: 'Каракули прокачивают извилины',
+            dateString: 'март 2014',
+            tags: ['design'],
+            linkToVideo: 'https://vimeo.com/90720580',
+            linkToSlides: 'https://www.slideshare.net/UXkontur/ss-32973619',
+            linkToEvent: dump2014Link,
         },
         {
             image: geinImage,
@@ -886,6 +952,38 @@ export default {
             dateString: 'декабрь 2013',
             tags: ['backend', 'db', 'cassandra'],
             linkToVideo: 'https://www.youtube.com/watch?v=BacY43GELrM&index=12&list=PLEbtM8n7mz93h4VRGBc3SabsAHJCcjdzx',
+        },
+        {
+            image: egorovImage,
+            speakerFullName: 'Павел Егоров',
+            eventName: 'Семинар IT-people',
+            title: 'Введение в машинное обучение',
+            dateString: 'декабрь 2012',
+            tags: ['science', 'machine learning'],
+            linkToVideo: 'https://www.youtube.com/watch?v=qzs0rJscOxg&index=2&list=PLRdS-n5seLRoCss8j5S-M50hH0HhoPiSo',
+            linkToSlides: 'http://www.slideshare.net/xoposhiy/oseminar-2012',
+        },
+        {
+            image: dashkevichImage,
+            speakerFullName: 'Семён Молотков, Иван Дашкевич',
+            eventName: 'DUMP',
+            title: 'Канбан-победитель',
+            dateString: 'март 2012',
+            tags: ['management'],
+            linkToVideo: 'https://www.youtube.com/watch?v=Pb5v__j91uY',
+            linkToSlides: 'https://www.slideshare.net/UXkontur/ss-13193948',
+            linkToEvent: dump2012Link,
+        },
+        {
+            image: solovievImage,
+            speakerFullName: 'Сергей Соловьёв, Семён Молотков',
+            eventName: 'UX-Среда',
+            title: 'Как не делать лишнего, или доклад без названия',
+            dateString: 'март 2012',
+            tags: ['design'],
+            linkToVideo: 'https://www.youtube.com/watch?v=vEjo17JdYg4',
+            linkToSlides: 'https://www.slideshare.net/UXkontur/ss-13265788',
+            linkToEvent: UXSreda,
         },
     ],
 };
