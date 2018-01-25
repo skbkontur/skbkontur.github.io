@@ -3,6 +3,8 @@ import React from 'react';
 import moiraImage from './images/products/moira.png';
 import ditraceImage from './images/products/ditrace.png';
 import cementImage from './images/products/cement.png';
+import vostokImage from './images/products/vostok.png';
+import guidesImage from './images/products/guides.png';
 import gitHubImage from './images/products/github.png';
 
 export default {
@@ -16,6 +18,20 @@ export default {
             { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
         ],
         blocks: [
+            {
+                image: vostokImage,
+                header: {
+                    href: 'http://vostok.tools',
+                    caption: 'Восток'
+                },
+                text: <span>Экосистема для микросервисов на&nbsp;платформе .NET</span>,
+                links: [
+                    {
+                        href: 'https://github.com/vostok',
+                        caption: 'Код'
+                    },
+                ]
+            },
             {
                 image: moiraImage,
                 header: {
@@ -31,6 +47,20 @@ export default {
                     {
                         href: 'https://moira.readthedocs.io/',
                         caption: 'Документация'
+                    },
+                ]
+            },
+            {
+                image: guidesImage,
+                header: {
+                    href: 'https://guides.kontur.ru',
+                    caption: 'Гайды'
+                },
+                text: <span>Первоисточник требований к&nbsp;дизайну интерфейсов Контура</span>,
+                links: [
+                    {
+                        href: 'https://github.com/skbkontur/retail-ui',
+                        caption: 'Библиотека компонентов'
                     },
                 ]
             },
@@ -85,7 +115,7 @@ export default {
                     href: 'https://github.com/skbkontur/frontreport',
                     caption: 'frontreport'
                 },
-                text: <span>Шлюз для сбора логов ошибок из браузеров пользователей</span>,
+                text: <span>Шлюз для сбора логов ошибок из&nbsp;браузеров пользователей</span>,
                 links: []
             },
             {
@@ -94,7 +124,7 @@ export default {
                     href: 'https://github.com/skbkontur/gremit',
                     caption: 'GrEmit'
                 },
-                text: <span>Инструменты для генерации кода через Reflection.Emit, в том числе GroboIL — умная обертка над <a href="http://msdn.microsoft.com/en-us/library/system.reflection.emit.ilgenerator.aspx">ILGenerator</a></span>,
+                text: <span>Инструменты для генерации кода через Reflection.Emit, в том числе GroboIL — умная обертка над&nbsp;<a href="http://msdn.microsoft.com/en-us/library/system.reflection.emit.ilgenerator.aspx">ILGenerator</a></span>,
                 links: [
                     {
                         href: 'https://github.com/skbkontur/gremit',
@@ -152,7 +182,7 @@ export default {
                     href: 'https://github.com/misha-plus/ytissues-confluence',
                     caption: 'ytissues-confluence'
                 },
-                text: <span>Макрос Confluence для вставки на страницы интерактивных ссылок на задачи YouTrack</span>,
+                text: <span>Макрос Confluence для вставки на&nbsp;страницы интерактивных ссылок на&nbsp;задачи YouTrack</span>,
                 links: []
             },
             {
@@ -161,16 +191,7 @@ export default {
                     href: 'https://github.com/skbkontur/OctoPnP',
                     caption: 'OctoPnP'
                 },
-                text: <span>Плагин TeamCity для упаковки и публикации пакетов в систему автоматического деплоя Octopus</span>,
-                links: []
-            },
-            {
-                image: gitHubImage,
-                header: {
-                    href: 'https://github.com/igorlukanin/uxperiment-sketch-plugin',
-                    caption: 'UXperiment Sketch Plugin'
-                },
-                text: <span>Плагин для трансформации <a href="https://sketchapp.com/">Sketch</a>-документов в JSON-объекты</span>,
+                text: <span>Плагин TeamCity для упаковки и&nbsp;публикации пакетов в систему автоматического деплоя Octopus</span>,
                 links: []
             },
         ]
@@ -331,15 +352,6 @@ export default {
                     caption: 'OctoPnP'
                 },
                 text: <span>TeamCity plugin with pack-and-publish functionality for Octopus-based deployments automation</span>,
-                links: []
-            },
-            {
-                image: gitHubImage,
-                header: {
-                    href: 'https://github.com/igorlukanin/uxperiment-sketch-plugin',
-                    caption: 'UXperiment Sketch Plugin'
-                },
-                text: <span>A plugin that transforms <a href="https://sketchapp.com/">Sketch</a> documents into JSON objects</span>,
                 links: []
             },
         ]

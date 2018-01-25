@@ -82,6 +82,7 @@ const wsdEkb2016Link = 'https://wsd.events/2016/06/25/';
 
 // 2017 conference archives
 const dump2017Link = 'http://dump-conf.ru/archive/2017/';
+const dotnext2017PiterLink = 'http://2017.dotnext-piter.ru';
 const permTechTalksSep2017Link = 'https://vk.com/permtechtalks';
 const izhTechTalksOct2017Link = 'https://vk.com/izhtechtalks';
 const profsouxApr2017Link = 'http://2017.profsoux.ru/';
@@ -107,6 +108,17 @@ export default {
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
     ],
     items: [
+        {
+            image: koshelevImage,
+            speakerFullName: 'Григорий Кошелев',
+            eventName: 'DotNext',
+            title: 'Интеграция виртуальных машин .NET и JAVA',
+            dateString: 'май 2017',
+            tags: ['backend', '.net', 'java'],
+            linkToVideo: 'https://www.youtube.com/watch?v=E3SfXloQdfw',
+            linkToSlides: 'https://vk.com/doc1499661_443130256?hash=c79b834120f09169a3&dl=08bf31d5ab21f036fc',
+            linkToEvent: dotnext2017PiterLink,
+        },
         {
             image: suslovImage,
             speakerFullName: 'Юрий Суслов',
@@ -375,7 +387,7 @@ export default {
             image: koshelevImage,
             speakerFullName: 'Григорий Кошелев',
             eventName: '.NET meetup Екб',
-            title: 'Интеграция виртуальных машин NET и JAVA',
+            title: 'Интеграция виртуальных машин .NET и JAVA',
             dateString: 'февраль 2017',
             tags: ['backend', '.net', 'java'],
             linkToVideo: 'https://youtu.be/wyIlV4TU_Vk',

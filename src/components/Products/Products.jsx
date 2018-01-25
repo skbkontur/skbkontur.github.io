@@ -27,14 +27,14 @@ export default function Products({ route: { products } }) {
                                 }
                                 <div className={cn('content')}>
                                     <h3>
-                                        <a href={block.header.href}>{block.header.caption}</a>
+                                        <a href={block.header.href} target='_blank'>{block.header.caption}</a>
                                     </h3>
                                     <div className={cn('text')}>
                                         {block.text}
                                     </div>
                                     <div className={cn('links')}>
                                         {block.links.map((link, index) => (
-                                            <a key={index} href={link.href}>{link.caption}</a>
+                                            <a key={index} href={link.href} target='_blank'>{link.caption}</a>
                                         ))}
                                     </div>
                                 </div>
