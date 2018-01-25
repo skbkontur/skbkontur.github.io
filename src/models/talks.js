@@ -23,6 +23,7 @@ import kirpichnikovImage from 'talks-image-responsive!./images/talks/kirpichniko
 import kokovinImage from 'talks-image-responsive!./images/talks/kokovin.jpg';
 import konovalovImage from 'talks-image-responsive!./images/talks/konovalov.png';
 import koshelevImage from 'talks-image-responsive!./images/talks/koshelev.png';
+import koshelev2Image from 'talks-image-responsive!./images/talks/koshelev2.jpg';
 import kurpilanskyImage from 'talks-image-responsive!./images/talks/kurpilansky.png';
 import kutovoiImage from 'talks-image-responsive!./images/talks/kutovoi.png';
 import kuzminImage from 'talks-image-responsive!./images/talks/kuzmin.png';
@@ -109,7 +110,7 @@ export default {
     ],
     items: [
         {
-            image: koshelevImage,
+            image: koshelev2Image,
             speakerFullName: 'Григорий Кошелев',
             eventName: 'DotNext',
             title: 'Интеграция виртуальных машин .NET и JAVA',
