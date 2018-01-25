@@ -87,6 +87,7 @@ const dotnext2017PiterLink = 'http://2017.dotnext-piter.ru';
 const permTechTalksSep2017Link = 'https://vk.com/permtechtalks';
 const izhTechTalksOct2017Link = 'https://vk.com/izhtechtalks';
 const profsouxApr2017Link = 'http://2017.profsoux.ru/';
+const cultDigital2017Link = 'http://cult.digital';
 
 // conference and meetup archives without dates
 const uralJSLink = 'https://vk.com/uraljs';
@@ -109,6 +110,17 @@ export default {
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
     ],
     items: [
+        {
+            image: dolganovImage,
+            speakerFullName: 'Лев Долганов',
+            eventName: 'Cult.Digital',
+            title: 'Опросы usability: методики и практики',
+            dateString: 'ноябрь 2017',
+            tags: ['design'],
+            linkToVideo: 'https://www.youtube.com/watch?v=N61stg9SHFU',
+            linkToSlides: 'https://drive.google.com/file/d/1kJnAvHnszQDOxh3h91llawoj3lCkh1v-/view?usp=sharing',
+            linkToEvent: cultDigital2017Link,
+        },
         {
             image: koshelev2Image,
             speakerFullName: 'Григорий Кошелев',

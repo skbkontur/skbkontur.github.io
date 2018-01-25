@@ -37,20 +37,21 @@ function Talk({ talk }) {
     return (
         <article className={cn('talk')}>
             <div className={cn('image')}>
-                <a href={talk.linkToVideo}>
+                <a href={talk.linkToVideo} target='_blank'>
                     <img
                         {...buildImageProps(talk.image)}
                     />
                 </a>
             </div>
             <div className={cn('content')}>
-                <h3><a href={talk.linkToVideo}>{talk.title}</a></h3>
+                <h3><a href={talk.linkToVideo} target='_blank'>{talk.title}</a></h3>
                 <div className={cn('speaker-and-slides-link')}>
                     <div className={cn('speaker')}>{talk.speakerFullName}</div>
                     {talk.linkToSlides && <div className={cn('slides-link')}>
                         <Link
                             href={talk.linkToSlides}
-                            icon='card'>
+                            icon='card'
+                            target='_blank'>
                             Слайды
                         </Link>
                     </div>}
@@ -58,7 +59,7 @@ function Talk({ talk }) {
                 <div className={cn('short-info')}>
                     <span className={cn('event-info')}>
                         {talk.linkToEvent
-                            ? <a href={talk.linkToEvent}>{[talk.eventName, talk.dateString].filter(x => x).join(', ')}</a>
+                            ? <a href={talk.linkToEvent} target='_blank'>{[talk.eventName, talk.dateString].filter(x => x).join(', ')}</a>
                             : [talk.eventName, talk.dateString].filter(x => x).join(', ')
                         }
                     </span>
