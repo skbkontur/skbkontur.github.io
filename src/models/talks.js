@@ -116,7 +116,7 @@ export default {
             dateString: 'май 2017',
             tags: ['backend', '.net', 'java'],
             linkToVideo: 'https://www.youtube.com/watch?v=E3SfXloQdfw',
-            linkToSlides: 'https://vk.com/doc1499661_443130256?hash=c79b834120f09169a3&dl=08bf31d5ab21f036fc',
+            linkToSlides: 'http://assets.contentful.com/9n3x4rtjlya6/468yGoReI80u0CewaOqS4C/cbfc9aef7b8ded4cc472440ff4c9686b/Gregory_Koshelev_Integrating_.NET_and_Java_virtual_machines.pdf',
             linkToEvent: dotnext2017PiterLink,
         },
         {
