@@ -92,24 +92,6 @@ export default {
                 links: []
             },
             {
-                image: ditraceImage,
-                header: {
-                    href: 'https://ditrace.readthedocs.io/',
-                    caption: 'DiTrace'
-                },
-                text: <span>Трассировка запросов для анализа узких мест в распределенных системах</span>,
-                links: [
-                    {
-                        href: 'https://github.com/ditrace',
-                        caption: 'Код'
-                    },
-                    {
-                        href: 'http://ditrace.readthedocs.io/',
-                        caption: 'Документация'
-                    },
-                ]
-            },
-            {
                 image: gitHubImage,
                 header: {
                     href: 'https://github.com/skbkontur/frontreport',
@@ -250,24 +232,6 @@ export default {
                 },
                 text: <span>C# dependency management tool</span>,
                 links: []
-            },
-            {
-                image: ditraceImage,
-                header: {
-                    href: 'https://ditrace.readthedocs.io/',
-                    caption: 'DiTrace'
-                },
-                text: <span>Request tracing for bottlenecks analysis in distributed systems</span>,
-                links: [
-                    {
-                        href: 'https://github.com/ditrace',
-                        caption: 'Code'
-                    },
-                    {
-                        href: 'http://ditrace.readthedocs.io/',
-                        caption: 'Docs'
-                    },
-                ]
             },
             {
                 image: gitHubImage,
