@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /*_openstat
+Disallow: /?
+Disallow: *utm_*
+Disallow: *from=*
+
+Host: http://tech.skbkontur.ru
+Sitemap: http://tech.skbkontur.ru/sitemap.xml
