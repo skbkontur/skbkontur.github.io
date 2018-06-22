@@ -1,7 +1,6 @@
 import React from 'react';
 
 import moiraImage from './images/products/moira.png';
-import ditraceImage from './images/products/ditrace.png';
 import cementImage from './images/products/cement.png';
 import vostokImage from './images/products/vostok.png';
 import guidesImage from './images/products/guides.png';
@@ -9,10 +8,10 @@ import gitHubImage from './images/products/github.png';
 
 export default {
     ['ru']: {
-        title: 'Open source технологии и решения компании СКБ Контур: Moira, DiTrace и многое другое',
+        title: 'Open source технологии и решения компании СКБ Контур: Vostok, Moira и многое другое',
         meta: {
-            keywords: 'open source, open-sourсe, oss, скб контур, скб-контур, контур, открытый код, Moira, DiTrace, ZstdNet, reelm, frontreport',
-            description: 'Open source технологии компании СКБ Контур. Moira — решение по уведомлениям из Graphite, DiTrace — трассировка запросов в распределенных системах и другие решения',
+            keywords: 'open source, open-sourсe, oss, скб контур, скб-контур, контур, открытый код, Moira, ZstdNet, reelm, frontreport',
+            description: 'Open source технологии компании СКБ Контур. Moira — решение по уведомлениям из Graphite и другие решения',
         },
         customMetaHeaders: [
             { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
@@ -179,10 +178,10 @@ export default {
         ]
     },
     'en': {
-        title: 'Open source technology and solutions company SKB Kontur: Moira, DiTrace and more',
+        title: 'Open source technology and solutions company SKB Kontur: Vostok, Moira and more',
         meta: {
-            description: 'Open source technology company SKB Kontur. Moira — Mail, Telegram, Slack and Pushover notifications based on Graphite metrics, DiTrace — request tracing for bottlenecks analysis in distributed systems',
-            keywords: 'open source, open-sourсe, oss, skb kontur, skb-kontur, kontur, Moira, DiTrace, ZstdNet, reelm, frontreport',
+            description: 'Open source technology company SKB Kontur. Moira — Mail, Telegram, Slack and Pushover notifications based on Graphite metrics',
+            keywords: 'open source, open-sourсe, oss, skb kontur, skb-kontur, kontur, Moira, ZstdNet, reelm, frontreport',
         },
         customMetaHeaders: [
             { ['http-equiv']: 'content-language', ['content']: 'en-US' },
