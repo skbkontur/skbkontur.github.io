@@ -56,6 +56,9 @@ import volokitinImage from 'talks-image-responsive!./images/talks/volokitin.jpg'
 import yuryevImage from 'talks-image-responsive!./images/talks/yuryev.png';
 import zakharovImage from 'talks-image-responsive!./images/talks/zakharov.jpg';
 import zhirovImage from 'talks-image-responsive!./images/talks/zhirov.png';
+import tolstikovImage from 'talks-image-responsive!./images/talks/tolstikov.jpg';
+import shatikhinImage from 'talks-image-responsive!./images/talks/shatikhin.jpg';
+import bukharinImage from 'talks-image-responsive!./images/talks/bukharin.jpg';
 
 // 2012 conference archives
 const sqa2012Link = 'http://sqadays.com/ru/talks/7995';
@@ -89,6 +92,8 @@ const izhTechTalksOct2017Link = 'https://vk.com/izhtechtalks';
 const profsouxApr2017Link = 'http://2017.profsoux.ru/';
 const cultDigital2017Link = 'http://cult.digital';
 
+// 2018 conference archives
+
 // conference and meetup archives without dates
 const uralJSLink = 'https://vk.com/uraljs';
 const dotnetEkbLink = 'https://vk.com/dotnetekb';
@@ -110,6 +115,61 @@ export default {
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
     ],
     items: [
+        {
+            image: bukharinImage,
+            speakerFullName: 'Вячеслав Бухарин',
+            eventName: 'UralJS',
+            title: 'Улучшение навигации в SPA',
+            dateString: 'апрель 2018',
+            tags: ['frontend'],
+            linkToVideo: 'https://www.youtube.com/watch?v=Ip1C4rcfdi0',
+            linkToSlides: 'https://slides.com/viacheslavbukharin/deck-2#/',
+            linkToEvent: uralJSLink,
+        },
+        {
+            image: tihonovImage,
+            speakerFullName: 'Евгений Тихонов',
+            eventName: 'UralJS',
+            title: 'Давайте уже разберемся с DateTime',
+            dateString: 'апрель 2018',
+            tags: ['frontend'],
+            linkToVideo: 'https://www.youtube.com/watch?v=Yc623xx6b3M&t=',
+            linkToSlides: 'https://goo.gl/3qdeSp',
+            linkToEvent: uralJSLink,
+        },
+        {
+            image: shatikhinImage,
+            speakerFullName: 'Михаил Шатихин',
+            eventName: 'UralJS',
+            title: 'Безжалостная типизация',
+            dateString: 'февраль 2018',
+            tags: ['frontend'],
+            linkToVideo: 'https://www.youtube.com/watch?v=_00hPGacr18',
+            linkToSlides: 'https://goo.gl/E4fmL1',
+            linkToEvent: uralJSLink,
+        },
+        {
+            image: khazamovImage,
+            speakerFullName: 'Теймураз Хазамов',
+            eventName: 'UralJS',
+            title: 'React-DnD',
+            dateString: 'ноябрь 2017',
+            tags: ['frontend'],
+            linkToVideo: 'https://www.youtube.com/watch?v=amhSyi_NQ4s&t=',
+            linkToSlides: 'https://slides.com/t1mmaas/react-dnd/',
+            linkToEvent: uralJSLink,
+        },
+        {
+            image: tolstikovImage,
+            speakerFullName: 'Владимир Толстиков',
+            eventName: 'UralJS',
+            title: 'CSS in JS',
+            dateString: 'июль 2017',
+            tags: ['frontend'],
+            linkToVideo: 'https://www.youtube.com/watch?v=5HI7g3k0Ues&t=',
+            linkToSlides: 'https://original001.github.io/reveal.js/',
+            linkToEvent: uralJSLink,
+        },
         {
             image: dolganovImage,
             speakerFullName: 'Лев Долганов',
@@ -283,7 +343,6 @@ export default {
             dateString: 'апрель 2017',
             tags: ['testing'],
             linkToVideo: 'https://www.youtube.com/watch?v=HbQm006nKho',
-            linkToSlides: 'https://www.slideshare.net/it-people/ss-75225256',
             linkToEvent: dump2017Link,
         },
         {
