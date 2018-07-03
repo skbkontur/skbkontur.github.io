@@ -59,6 +59,9 @@ import zhirovImage from 'talks-image-responsive!./images/talks/zhirov.png';
 import tolstikovImage from 'talks-image-responsive!./images/talks/tolstikov.jpg';
 import shatikhinImage from 'talks-image-responsive!./images/talks/shatikhin.jpg';
 import bukharinImage from 'talks-image-responsive!./images/talks/bukharin.jpg';
+import shundeevaImage from 'talks-image-responsive!./images/talks/shundeeva.jpg';
+import vorotnikovImage from 'talks-image-responsive!./images/talks/vorotnikov.jpg';
+import vorotnikovaImage from 'talks-image-responsive!./images/talks/vorotnikova.jpg';
 
 // 2012 conference archives
 const sqa2012Link = 'http://sqadays.com/ru/talks/7995';
@@ -93,6 +96,7 @@ const profsouxApr2017Link = 'http://2017.profsoux.ru/';
 const cultDigital2017Link = 'http://cult.digital';
 
 // 2018 conference archives
+const nskTechTalksTestingApr2018Link = 'https://vk.com/nsktechtalkstest';
 
 // conference and meetup archives without dates
 const uralJSLink = 'https://vk.com/uraljs';
@@ -115,6 +119,39 @@ export default {
         { ['http-equiv']: 'content-language', ['content']: 'ru-RU' },
     ],
     items: [
+        {
+            image: vorotnikovaImage,
+            speakerFullName: 'Екатерина Воротникова',
+            eventName: 'Nsk Tech Talks по тестированию',
+            title: 'Автоматизация UI-тестов с помощью webdriverIO',
+            dateString: 'апрель 2018',
+            tags: ['testing'],
+            linkToVideo: 'https://www.youtube.com/watch?v=EVtBbdJY_yw',
+            linkToSlides: '',
+            linkToEvent: nskTechTalksTestingApr2018Link,
+        },
+        {
+            image: vorotnikovImage,
+            speakerFullName: 'Дмитрий Воротников',
+            eventName: 'Nsk Tech Talks по тестированию',
+            title: 'Consumer contract driven testing',
+            dateString: 'апрель 2018',
+            tags: ['testing'],
+            linkToVideo: 'https://www.youtube.com/watch?v=Mu02wyUNHZY',
+            linkToSlides: '',
+            linkToEvent: nskTechTalksTestingApr2018Link,
+        },
+        {
+            image: shundeevaImage,
+            speakerFullName: 'Инна Шундеева',
+            eventName: 'Nsk Tech Talks по тестированию',
+            title: 'Как стать автоматизатором и не перестать тестировать',
+            dateString: 'апрель 2018',
+            tags: ['testing'],
+            linkToVideo: 'https://www.youtube.com/watch?v=Me662Hacbw0&t=',
+            linkToSlides: '',
+            linkToEvent: nskTechTalksTestingApr2018Link,
+        },
         {
             image: bukharinImage,
             speakerFullName: 'Вячеслав Бухарин',
